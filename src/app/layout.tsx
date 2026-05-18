@@ -23,7 +23,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr" className="h-full scroll-smooth">
-      <body className="min-h-full flex flex-col bg-[#FFFAFA] text-[#2C1A0E] antialiased">
+      <body className="min-h-full flex flex-col bg-[#FAFCFD] text-[#2D4650] antialiased">
         <Header />
         <main id="main-content" className="flex-grow">
           <PageTransitionWrapper>
@@ -35,3 +35,5 @@ export default function RootLayout({
     </html>
   );
 }
+
+

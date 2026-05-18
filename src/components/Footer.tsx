@@ -18,7 +18,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-[#1C1008] text-[#E8D8CC] border-t border-[#C9AA95]/20 font-body">
+    <footer className="bg-[#2D4650] text-[#A8D5E2] border-t border-[#89C2D9]/20 font-body">
       
       {/* Main Footer Content */}
       <div className="max-w-[1200px] mx-auto px-6 md:px-8 py-16 grid grid-cols-1 md:grid-cols-12 gap-12 items-start">
@@ -36,12 +36,12 @@ export default function Footer() {
             />
           </Link>
           
-          <p className="text-[13px] text-[#E8D8CC]/85 font-light leading-relaxed max-w-sm">
+          <p className="text-[13px] text-[#A8D5E2]/85 font-light leading-relaxed max-w-sm">
             Coloration végétale – coloration 100% naturelle
           </p>
 
           {/* Partner logos banner */}
-          <div className="relative w-[280px] h-[95px] bg-[#FFFFFF] border border-[#C9AA95]/30 overflow-hidden flex items-center justify-center p-1.5">
+          <div className="relative w-[280px] h-[95px] bg-[#FAFCFD] border border-[#89C2D9]/30 overflow-hidden flex items-center justify-center p-1.5">
             <Image
               src="/partners.png"
               alt="Partenaires Nouvelle-Aquitaine et Laboratoire ISATIS"
@@ -51,7 +51,7 @@ export default function Footer() {
           </div>
 
           {/* Disclaimer text */}
-          <p className="text-[10px] text-[#E8D8CC]/55 leading-relaxed font-light max-w-[280px]">
+          <p className="text-[10px] text-[#A8D5E2]/55 leading-relaxed font-light max-w-[280px]">
             La Région et l&apos;Union Européenne soutiennent le Laboratoire ISATIS dans le cadre du dispositif de relance de l&apos;Union Européenne en réponse à la pandémie de COVID-19 du Programme Opérationnel FEDER/FSE (Aquitaine/Limousin/Poitou-Charentes) 2014-2020
           </p>
         </div>
@@ -61,56 +61,56 @@ export default function Footer() {
           <h3 className="font-display font-medium text-[16px] !text-white mb-5 tracking-wide">
             Informations
           </h3>
-          <ul className="space-y-3.5 text-[13.5px] font-light text-[#E8D8CC]/85 w-full flex flex-col items-center md:items-start">
+          <ul className="space-y-3.5 text-[13.5px] font-light text-[#A8D5E2]/85 w-full flex flex-col items-center md:items-start">
             
             {/* Group 1: Boutique */}
             <li>
-              <Link href="/boutique" className="hover:text-[#FFFFFF] transition-colors">
+              <Link href="/boutique" className="hover:text-[#FAFCFD] transition-colors">
                 E-shop
               </Link>
             </li>
             <li>
-              <Link href="/boutique#colorations" className="hover:text-[#FFFFFF] transition-colors">
+              <Link href="/boutique#colorations" className="hover:text-[#FAFCFD] transition-colors">
                 Colorations végétales
               </Link>
             </li>
             <li>
-              <Link href="/boutique#soins" className="hover:text-[#FFFFFF] transition-colors">
+              <Link href="/boutique#soins" className="hover:text-[#FAFCFD] transition-colors">
                 Soins
               </Link>
             </li>
             <li>
-              <Link href="/boutique#accessoires" className="hover:text-[#FFFFFF] transition-colors">
+              <Link href="/boutique#accessoires" className="hover:text-[#FAFCFD] transition-colors">
                 Accessoires
               </Link>
             </li>
 
             {/* Divider Line 1 */}
-            <li className="w-full max-w-[120px] md:max-w-none border-t border-[#C9AA95]/20 my-2.5 pointer-events-none"></li>
+            <li className="w-full max-w-[120px] md:max-w-none border-t border-[#89C2D9]/20 my-2.5 pointer-events-none"></li>
 
             {/* Group 2: Conseils */}
             <li>
-              <Link href="/conseils" className="hover:text-[#FFFFFF] transition-colors">
+              <Link href="/conseils" className="hover:text-[#FAFCFD] transition-colors">
                 Inspirations
               </Link>
             </li>
             <li>
-              <Link href="/conseils#blog-section" className="hover:text-[#FFFFFF] transition-colors">
+              <Link href="/conseils#blog-section" className="hover:text-[#FAFCFD] transition-colors">
                 Nos formations
               </Link>
             </li>
 
             {/* Divider Line 2 */}
-            <li className="w-full max-w-[120px] md:max-w-none border-t border-[#C9AA95]/20 my-2.5 pointer-events-none"></li>
+            <li className="w-full max-w-[120px] md:max-w-none border-t border-[#89C2D9]/20 my-2.5 pointer-events-none"></li>
 
             {/* Group 3: À propos */}
             <li>
-              <Link href="/a-propos#histoire" className="hover:text-[#FFFFFF] transition-colors">
+              <Link href="/a-propos#histoire" className="hover:text-[#FAFCFD] transition-colors">
                 Trouver un salon
               </Link>
             </li>
             <li>
-              <Link href="/a-propos#contact" className="hover:text-[#FFFFFF] transition-colors">
+              <Link href="/a-propos#contact" className="hover:text-[#FAFCFD] transition-colors">
                 Contactez-nous
               </Link>
             </li>
@@ -130,50 +130,50 @@ export default function Footer() {
               placeholder="E-mail"
               value={newsletterEmail}
               onChange={(e) => setNewsletterEmail(e.target.value)}
-              className="bg-[#1C1008]/40 border border-[#C9AA95]/40 text-[#FFFFFF] font-body text-[13px] px-3.5 py-2.5 rounded-none focus:outline-none focus:border-[#FFFFFF] placeholder-[#E8D8CC]/35 w-full transition-all duration-300"
+              className="bg-[#2D4650]/40 border border-[#89C2D9]/40 text-[#FAFCFD] font-body text-[13px] px-3.5 py-2.5 rounded-none focus:outline-none focus:border-[#FAFCFD] placeholder-[#A8D5E2]/35 w-full transition-all duration-300"
               required
             />
             <button 
               type="submit" 
-              className="bg-[#D96B43] hover:bg-[#C25B35] text-[#FFFFFF] font-body text-[12.5px] font-semibold uppercase tracking-wider px-4 py-2.5 rounded-none transition-all duration-200 cursor-pointer w-full"
+              className="bg-[#7CB7CC] hover:bg-[#4F8FA8] text-[#FAFCFD] font-body text-[12.5px] font-semibold uppercase tracking-wider px-4 py-2.5 rounded-none transition-all duration-200 cursor-pointer w-full"
             >
               s&apos;abonner
             </button>
           </form>
           
           {subscribed && (
-            <p className="text-[12px] text-[#6B8F5E] mt-2 font-medium">
+            <p className="text-[12px] text-[#89C2D9] mt-2 font-medium">
               Inscription réussie. Bienvenue dans la Maison.
             </p>
           )}
 
-          <p className="text-[11.5px] text-[#E8D8CC]/70 font-light mt-4 leading-relaxed max-w-xs text-center md:text-left">
-            J&apos;accepte de recevoir des emails d&apos;informations, conformément à notre <Link href="/a-propos" className="text-[#D96B43] hover:underline">politique de confidentialité</Link>.
+          <p className="text-[11.5px] text-[#A8D5E2]/70 font-light mt-4 leading-relaxed max-w-xs text-center md:text-left">
+            J&apos;accepte de recevoir des emails d&apos;informations, conformément à notre <Link href="/a-propos" className="text-[#7CB7CC] hover:underline">politique de confidentialité</Link>.
           </p>
         </div>
 
       </div>
 
       {/* Bottom Bar: Copyright & legal links */}
-      <div className="border-t border-[#C9AA95]/15 py-6 px-6 bg-[#160D06] text-center text-[12px] text-[#E8D8CC]/55 font-body">
+      <div className="border-t border-[#89C2D9]/15 py-6 px-6 bg-[#2D4650] text-center text-[12px] text-[#A8D5E2]/55 font-body">
         <div className="max-w-[1200px] mx-auto flex flex-col sm:flex-row justify-center items-center gap-1.5 flex-wrap leading-relaxed">
           <span>
-            Réalisation : <a href="https://iaweb.dev" target="_blank" rel="noopener noreferrer" className="text-[#D96B43] hover:underline font-medium">iaweb.dev</a> © Louise XIV {new Date().getFullYear()}
+            Réalisation : <a href="https://iaweb.dev" target="_blank" rel="noopener noreferrer" className="text-[#7CB7CC] hover:underline font-medium">iaweb.dev</a> © Louise XIV {new Date().getFullYear()}
           </span>
-          <span className="hidden sm:inline text-[#E8D8CC]/30">|</span>
-          <Link href="/a-propos" className="hover:text-[#FFFFFF] transition-colors">
+          <span className="hidden sm:inline text-[#A8D5E2]/30">|</span>
+          <Link href="/a-propos" className="hover:text-[#FAFCFD] transition-colors">
             Mentions légales
           </Link>
-          <span className="text-[#E8D8CC]/30">|</span>
-          <Link href="/a-propos" className="hover:text-[#FFFFFF] transition-colors">
+          <span className="text-[#A8D5E2]/30">|</span>
+          <Link href="/a-propos" className="hover:text-[#FAFCFD] transition-colors">
             Confidentialité
           </Link>
-          <span className="text-[#E8D8CC]/30">|</span>
-          <Link href="/boutique" className="hover:text-[#FFFFFF] transition-colors">
+          <span className="text-[#A8D5E2]/30">|</span>
+          <Link href="/boutique" className="hover:text-[#FAFCFD] transition-colors">
             CGV
           </Link>
-          <span className="text-[#E8D8CC]/30">|</span>
-          <Link href="/a-propos" className="hover:text-[#FFFFFF] transition-colors">
+          <span className="text-[#A8D5E2]/30">|</span>
+          <Link href="/a-propos" className="hover:text-[#FAFCFD] transition-colors">
             Cookies
           </Link>
         </div>
@@ -182,3 +182,5 @@ export default function Footer() {
     </footer>
   );
 }
+
+

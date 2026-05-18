@@ -22,26 +22,26 @@ export default function FAQAccordion({ items }: FAQAccordionProps) {
         return (
           <div 
             key={item.id} 
-            className="border border-[#E8D8CC] rounded-none bg-[#FFFAFA] overflow-hidden transition-all duration-300"
+            className="border border-[#A8D5E2] rounded-none bg-[#FAFCFD] overflow-hidden transition-all duration-300"
           >
             <button
               onClick={() => toggleItem(item.id)}
-              className="flex items-center justify-between w-full p-5 text-left bg-transparent transition-colors hover:bg-[#F8F0EB]/40 cursor-pointer"
+              className="flex items-center justify-between w-full p-5 text-left bg-transparent transition-colors hover:bg-[#EAF3F6]/40 cursor-pointer"
             >
-              <span className="font-display text-[16px] font-medium text-[#2C1A0E] pr-4">
+              <span className="font-display text-[16px] font-medium text-[#2D4650] pr-4">
                 {item.question}
               </span>
               <ChevronDown 
                 size={18} 
                 strokeWidth={1.5} 
-                className={`text-[#573119] transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`}
+                className={`text-[#7CB7CC] transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`}
               />
             </button>
             
             <div 
-              className={`transition-all duration-300 ease-in-out ${isOpen ? 'max-h-[300px] border-t border-[#E8D8CC]/40' : 'max-h-0'} overflow-hidden`}
+              className={`transition-all duration-300 ease-in-out ${isOpen ? 'max-h-[300px] border-t border-[#A8D5E2]/40' : 'max-h-0'} overflow-hidden`}
             >
-              <div className="p-5 font-body text-[14px] font-light text-[#7A5C46] leading-relaxed">
+              <div className="p-5 font-body text-[14px] font-light text-[#4F8FA8] leading-relaxed">
                 {item.answer}
               </div>
             </div>
@@ -51,3 +51,5 @@ export default function FAQAccordion({ items }: FAQAccordionProps) {
     </div>
   );
 }
+
+

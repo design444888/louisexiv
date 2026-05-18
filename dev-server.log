@@ -1,0 +1,10 @@
+
+> louise@0.1.0 dev
+> next dev --port 3000
+
+▲ Next.js 16.2.6 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://192.168.2.5:3000
+✓ Ready in 1217ms
+Creating turbopack project { dir: 'A:\\projet 2026\\iaweb\\louise', testMode: true }
+

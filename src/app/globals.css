@@ -3,34 +3,34 @@
 @import "tailwindcss";
 
 :root {
-  --background: #FFFAFA;
-  --foreground: #2C1A0E;
+  --background: #FAFCFD;
+  --foreground: #2D4650;
 
-  --color-primary: #573119;
-  --color-primary-dark: #3E2110;
-  --color-primary-light: #7A4A2A;
+  --color-primary: #7CB7CC;
+  --color-primary-dark: #4F8FA8;
+  --color-primary-light: #89C2D9;
 
-  --color-bg: #FFFAFA;
-  --color-surface: #F8F0EB;
-  --color-surface-warm: #F2E6DC;
+  --color-bg: #FAFCFD;
+  --color-surface: #EAF3F6;
+  --color-surface-warm: #A8D5E2;
 
-  --color-text-primary: #2C1A0E;
-  --color-text-secondary: #7A5C46;
-  --color-text-muted: #B09880;
+  --color-text-primary: #2D4650;
+  --color-text-secondary: #4F8FA8;
+  --color-text-muted: #89C2D9;
 
-  --color-border: #E8D8CC;
-  --color-border-strong: #C9AA95;
+  --color-border: #A8D5E2;
+  --color-border-strong: #89C2D9;
 
-  --color-white: #FFFFFF;
+  --color-white: #FAFCFD;
 
-  --color-footer: #3C2210;
-  --color-footer-text: #D4B99A;
+  --color-footer: #2D4650;
+  --color-footer-text: #A8D5E2;
 
-  --color-eco: #6B8F5E;
-  --color-eco-bg: #EAF0E6;
+  --color-eco: #89C2D9;
+  --color-eco-bg: #EAF3F6;
 
-  --shadow-soft: 0 2px 16px rgba(87, 49, 25, 0.07);
-  --shadow-hover: 0 8px 28px rgba(87, 49, 25, 0.13);
+  --shadow-soft: 0 2px 16px rgba(45, 70, 80, 0.07);
+  --shadow-hover: 0 8px 28px rgba(45, 70, 80, 0.13);
 
   --font-display: 'Playfair Display', Georgia, serif;
   --font-body: 'Jost', 'Helvetica Neue', Arial, sans-serif;
@@ -191,7 +191,7 @@ h1, h2, h3, h4, h5, h6 {
 html {
   scroll-behavior: smooth;
   scrollbar-width: thin;
-  scrollbar-color: #C9AA95 #FFFAFA;
+  scrollbar-color: #89C2D9 #FAFCFD;
 }
 
 ::-webkit-scrollbar {
@@ -200,16 +200,16 @@ html {
 }
 
 ::-webkit-scrollbar-track {
-  background: #FFFAFA;
+  background: #FAFCFD;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #C9AA95;
+  background: #89C2D9;
   border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #573119;
+  background: #7CB7CC;
 }
 
 /* Slim, Calm Page Transition Keyframes */
@@ -292,3 +292,5 @@ html {
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
 }
+
+
