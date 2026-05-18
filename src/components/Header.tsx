@@ -1,46 +1,39 @@
 'use client';
 
-import React, { useState, useEffect, useRef } from 'react';
-import Link from 'next/link';
+import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { 
-  ShoppingBag, 
-  Menu, 
-  X, 
-  ChevronDown, 
-  Leaf, 
-  Sparkles, 
-  Droplets, 
-  BookOpen, 
-  HelpCircle, 
-  MessageSquare,
-  Users,
-  Sprout,
+import {
+  BookOpen,
+  ChevronDown,
+  Droplets,
+  HelpCircle,
+  Leaf,
   Lightbulb,
   Mail,
-  MoreHorizontal
+  Menu,
+  MessageSquare,
+  MoreHorizontal,
+  ShoppingBag,
+  Sparkles,
+  Sprout,
+  Users,
+  X,
 } from 'lucide-react';
 
 export default function Header() {
   const pathname = usePathname();
-  
-  // Navigation states
+
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [mobileAccordion, setMobileAccordion] = useState<string | null>(null);
-  
-  // Cart state
   const [cartCount, setCartCount] = useState(0);
   const [showCartAlert, setShowCartAlert] = useState(false);
 
-  // Refs for closing dropdowns on outside click
-  const dropdownRef = useRef<HTMLDivElement>(null);
-
   useEffect(() => {
-    // Listen for custom "add-to-cart" event
     const handleAddToCart = () => {
-      setCartCount(prev => prev + 1);
+      setCartCount((prev) => prev + 1);
       setShowCartAlert(true);
       setTimeout(() => setShowCartAlert(false), 2000);
     };
@@ -49,273 +42,273 @@ export default function Header() {
     return () => window.removeEventListener('add-to-cart', handleAddToCart);
   }, []);
 
-  useEffect(() => {
-    // Close dropdowns on click outside
-    const handleClickOutside = (event: MouseEvent) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
-        setActiveDropdown(null);
-      }
-    };
-    
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
-  }, []);
-
-  // Close mobile menu on route change
-  useEffect(() => {
-    setMobileMenuOpen(false);
-    setActiveDropdown(null);
-  }, [pathname]);
-
-  const toggleDropdown = (name: string) => {
-    if (activeDropdown === name) {
+  const handleDesktopDropdownBlur = (event: React.FocusEvent<HTMLDivElement>) => {
+    if (!event.currentTarget.contains(event.relatedTarget as Node | null)) {
       setActiveDropdown(null);
-    } else {
-      setActiveDropdown(name);
     }
   };
 
   const toggleMobileAccordion = (name: string) => {
-    if (mobileAccordion === name) {
-      setMobileAccordion(null);
-    } else {
-      setMobileAccordion(name);
-    }
+    setMobileAccordion((current) => (current === name ? null : name));
   };
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-[#FFFAFA]/60 backdrop-blur-md border-b border-[#C9AA95]/50 shadow-none">
-      {/* Mini Cart notification toast inside Header */}
+    <header className="sticky top-0 z-50 w-full border-b border-[#C9AA95]/50 bg-[#FFFAFA]/60 shadow-none backdrop-blur-md">
       {showCartAlert && (
-        <div className="absolute top-full left-1/2 -translate-x-1/2 mt-4 bg-[#6B8F5E] text-[#FFFFFF] px-4 py-2 rounded-none shadow-none font-body text-[13px] tracking-wide animate-fade-in z-50">
-          Produit ajouté au panier !
+        <div className="absolute top-full left-1/2 z-50 mt-4 -translate-x-1/2 rounded-none bg-[#6B8F5E] px-4 py-2 font-body text-[13px] tracking-wide text-[#FFFFFF] shadow-none animate-fade-in">
+          Produit ajoute au panier !
         </div>
       )}
 
-      {/* Responsive layout:
-          - Mobile/Tablet: 2-column flex (Left: Menu trigger + Logo, Right: Cart)
-          - Desktop: 3-column grid for perfect mathematical balance */}
-      <div className="max-w-[1200px] mx-auto px-6 md:px-8 h-20 flex md:grid md:grid-cols-3 items-center justify-between">
-        
-        {/* LEFT COLUMN: Mobile trigger & Logo */}
-        <div className="flex items-center gap-4 justify-start">
-          {/* Mobile Menu Trigger */}
-          <button 
-            className="md:hidden text-[#573119] hover:text-[#3E2110] cursor-pointer"
+      <div className="mx-auto flex h-20 max-w-[1200px] items-center justify-between px-6 md:grid md:grid-cols-3 md:px-8">
+        <div className="flex items-center justify-start gap-4">
+          <button
+            className="cursor-pointer text-[#573119] hover:text-[#3E2110] md:hidden"
             onClick={() => setMobileMenuOpen(true)}
             aria-label="Ouvrir le menu"
           >
             <Menu size={24} strokeWidth={1.5} />
           </button>
 
-          {/* LOGO AREA */}
-          <Link href="/" className="flex items-center group py-1 select-none hover:scale-102 transition-transform duration-300">
-            {/* Desktop Logo */}
+          <Link href="/" className="flex items-center group py-1 select-none transition-transform duration-300 hover:scale-102">
             <Image
               src="/logo.svg"
               alt="Louise XIV"
               width={64}
               height={53}
               priority
-              className="hidden md:block object-contain"
+              className="hidden object-contain md:block"
             />
-            {/* Mobile/Tablet Logo */}
             <Image
               src="/logo.svg"
               alt="Louise XIV"
               width={52}
               height={43}
               priority
-              className="block md:hidden object-contain"
+              className="block object-contain md:hidden"
             />
           </Link>
         </div>
 
-        {/* CENTER COLUMN: Perfectly Centered Navigation (Desktop only) */}
-        <nav ref={dropdownRef} className="hidden md:flex items-center justify-center gap-8 relative h-full">
-          
-          {/* Dropdown 1: Boutique */}
-          <div className="relative">
-            <button 
-              onClick={() => toggleDropdown('boutique')}
-              className={`flex items-center gap-1 font-body text-[13px] font-semibold uppercase tracking-[0.15em] text-[#573119] hover:text-[#3E2110] transition-colors cursor-pointer py-2 ${pathname.startsWith('/boutique') ? 'underline underline-offset-[6px]' : ''}`}
+        <nav className="relative hidden h-full items-center justify-center gap-8 md:flex">
+          <div
+            className="relative flex h-full items-center"
+            onMouseEnter={() => setActiveDropdown('boutique')}
+            onMouseLeave={() => setActiveDropdown(null)}
+            onFocus={() => setActiveDropdown('boutique')}
+            onBlur={handleDesktopDropdownBlur}
+          >
+            <Link
+              href="/boutique"
+              className={`flex cursor-pointer items-center gap-1 py-2 font-body text-[13px] font-semibold uppercase tracking-[0.15em] text-[#573119] transition-colors hover:text-[#3E2110] ${pathname.startsWith('/boutique') ? 'underline underline-offset-[6px]' : ''}`}
             >
               Boutique
-              <ChevronDown size={14} strokeWidth={1.5} className={`transition-transform duration-300 ${activeDropdown === 'boutique' ? 'rotate-180' : ''}`} />
-            </button>
+              <ChevronDown
+                size={14}
+                strokeWidth={1.5}
+                className={`transition-transform duration-200 ${activeDropdown === 'boutique' ? 'rotate-180' : ''}`}
+              />
+            </Link>
 
-            {activeDropdown === 'boutique' && (
-              <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-[280px] bg-[#F8F0EB] border border-[#E8D8CC] rounded-none shadow-none p-4 animate-slide-down">
-                <div className="space-y-1">
-                  <Link 
-                    href="/boutique#colorations" 
-                    onClick={() => setActiveDropdown(null)}
-                    className="flex items-center gap-3 p-2.5 rounded-none hover:bg-[#F2E6DC] text-[#2C1A0E] hover:text-[#573119] transition-all"
-                  >
-                    <Leaf size={18} strokeWidth={1.5} className="text-[#573119]" />
-                    <div className="text-left">
-                      <div className="font-display text-[14px] font-medium">Colorations Naturelles</div>
-                      <div className="font-body text-[11px] text-[#7A5C46] font-light">Pigments botaniques et soins</div>
-                    </div>
-                  </Link>
-                  <Link 
-                    href="/boutique#soins" 
-                    onClick={() => setActiveDropdown(null)}
-                    className="flex items-center gap-3 p-2.5 rounded-none hover:bg-[#F2E6DC] text-[#2C1A0E] hover:text-[#573119] transition-all"
-                  >
-                    <Droplets size={18} strokeWidth={1.5} className="text-[#573119]" />
-                    <div className="text-left">
-                      <div className="font-display text-[14px] font-medium">Soins Capillaires</div>
-                      <div className="font-body text-[11px] text-[#7A5C46] font-light">Rituels hydratants des Alpes</div>
-                    </div>
-                  </Link>
-
-                  <Link 
-                    href="/boutique#accessoires" 
-                    onClick={() => setActiveDropdown(null)}
-                    className="flex items-center gap-3 p-2.5 rounded-none hover:bg-[#F2E6DC] text-[#2C1A0E] hover:text-[#573119] transition-all"
-                  >
-                    <Sparkles size={18} strokeWidth={1.5} className="text-[#573119]" />
-                    <div className="text-left">
-                      <div className="font-display text-[14px] font-medium">Accessoires</div>
-                      <div className="font-body text-[11px] text-[#7A5C46] font-light">Outils artisanaux en bois noble</div>
-                    </div>
-                  </Link>
-                  <div className="border-t border-[#E8D8CC]/50 my-1 pt-1.5">
-                    <Link 
-                       href="/boutique" 
-                       onClick={() => setActiveDropdown(null)}
-                       className="flex items-center gap-3 p-2.5 rounded-none hover:bg-[#F2E6DC] text-[#2C1A0E] hover:text-[#573119] transition-all font-body text-[12px] font-semibold uppercase tracking-wider"
-                    >
-                      <MoreHorizontal size={18} strokeWidth={1.5} className="text-[#573119]" />
-                      Voir tous les produits
-                    </Link>
+            <div
+              className={`absolute top-full left-1/2 z-20 w-[280px] -translate-x-1/2 border border-[#E8D8CC] bg-[#F8F0EB] p-4 shadow-none before:absolute before:-top-4 before:left-0 before:h-4 before:w-full transition-all duration-200 ease-out ${
+                activeDropdown === 'boutique'
+                  ? 'visible translate-y-0 opacity-100 pointer-events-auto'
+                  : 'invisible translate-y-2 opacity-0 pointer-events-none'
+              }`}
+            >
+              <div className="space-y-1">
+                <Link
+                  href="/boutique#colorations"
+                  onClick={() => setActiveDropdown(null)}
+                  className="flex items-center gap-3 rounded-none p-2.5 text-[#2C1A0E] transition-all hover:bg-[#F2E6DC] hover:text-[#573119]"
+                >
+                  <Leaf size={18} strokeWidth={1.5} className="text-[#573119]" />
+                  <div className="text-left">
+                    <div className="font-display text-[14px] font-medium">Colorations Naturelles</div>
+                    <div className="font-body text-[11px] font-light text-[#7A5C46]">Pigments botaniques et soins</div>
                   </div>
+                </Link>
+                <Link
+                  href="/boutique#soins"
+                  onClick={() => setActiveDropdown(null)}
+                  className="flex items-center gap-3 rounded-none p-2.5 text-[#2C1A0E] transition-all hover:bg-[#F2E6DC] hover:text-[#573119]"
+                >
+                  <Droplets size={18} strokeWidth={1.5} className="text-[#573119]" />
+                  <div className="text-left">
+                    <div className="font-display text-[14px] font-medium">Soins Capillaires</div>
+                    <div className="font-body text-[11px] font-light text-[#7A5C46]">Rituels hydratants des Alpes</div>
+                  </div>
+                </Link>
+                <Link
+                  href="/boutique#accessoires"
+                  onClick={() => setActiveDropdown(null)}
+                  className="flex items-center gap-3 rounded-none p-2.5 text-[#2C1A0E] transition-all hover:bg-[#F2E6DC] hover:text-[#573119]"
+                >
+                  <Sparkles size={18} strokeWidth={1.5} className="text-[#573119]" />
+                  <div className="text-left">
+                    <div className="font-display text-[14px] font-medium">Accessoires</div>
+                    <div className="font-body text-[11px] font-light text-[#7A5C46]">Outils artisanaux en bois noble</div>
+                  </div>
+                </Link>
+                <div className="my-1 border-t border-[#E8D8CC]/50 pt-1.5">
+                  <Link
+                    href="/boutique"
+                    onClick={() => setActiveDropdown(null)}
+                    className="flex items-center gap-3 rounded-none p-2.5 font-body text-[12px] font-semibold uppercase tracking-wider text-[#2C1A0E] transition-all hover:bg-[#F2E6DC] hover:text-[#573119]"
+                  >
+                    <MoreHorizontal size={18} strokeWidth={1.5} className="text-[#573119]" />
+                    Voir tous les produits
+                  </Link>
                 </div>
               </div>
-            )}
+            </div>
           </div>
 
-          {/* Dropdown 2: Conseils */}
-          <div className="relative">
-            <button 
-              onClick={() => toggleDropdown('conseils')}
-              className={`flex items-center gap-1 font-body text-[13px] font-semibold uppercase tracking-[0.15em] text-[#573119] hover:text-[#3E2110] transition-colors cursor-pointer py-2 ${pathname.startsWith('/conseils') ? 'underline underline-offset-[6px]' : ''}`}
+          <div
+            className="relative flex h-full items-center"
+            onMouseEnter={() => setActiveDropdown('conseils')}
+            onMouseLeave={() => setActiveDropdown(null)}
+            onFocus={() => setActiveDropdown('conseils')}
+            onBlur={handleDesktopDropdownBlur}
+          >
+            <Link
+              href="/conseils"
+              className={`flex cursor-pointer items-center gap-1 py-2 font-body text-[13px] font-semibold uppercase tracking-[0.15em] text-[#573119] transition-colors hover:text-[#3E2110] ${pathname.startsWith('/conseils') ? 'underline underline-offset-[6px]' : ''}`}
             >
               Conseils
-              <ChevronDown size={14} strokeWidth={1.5} className={`transition-transform duration-300 ${activeDropdown === 'conseils' ? 'rotate-180' : ''}`} />
-            </button>
+              <ChevronDown
+                size={14}
+                strokeWidth={1.5}
+                className={`transition-transform duration-200 ${activeDropdown === 'conseils' ? 'rotate-180' : ''}`}
+              />
+            </Link>
 
-            {activeDropdown === 'conseils' && (
-              <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-[240px] bg-[#F8F0EB] border border-[#E8D8CC] rounded-none shadow-none p-4 animate-slide-down">
-                <div className="space-y-1 text-left">
-                  <Link 
-                    href="/conseils#blog-section" 
-                    onClick={() => setActiveDropdown(null)}
-                    className="flex items-center gap-3 p-2 rounded-none hover:bg-[#F2E6DC] text-[#2C1A0E] hover:text-[#573119] transition-all"
-                  >
-                    <BookOpen size={16} strokeWidth={1.5} className="text-[#573119]" />
-                    <span className="font-body text-[13.5px]">Le Blog Officiel</span>
-                  </Link>
-                  <Link 
-                    href="/conseils#faq-section" 
-                    onClick={() => setActiveDropdown(null)}
-                    className="flex items-center gap-3 p-2 rounded-none hover:bg-[#F2E6DC] text-[#2C1A0E] hover:text-[#573119] transition-all"
-                  >
-                    <HelpCircle size={16} strokeWidth={1.5} className="text-[#573119]" />
-                    <span className="font-body text-[13.5px]">Foire Aux Questions</span>
-                  </Link>
-                  <Link 
-                    href="/conseils#reviews-section" 
-                    onClick={() => setActiveDropdown(null)}
-                    className="flex items-center gap-3 p-2 rounded-none hover:bg-[#F2E6DC] text-[#2C1A0E] hover:text-[#573119] transition-all"
-                  >
-                    <MessageSquare size={16} strokeWidth={1.5} className="text-[#573119]" />
-                    <span className="font-body text-[13.5px]">Avis Clients</span>
-                  </Link>
-                </div>
+            <div
+              className={`absolute top-full left-1/2 z-20 w-[240px] -translate-x-1/2 border border-[#E8D8CC] bg-[#F8F0EB] p-4 shadow-none before:absolute before:-top-4 before:left-0 before:h-4 before:w-full transition-all duration-200 ease-out ${
+                activeDropdown === 'conseils'
+                  ? 'visible translate-y-0 opacity-100 pointer-events-auto'
+                  : 'invisible translate-y-2 opacity-0 pointer-events-none'
+              }`}
+            >
+              <div className="space-y-1 text-left">
+                <Link
+                  href="/conseils#blog-section"
+                  onClick={() => setActiveDropdown(null)}
+                  className="flex items-center gap-3 rounded-none p-2 text-[#2C1A0E] transition-all hover:bg-[#F2E6DC] hover:text-[#573119]"
+                >
+                  <BookOpen size={16} strokeWidth={1.5} className="text-[#573119]" />
+                  <span className="font-body text-[13.5px]">Le Blog Officiel</span>
+                </Link>
+                <Link
+                  href="/conseils#faq-section"
+                  onClick={() => setActiveDropdown(null)}
+                  className="flex items-center gap-3 rounded-none p-2 text-[#2C1A0E] transition-all hover:bg-[#F2E6DC] hover:text-[#573119]"
+                >
+                  <HelpCircle size={16} strokeWidth={1.5} className="text-[#573119]" />
+                  <span className="font-body text-[13.5px]">Foire Aux Questions</span>
+                </Link>
+                <Link
+                  href="/conseils#reviews-section"
+                  onClick={() => setActiveDropdown(null)}
+                  className="flex items-center gap-3 rounded-none p-2 text-[#2C1A0E] transition-all hover:bg-[#F2E6DC] hover:text-[#573119]"
+                >
+                  <MessageSquare size={16} strokeWidth={1.5} className="text-[#573119]" />
+                  <span className="font-body text-[13.5px]">Avis Clients</span>
+                </Link>
               </div>
-            )}
+            </div>
           </div>
 
-          {/* Dropdown 3: À Propos */}
-          <div className="relative">
-            <button 
-              onClick={() => toggleDropdown('a-propos')}
-              className={`flex items-center gap-1 font-body text-[13px] font-semibold uppercase tracking-[0.15em] text-[#573119] hover:text-[#3E2110] transition-colors cursor-pointer py-2 ${pathname.startsWith('/a-propos') ? 'underline underline-offset-[6px]' : ''}`}
+          <div
+            className="relative flex h-full items-center"
+            onMouseEnter={() => setActiveDropdown('a-propos')}
+            onMouseLeave={() => setActiveDropdown(null)}
+            onFocus={() => setActiveDropdown('a-propos')}
+            onBlur={handleDesktopDropdownBlur}
+          >
+            <Link
+              href="/a-propos"
+              className={`flex cursor-pointer items-center gap-1 py-2 font-body text-[13px] font-semibold uppercase tracking-[0.15em] text-[#573119] transition-colors hover:text-[#3E2110] ${pathname.startsWith('/a-propos') ? 'underline underline-offset-[6px]' : ''}`}
             >
-              À Propos
-              <ChevronDown size={14} strokeWidth={1.5} className={`transition-transform duration-300 ${activeDropdown === 'a-propos' ? 'rotate-180' : ''}`} />
-            </button>
+              A Propos
+              <ChevronDown
+                size={14}
+                strokeWidth={1.5}
+                className={`transition-transform duration-200 ${activeDropdown === 'a-propos' ? 'rotate-180' : ''}`}
+              />
+            </Link>
 
-            {activeDropdown === 'a-propos' && (
-              <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-[240px] bg-[#F8F0EB] border border-[#E8D8CC] rounded-none shadow-none p-4 animate-slide-down">
-                <div className="space-y-1 text-left">
-                  <Link 
-                    href="/a-propos#histoire" 
-                    onClick={() => setActiveDropdown(null)}
-                    className="flex items-center gap-3 p-2 rounded-none hover:bg-[#F2E6DC] text-[#2C1A0E] hover:text-[#573119] transition-all"
-                  >
-                    <Users size={16} strokeWidth={1.5} className="text-[#573119]" />
-                    <span className="font-body text-[13.5px]">Notre Histoire</span>
-                  </Link>
-                  <Link 
-                    href="/a-propos#engagements" 
-                    onClick={() => setActiveDropdown(null)}
-                    className="flex items-center gap-3 p-2 rounded-none hover:bg-[#F2E6DC] text-[#2C1A0E] hover:text-[#573119] transition-all"
-                  >
-                    <Sprout size={16} strokeWidth={1.5} className="text-[#573119]" />
-                    <span className="font-body text-[13.5px]">Nos Engagements</span>
-                  </Link>
-                  <Link 
-                    href="/a-propos#innovation" 
-                    onClick={() => setActiveDropdown(null)}
-                    className="flex items-center gap-3 p-2 rounded-none hover:bg-[#F2E6DC] text-[#2C1A0E] hover:text-[#573119] transition-all"
-                  >
-                    <Lightbulb size={16} strokeWidth={1.5} className="text-[#573119]" />
-                    <span className="font-body text-[13.5px]">Innovation Suisse</span>
-                  </Link>
-                  <Link 
-                    href="/a-propos#contact" 
-                    onClick={() => setActiveDropdown(null)}
-                    className="flex items-center gap-3 p-2 rounded-none hover:bg-[#F2E6DC] text-[#2C1A0E] hover:text-[#573119] transition-all"
-                  >
-                    <Mail size={16} strokeWidth={1.5} className="text-[#573119]" />
-                    <span className="font-body text-[13.5px]">Contact & Salon</span>
-                  </Link>
-                </div>
+            <div
+              className={`absolute top-full left-1/2 z-20 w-[240px] -translate-x-1/2 border border-[#E8D8CC] bg-[#F8F0EB] p-4 shadow-none before:absolute before:-top-4 before:left-0 before:h-4 before:w-full transition-all duration-200 ease-out ${
+                activeDropdown === 'a-propos'
+                  ? 'visible translate-y-0 opacity-100 pointer-events-auto'
+                  : 'invisible translate-y-2 opacity-0 pointer-events-none'
+              }`}
+            >
+              <div className="space-y-1 text-left">
+                <Link
+                  href="/a-propos#histoire"
+                  onClick={() => setActiveDropdown(null)}
+                  className="flex items-center gap-3 rounded-none p-2 text-[#2C1A0E] transition-all hover:bg-[#F2E6DC] hover:text-[#573119]"
+                >
+                  <Users size={16} strokeWidth={1.5} className="text-[#573119]" />
+                  <span className="font-body text-[13.5px]">Notre Histoire</span>
+                </Link>
+                <Link
+                  href="/a-propos#engagements"
+                  onClick={() => setActiveDropdown(null)}
+                  className="flex items-center gap-3 rounded-none p-2 text-[#2C1A0E] transition-all hover:bg-[#F2E6DC] hover:text-[#573119]"
+                >
+                  <Sprout size={16} strokeWidth={1.5} className="text-[#573119]" />
+                  <span className="font-body text-[13.5px]">Nos Engagements</span>
+                </Link>
+                <Link
+                  href="/a-propos#innovation"
+                  onClick={() => setActiveDropdown(null)}
+                  className="flex items-center gap-3 rounded-none p-2 text-[#2C1A0E] transition-all hover:bg-[#F2E6DC] hover:text-[#573119]"
+                >
+                  <Lightbulb size={16} strokeWidth={1.5} className="text-[#573119]" />
+                  <span className="font-body text-[13.5px]">Innovation Suisse</span>
+                </Link>
+                <Link
+                  href="/a-propos#contact"
+                  onClick={() => setActiveDropdown(null)}
+                  className="flex items-center gap-3 rounded-none p-2 text-[#2C1A0E] transition-all hover:bg-[#F2E6DC] hover:text-[#573119]"
+                >
+                  <Mail size={16} strokeWidth={1.5} className="text-[#573119]" />
+                  <span className="font-body text-[13.5px]">Contact & Salon</span>
+                </Link>
               </div>
-            )}
+            </div>
           </div>
         </nav>
 
-        {/* RIGHT COLUMN: Actions / Cart only */}
         <div className="flex items-center justify-end">
-          {/* Cart Button "Panier" */}
-          <button 
-            className="text-[#573119] hover:text-[#3E2110] transition-all cursor-pointer relative flex items-center justify-center p-1.5 hover:scale-105"
+          <button
+            className="relative flex items-center justify-center p-1.5 text-[#573119] transition-all hover:scale-105 hover:text-[#3E2110]"
             onClick={() => {
-              alert(`Votre panier contient actuellement ${cartCount} produit(s). Le système de paiement de démonstration s'activera prochainement.`);
+              alert(`Votre panier contient actuellement ${cartCount} produit(s). Le systeme de paiement de demonstration s'activera prochainement.`);
             }}
           >
             <ShoppingBag size={20} strokeWidth={1.5} />
-            <span className="absolute -top-1 -right-1 bg-[#573119] text-[#FFFFFF] text-[9px] w-4.5 h-4.5 flex items-center justify-center rounded-full font-body font-semibold">
+            <span className="absolute -top-1 -right-1 flex h-4.5 w-4.5 items-center justify-center rounded-full bg-[#573119] font-body text-[9px] font-semibold text-[#FFFFFF]">
               {cartCount}
             </span>
           </button>
         </div>
-
       </div>
 
-      {/* MOBILE ACCORDION NAVIGATION OVERLAY */}
       {mobileMenuOpen && (
-        <div className="fixed inset-0 z-50 bg-[#2C1A0E]/60 backdrop-blur-xs flex justify-start md:hidden transition-all duration-300">
-          <div className="w-[300px] h-full bg-[#FFFAFA] shadow-2xl p-6 flex flex-col justify-between overflow-y-auto animate-slide-right">
-            
+        <div className="fixed inset-0 z-50 flex justify-start bg-[#2C1A0E]/60 backdrop-blur-xs transition-all duration-300 md:hidden">
+          <div className="flex h-full w-[300px] flex-col justify-between overflow-y-auto bg-[#FFFAFA] p-6 shadow-2xl animate-slide-right">
             <div>
-              {/* Mobile Header */}
-              <div className="flex items-center justify-between mb-8 pb-4 border-b border-[#C9AA95]/40">
-                <Link href="/" className="block py-1 relative w-[52px] h-[43px] hover:scale-102 transition-transform duration-300" onClick={() => setMobileMenuOpen(false)}>
+              <div className="mb-8 flex items-center justify-between border-b border-[#C9AA95]/40 pb-4">
+                <Link
+                  href="/"
+                  className="relative block h-[43px] w-[52px] py-1 transition-transform duration-300 hover:scale-102"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
                   <Image
                     src="/logo.svg"
                     alt="Louise XIV"
@@ -324,58 +317,56 @@ export default function Header() {
                     className="object-contain"
                   />
                 </Link>
-                <button 
-                  className="text-[#573119]"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
+                <button className="text-[#573119]" onClick={() => setMobileMenuOpen(false)}>
                   <X size={22} strokeWidth={1.5} />
                 </button>
               </div>
 
-              {/* Mobile Navigation Accordions */}
               <div className="space-y-4 font-body">
-                
-                {/* Accordion 1: Boutique */}
                 <div className="border-b border-[#E8D8CC]/50 pb-2">
                   <button
                     onClick={() => toggleMobileAccordion('boutique')}
-                    className="flex items-center justify-between w-full text-left py-2 font-body text-[13px] font-semibold uppercase tracking-wider text-[#573119]"
+                    className="flex w-full items-center justify-between py-2 text-left font-body text-[13px] font-semibold uppercase tracking-wider text-[#573119]"
                   >
                     Boutique
-                    <ChevronDown size={16} className={`transition-transform duration-300 ${mobileAccordion === 'boutique' ? 'rotate-180' : ''}`} />
+                    <ChevronDown
+                      size={16}
+                      className={`transition-transform duration-300 ${mobileAccordion === 'boutique' ? 'rotate-180' : ''}`}
+                    />
                   </button>
-                  
+
                   {mobileAccordion === 'boutique' && (
-                    <div className="mt-2 ml-3 space-y-2.5 border-l border-[#E8D8CC] pl-3 py-1 animate-slide-down">
+                    <div className="mt-2 ml-3 space-y-2.5 border-l border-[#E8D8CC] py-1 pl-3 animate-slide-down">
                       <Link href="/boutique#colorations" onClick={() => setMobileMenuOpen(false)} className="block text-[13.5px] text-[#7A5C46] hover:text-[#573119]">
                         Colorations Naturelles
                       </Link>
                       <Link href="/boutique#soins" onClick={() => setMobileMenuOpen(false)} className="block text-[13.5px] text-[#7A5C46] hover:text-[#573119]">
                         Soins Capillaires
                       </Link>
-
                       <Link href="/boutique#accessoires" onClick={() => setMobileMenuOpen(false)} className="block text-[13.5px] text-[#7A5C46] hover:text-[#573119]">
                         Accessoires
                       </Link>
-                      <Link href="/boutique" onClick={() => setMobileMenuOpen(false)} className="block text-[13px] text-[#573119] font-semibold uppercase tracking-wider pt-1">
+                      <Link href="/boutique" onClick={() => setMobileMenuOpen(false)} className="block pt-1 text-[13px] font-semibold uppercase tracking-wider text-[#573119]">
                         Tous les produits
                       </Link>
                     </div>
                   )}
                 </div>
 
-                {/* Accordion 2: Conseils */}
                 <div className="border-b border-[#E8D8CC]/50 pb-2">
                   <button
                     onClick={() => toggleMobileAccordion('conseils')}
-                    className="flex items-center justify-between w-full text-left py-2 font-body text-[13px] font-semibold uppercase tracking-wider text-[#573119]"
+                    className="flex w-full items-center justify-between py-2 text-left font-body text-[13px] font-semibold uppercase tracking-wider text-[#573119]"
                   >
                     Conseils
-                    <ChevronDown size={16} className={`transition-transform duration-300 ${mobileAccordion === 'conseils' ? 'rotate-180' : ''}`} />
+                    <ChevronDown
+                      size={16}
+                      className={`transition-transform duration-300 ${mobileAccordion === 'conseils' ? 'rotate-180' : ''}`}
+                    />
                   </button>
-                  
+
                   {mobileAccordion === 'conseils' && (
-                    <div className="mt-2 ml-3 space-y-2.5 border-l border-[#E8D8CC] pl-3 py-1 animate-slide-down">
+                    <div className="mt-2 ml-3 space-y-2.5 border-l border-[#E8D8CC] py-1 pl-3 animate-slide-down">
                       <Link href="/conseils#blog-section" onClick={() => setMobileMenuOpen(false)} className="block text-[13.5px] text-[#7A5C46] hover:text-[#573119]">
                         Blog
                       </Link>
@@ -389,18 +380,20 @@ export default function Header() {
                   )}
                 </div>
 
-                {/* Accordion 3: À Propos */}
                 <div className="border-b border-[#E8D8CC]/50 pb-2">
                   <button
                     onClick={() => toggleMobileAccordion('a-propos')}
-                    className="flex items-center justify-between w-full text-left py-2 font-body text-[13px] font-semibold uppercase tracking-wider text-[#573119]"
+                    className="flex w-full items-center justify-between py-2 text-left font-body text-[13px] font-semibold uppercase tracking-wider text-[#573119]"
                   >
-                    À Propos
-                    <ChevronDown size={16} className={`transition-transform duration-300 ${mobileAccordion === 'a-propos' ? 'rotate-180' : ''}`} />
+                    A Propos
+                    <ChevronDown
+                      size={16}
+                      className={`transition-transform duration-300 ${mobileAccordion === 'a-propos' ? 'rotate-180' : ''}`}
+                    />
                   </button>
-                  
+
                   {mobileAccordion === 'a-propos' && (
-                    <div className="mt-2 ml-3 space-y-2.5 border-l border-[#E8D8CC] pl-3 py-1 animate-slide-down">
+                    <div className="mt-2 ml-3 space-y-2.5 border-l border-[#E8D8CC] py-1 pl-3 animate-slide-down">
                       <Link href="/a-propos#histoire" onClick={() => setMobileMenuOpen(false)} className="block text-[13.5px] text-[#7A5C46] hover:text-[#573119]">
                         Notre histoire
                       </Link>
@@ -416,20 +409,16 @@ export default function Header() {
                     </div>
                   )}
                 </div>
-
               </div>
             </div>
 
-            {/* Mobile Footer Area */}
-            <div className="pt-6 border-t border-[#C9AA95]/40 text-center font-body text-[11px] text-[#7A5C46]">
-              <p>Maison Louise XIV — Suisse</p>
+            <div className="border-t border-[#C9AA95]/40 pt-6 text-center font-body text-[11px] text-[#7A5C46]">
+              <p>Maison Louise XIV - Suisse</p>
               <p className="mt-1 font-light">Rituels botaniques de prestige</p>
             </div>
-
           </div>
         </div>
       )}
-
     </header>
   );
 }
