@@ -8,3 +8,4 @@
 ✓ Ready in 1217ms
 Creating turbopack project { dir: 'A:\\projet 2026\\iaweb\\louise', testMode: true }
 
+ GET / 200 in 1123ms (next.js: 380ms, application-code: 743ms)

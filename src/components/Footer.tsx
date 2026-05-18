@@ -158,7 +158,7 @@ export default function Footer() {
       <div className="border-t border-[#89C2D9]/15 py-6 px-6 bg-[#2D4650] text-center text-[12px] text-[#A8D5E2]/55 font-body">
         <div className="max-w-[1200px] mx-auto flex flex-col sm:flex-row justify-center items-center gap-1.5 flex-wrap leading-relaxed">
           <span>
-            Réalisation : <a href="https://iaweb.dev" target="_blank" rel="noopener noreferrer" className="text-[#7CB7CC] hover:underline font-medium">iaweb.dev</a> © Louise XIV {new Date().getFullYear()}
+            Réalisation : <a href="https://havetdigital.com" target="_blank" rel="noopener noreferrer" className="text-[#7CB7CC] hover:underline font-medium">havet digital</a> © Louise XIV {new Date().getFullYear()}
           </span>
           <span className="hidden sm:inline text-[#A8D5E2]/30">|</span>
           <Link href="/a-propos" className="hover:text-[#FAFCFD] transition-colors">

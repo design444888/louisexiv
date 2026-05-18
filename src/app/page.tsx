@@ -47,7 +47,7 @@ export default function HomePage() {
             <div className="space-y-2">
               <h1 className="font-display text-[38px] sm:text-[48px] lg:text-[58px] font-medium text-[#7CB7CC] leading-[1.1] tracking-tight">
                 Qualité premium<br />
-                <em className="font-display italic text-[#4F8FA8] font-normal">100% professionnelle</em>
+                <em className="font-display italic text-[#4F8FA8] font-normal">100% naturelle</em>
               </h1>
               <p className="font-body text-[16px] sm:text-[18px] font-light text-[#7CB7CC] tracking-wide">
                 L’engagement d’une beauté durable
