@@ -41,7 +41,7 @@ export default function HomePage() {
         <div className="max-w-[1200px] mx-auto px-6 md:px-8 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
 
           {/* Left Text Column */}
-          <div className="lg:col-span-7 lg:col-start-4 space-y-5 text-center flex flex-col items-center">
+          <div className="lg:col-span-7 space-y-5">
 
             {/* Header Block: Title, Slogan & Vegan Logo */}
             <div className="space-y-2">
@@ -52,7 +52,7 @@ export default function HomePage() {
               <p className="font-body text-[16px] sm:text-[18px] font-light text-[#7CB7CC] tracking-wide">
                 L’engagement d’une beauté durable
               </p>
-              <div className="flex justify-center">
+              <div>
                 <span
                   role="img"
                   aria-label="Logo Certified Vegan"
@@ -76,7 +76,7 @@ export default function HomePage() {
               <p className="font-body text-[15px] sm:text-[16px] font-light text-[#4F8FA8] max-w-xl leading-relaxed">
                 Maison suisse de prestige dédiée à la haute formulation capillaire. Nos colorations 100% végétales et nos soins d&apos;exception infusent la pureté alpine au cœur de votre fibre capillaire pour un éclat absolu.
               </p>
-              <div className="flex flex-wrap items-center justify-center gap-4">
+              <div className="flex flex-wrap items-center gap-4">
                 <Link href="/boutique" className="btn-primary">
                   Voir la boutique
                 </Link>
@@ -87,7 +87,7 @@ export default function HomePage() {
             </div>
 
             {/* Quick Badges (Auto-Layout Horizontal Scroll on Mobile) */}
-            <div className="flex w-full max-w-lg items-center justify-center gap-6 overflow-x-auto no-scrollbar whitespace-nowrap pt-8 border-t border-[#A8D5E2]/50 md:justify-between">
+            <div className="flex items-center justify-start md:justify-between gap-6 overflow-x-auto no-scrollbar whitespace-nowrap pt-8 border-t border-[#A8D5E2]/50 max-w-lg">
               <div className="flex items-center gap-2 flex-shrink-0">
                 <Leaf size={16} strokeWidth={1.5} className="text-[#7CB7CC]" />
                 <span className="font-body text-[12px] text-[#4F8FA8]">100% Végétal</span>
