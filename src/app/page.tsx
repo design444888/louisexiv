@@ -53,11 +53,20 @@ export default function HomePage() {
                 L’engagement d’une beauté durable
               </p>
               <div>
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src="/logo-vegan.webp"
-                  alt="Logo Certified Vegan"
-                  className="h-[52px] w-auto opacity-85 hover:opacity-100 transition-opacity duration-300"
+                <span
+                  role="img"
+                  aria-label="Logo Certified Vegan"
+                  className="block h-[52px] w-[100px] bg-[#7CB7CC] opacity-85 transition-opacity duration-300 hover:opacity-100"
+                  style={{
+                    maskImage: "url('/logo-vegan.webp')",
+                    maskPosition: 'left center',
+                    maskRepeat: 'no-repeat',
+                    maskSize: 'contain',
+                    WebkitMaskImage: "url('/logo-vegan.webp')",
+                    WebkitMaskPosition: 'left center',
+                    WebkitMaskRepeat: 'no-repeat',
+                    WebkitMaskSize: 'contain',
+                  }}
                 />
               </div>
             </div>
@@ -288,5 +297,4 @@ export default function HomePage() {
     </div>
   );
 }
-
 
