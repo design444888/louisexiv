@@ -5,7 +5,7 @@ import { PRODUCTS } from '@/data/mockData';
 import ProductCard from '@/components/ProductCard';
 import FAQAccordion from '@/components/FAQAccordion';
 import CTASection from '@/components/CTASection';
-import { Leaf, Droplets, Sparkles, Scissors } from 'lucide-react';
+import { Leaf, Droplets, Scissors } from 'lucide-react';
 
 export default function BoutiqueContent() {
   // Group products by category slug
@@ -141,7 +141,7 @@ export default function BoutiqueContent() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {colorationsProducts.map((product) => (
-              <ProductCard key={product.id} product={product} variant="surface" />
+              <ProductCard key={product.id} product={product} variant="surface" showTechnicalSheetOnHover />
             ))}
           </div>
 
@@ -167,7 +167,7 @@ export default function BoutiqueContent() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {soinsProducts.map((product) => (
-              <ProductCard key={product.id} product={product} variant="bg" />
+              <ProductCard key={product.id} product={product} variant="bg" showTechnicalSheetOnHover />
             ))}
           </div>
 
@@ -195,7 +195,7 @@ export default function BoutiqueContent() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {accessoiresProducts.map((product) => (
-              <ProductCard key={product.id} product={product} variant="bg" />
+              <ProductCard key={product.id} product={product} variant="bg" showTechnicalSheetOnHover />
             ))}
           </div>
 
