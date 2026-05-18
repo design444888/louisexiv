@@ -284,7 +284,14 @@ export default function Header() {
           </div>
         </nav>
 
-        <div className="flex items-center justify-end">
+        <div className="flex items-center justify-end gap-4">
+          <Link
+            href="/inscription-formulaire"
+            className="hidden md:inline-flex items-center justify-center rounded-[4px] bg-[#7CB7CC] px-4 py-2 font-body text-[11px] font-semibold uppercase tracking-[0.12em] text-[#FAFCFD] transition-all duration-200 hover:bg-[#4F8FA8] hover:-translate-y-[1px]"
+          >
+            Inscription Pro
+          </Link>
+
           <button
             className="relative flex items-center justify-center p-1.5 text-[#7CB7CC] transition-all hover:scale-105 hover:text-[#4F8FA8]"
             onClick={() => {
@@ -323,6 +330,14 @@ export default function Header() {
               </div>
 
               <div className="space-y-4 font-body">
+                <Link
+                  href="/inscription-formulaire"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="flex w-full items-center justify-center rounded-[4px] bg-[#7CB7CC] px-4 py-3 text-[12px] font-semibold uppercase tracking-[0.12em] text-[#FAFCFD] transition-all duration-200 hover:bg-[#4F8FA8]"
+                >
+                  Inscription Pro
+                </Link>
+
                 <div className="border-b border-[#A8D5E2]/50 pb-2">
                   <button
                     onClick={() => toggleMobileAccordion('boutique')}
