@@ -18,7 +18,10 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-[#2D4650] text-[#A8D5E2] border-t border-[#89C2D9]/20 font-body">
+    <footer
+      className="bg-[var(--color-footer)] text-[#A8D5E2] border-t border-[#89C2D9]/20 font-body"
+      style={{ backgroundColor: '#2D4650' }}
+    >
       
       {/* Main Footer Content */}
       <div className="max-w-[1200px] mx-auto px-6 md:px-8 py-16 grid grid-cols-1 md:grid-cols-12 gap-12 items-start">
@@ -155,7 +158,10 @@ export default function Footer() {
       </div>
 
       {/* Bottom Bar: Copyright & legal links */}
-      <div className="border-t border-[#89C2D9]/15 py-6 px-6 bg-[#2D4650] text-center text-[12px] text-[#A8D5E2]/55 font-body">
+      <div
+        className="border-t border-[#89C2D9]/15 py-6 px-6 bg-[var(--color-footer)] text-center text-[12px] text-[#A8D5E2]/55 font-body"
+        style={{ backgroundColor: '#2D4650' }}
+      >
         <div className="max-w-[1200px] mx-auto flex flex-col sm:flex-row justify-center items-center gap-1.5 flex-wrap leading-relaxed">
           <span>
             Réalisation : <a href="https://havetdigital.com" target="_blank" rel="noopener noreferrer" className="text-[#7CB7CC] hover:underline font-medium">havet digital</a> © Louise XIV {new Date().getFullYear()}

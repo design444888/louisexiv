@@ -37,7 +37,7 @@ export default function HomePage() {
   return (
     <div className="w-full">
       {/* SECTION 1: HERO (Background #FAFCFD) */}
-      <section className="bg-[#FAFCFD] py-16 md:py-24 border-b border-[#A8D5E2]/50">
+      <section className="bg-[#F3F8FA] py-16 md:py-24 border-b border-[#A8D5E2]/50">
         <div className="max-w-[1200px] mx-auto px-6 md:px-8 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
 
           {/* Left Text Column */}
