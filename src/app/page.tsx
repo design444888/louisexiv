@@ -79,17 +79,17 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* Quick Badges */}
-            <div className="grid grid-cols-3 gap-4 pt-8 border-t border-[#E8D8CC]/50 max-w-lg">
-              <div className="flex items-center gap-2">
+            {/* Quick Badges (Auto-Layout Horizontal Scroll on Mobile) */}
+            <div className="flex items-center justify-start md:justify-between gap-6 overflow-x-auto no-scrollbar whitespace-nowrap pt-8 border-t border-[#E8D8CC]/50 max-w-lg">
+              <div className="flex items-center gap-2 flex-shrink-0">
                 <Leaf size={16} strokeWidth={1.5} className="text-[#573119]" />
                 <span className="font-body text-[12px] text-[#7A5C46]">100% Végétal</span>
               </div>
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-2 flex-shrink-0">
                 <Sparkles size={16} strokeWidth={1.5} className="text-[#573119]" />
                 <span className="font-body text-[12px] text-[#7A5C46]">Éclat Intense</span>
               </div>
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-2 flex-shrink-0">
                 <ShieldCheck size={16} strokeWidth={1.5} className="text-[#573119]" />
                 <span className="font-body text-[12px] text-[#7A5C46]">Cuir Chevelu Sain</span>
               </div>

@@ -96,25 +96,25 @@ export default function BoutiqueContent() {
       {/* SECTION 2: FLOATING JUMP LINKS MENU (Background #F8F0EB - Surface) */}
       <section className={`bg-[#F8F0EB] border-b border-[#E8D8CC]/50 py-5 sticky top-20 z-40 shadow-xs transition-all duration-500 ease-in-out ${isScrolled ? 'opacity-70 hover:opacity-100' : 'opacity-100'}`}>
         <div className="max-w-[1200px] mx-auto px-6 md:px-8">
-          <div className="flex items-center justify-center gap-4 md:gap-8 flex-wrap font-body text-[12px] font-semibold uppercase tracking-wider text-[#7A5C46]">
+          <div className="flex items-center justify-start md:justify-center gap-6 md:gap-8 overflow-x-auto no-scrollbar whitespace-nowrap font-body text-[12px] font-semibold uppercase tracking-wider text-[#7A5C46]">
             <a 
               href="#colorations" 
               onClick={(e) => scrollToSection(e, 'colorations')}
-              className="px-2 py-1.5 hover:text-[#3E2110] text-[#573119] transition-all cursor-pointer flex items-center gap-2 hover:scale-102 hover:underline underline-offset-[6px]"
+              className="px-2 py-1.5 hover:text-[#3E2110] text-[#573119] transition-all cursor-pointer flex items-center gap-2 flex-shrink-0 hover:scale-102 hover:underline underline-offset-[6px]"
             >
               <Leaf size={14} /> Colorations
             </a>
             <a 
               href="#soins" 
               onClick={(e) => scrollToSection(e, 'soins')}
-              className="px-2 py-1.5 hover:text-[#3E2110] text-[#573119] transition-all cursor-pointer flex items-center gap-2 hover:scale-102 hover:underline underline-offset-[6px]"
+              className="px-2 py-1.5 hover:text-[#3E2110] text-[#573119] transition-all cursor-pointer flex items-center gap-2 flex-shrink-0 hover:scale-102 hover:underline underline-offset-[6px]"
             >
               <Droplets size={14} /> Soins Capillaires
             </a>
             <a 
               href="#accessoires" 
               onClick={(e) => scrollToSection(e, 'accessoires')}
-              className="px-2 py-1.5 hover:text-[#3E2110] text-[#573119] transition-all cursor-pointer flex items-center gap-2 hover:scale-102 hover:underline underline-offset-[6px]"
+              className="px-2 py-1.5 hover:text-[#3E2110] text-[#573119] transition-all cursor-pointer flex items-center gap-2 flex-shrink-0 hover:scale-102 hover:underline underline-offset-[6px]"
             >
               <Scissors size={14} /> Accessoires
             </a>
