@@ -78,43 +78,43 @@ export default function BoutiqueContent() {
   return (
     <div className="w-full">
       
-      {/* SECTION 1: HERO (Background #FAFCFD) */}
-      <section className="bg-[#FAFCFD] py-16 md:py-24 border-b border-[#A8D5E2]/50">
+      {/* SECTION 1: HERO (Background #F1F8FC) */}
+      <section className="bg-[#F1F8FC] py-16 md:py-24 border-b border-[#8FC7E6]/50">
         <div className="max-w-[1200px] mx-auto px-6 md:px-8 text-center space-y-6">
 
           
-          <h1 className="font-display text-[38px] md:text-[54px] font-medium text-[#7CB7CC] leading-tight">
-            Boutique <em className="font-display italic text-[#4F8FA8] font-normal">Louise XIV</em>
+          <h1 className="font-display text-[38px] md:text-[54px] font-medium text-[#4496CC] leading-tight">
+            Boutique <em className="font-display italic text-[#2F7EAF] font-normal">Louise XIV</em>
           </h1>
           
-          <p className="font-body text-[15px] sm:text-[16px] font-light text-[#4F8FA8] max-w-xl mx-auto leading-relaxed">
+          <p className="font-body text-[15px] sm:text-[16px] font-light text-[#2F7EAF] max-w-xl mx-auto leading-relaxed">
             Explorez nos collections botaniques d&apos;exception. Des formulations pures et actives élaborées au cœur des Alpes suisses pour un rituel capillaire haut de gamme absolu.
           </p>
         </div>
       </section>
 
-      {/* SECTION 2: FLOATING JUMP LINKS MENU (Background #EAF3F6 - Surface) */}
-      <section className={`bg-[#EAF3F6] border-b border-[#A8D5E2]/50 py-5 sticky top-20 z-40 shadow-xs transition-all duration-500 ease-in-out ${isScrolled ? 'opacity-70 hover:opacity-100' : 'opacity-100'}`}>
+      {/* SECTION 2: FLOATING JUMP LINKS MENU (Background #E3F1F8 - Surface) */}
+      <section className={`bg-[#E3F1F8] border-b border-[#8FC7E6]/50 py-5 sticky top-20 z-40 shadow-xs transition-all duration-500 ease-in-out ${isScrolled ? 'opacity-70 hover:opacity-100' : 'opacity-100'}`}>
         <div className="max-w-[1200px] mx-auto px-6 md:px-8">
-          <div className="flex items-center justify-start md:justify-center gap-6 md:gap-8 overflow-x-auto no-scrollbar whitespace-nowrap font-body text-[12px] font-semibold uppercase tracking-wider text-[#4F8FA8]">
+          <div className="flex items-center justify-start md:justify-center gap-6 md:gap-8 overflow-x-auto no-scrollbar whitespace-nowrap font-body text-[12px] font-semibold uppercase tracking-wider text-[#2F7EAF]">
             <a 
               href="#colorations" 
               onClick={(e) => scrollToSection(e, 'colorations')}
-              className="px-2 py-1.5 hover:text-[#4F8FA8] text-[#7CB7CC] transition-all cursor-pointer flex items-center gap-2 flex-shrink-0 hover:scale-102 hover:underline underline-offset-[6px]"
+              className="px-2 py-1.5 hover:text-[#2F7EAF] text-[#4496CC] transition-all cursor-pointer flex items-center gap-2 flex-shrink-0 hover:scale-102 hover:underline underline-offset-[6px]"
             >
               <Leaf size={14} /> Colorations
             </a>
             <a 
               href="#soins" 
               onClick={(e) => scrollToSection(e, 'soins')}
-              className="px-2 py-1.5 hover:text-[#4F8FA8] text-[#7CB7CC] transition-all cursor-pointer flex items-center gap-2 flex-shrink-0 hover:scale-102 hover:underline underline-offset-[6px]"
+              className="px-2 py-1.5 hover:text-[#2F7EAF] text-[#4496CC] transition-all cursor-pointer flex items-center gap-2 flex-shrink-0 hover:scale-102 hover:underline underline-offset-[6px]"
             >
               <Droplets size={14} /> Soins Capillaires
             </a>
             <a 
               href="#accessoires" 
               onClick={(e) => scrollToSection(e, 'accessoires')}
-              className="px-2 py-1.5 hover:text-[#4F8FA8] text-[#7CB7CC] transition-all cursor-pointer flex items-center gap-2 flex-shrink-0 hover:scale-102 hover:underline underline-offset-[6px]"
+              className="px-2 py-1.5 hover:text-[#2F7EAF] text-[#4496CC] transition-all cursor-pointer flex items-center gap-2 flex-shrink-0 hover:scale-102 hover:underline underline-offset-[6px]"
             >
               <Scissors size={14} /> Accessoires
             </a>
@@ -122,21 +122,21 @@ export default function BoutiqueContent() {
         </div>
       </section>
 
-      {/* SECTION 3: COLORATIONS NATURELLES (Background #FAFCFD - white cream) */}
-      <section id="colorations" className="bg-[#FAFCFD] py-20 border-b border-[#A8D5E2]/50 scroll-mt-32">
+      {/* SECTION 3: COLORATIONS NATURELLES (Background #F1F8FC - white cream) */}
+      <section id="colorations" className="bg-[#F1F8FC] py-20 border-b border-[#8FC7E6]/50 scroll-mt-32">
         <div className="max-w-[1200px] mx-auto px-6 md:px-8">
           
           <div className="text-center max-w-xl mx-auto mb-16">
-            <span className="font-body text-[11px] uppercase tracking-[0.15em] text-[#4F8FA8] flex items-center justify-center gap-2">
+            <span className="font-body text-[11px] uppercase tracking-[0.15em] text-[#2F7EAF] flex items-center justify-center gap-2">
               <Leaf size={14} /> Pigments Botaniques
             </span>
-            <h2 className="font-display text-[28px] sm:text-[34px] font-medium text-[#2D4650] mt-2 leading-tight">
-              Colorations <em className="font-display italic text-[#7CB7CC] font-normal">Naturelles</em>
+            <h2 className="font-display text-[28px] sm:text-[34px] font-medium text-[#1F3F52] mt-2 leading-tight">
+              Colorations <em className="font-display italic text-[#4496CC] font-normal">Naturelles</em>
             </h2>
-            <p className="font-body text-[14px] font-light text-[#4F8FA8] mt-2 leading-relaxed">
+            <p className="font-body text-[14px] font-light text-[#2F7EAF] mt-2 leading-relaxed">
               Une couvrance parfaite des cheveux blancs et des reflets vibrants en transparence, sans aucune agression chimique.
             </p>
-            <div className="w-12 h-[1px] bg-[#89C2D9] mx-auto mt-4"></div>
+            <div className="w-12 h-[1px] bg-[#B7DFF2] mx-auto mt-4"></div>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -148,21 +148,21 @@ export default function BoutiqueContent() {
         </div>
       </section>
 
-      {/* SECTION 4: SOINS CAPILLAIRES (Background #EAF3F6 - soft crème) */}
-      <section id="soins" className="bg-[#EAF3F6] py-20 border-b border-[#A8D5E2]/50 scroll-mt-32">
+      {/* SECTION 4: SOINS CAPILLAIRES (Background #E3F1F8 - soft crème) */}
+      <section id="soins" className="bg-[#E3F1F8] py-20 border-b border-[#8FC7E6]/50 scroll-mt-32">
         <div className="max-w-[1200px] mx-auto px-6 md:px-8">
           
           <div className="text-center max-w-xl mx-auto mb-16">
-            <span className="font-body text-[11px] uppercase tracking-[0.15em] text-[#4F8FA8] flex items-center justify-center gap-2">
+            <span className="font-body text-[11px] uppercase tracking-[0.15em] text-[#2F7EAF] flex items-center justify-center gap-2">
               <Droplets size={14} /> Rituels Hydratants
             </span>
-            <h2 className="font-display text-[28px] sm:text-[34px] font-medium text-[#2D4650] mt-2 leading-tight">
-              Soins <em className="font-display italic text-[#7CB7CC] font-normal">Capillaires</em>
+            <h2 className="font-display text-[28px] sm:text-[34px] font-medium text-[#1F3F52] mt-2 leading-tight">
+              Soins <em className="font-display italic text-[#4496CC] font-normal">Capillaires</em>
             </h2>
-            <p className="font-body text-[14px] font-light text-[#4F8FA8] mt-2 leading-relaxed">
+            <p className="font-body text-[14px] font-light text-[#2F7EAF] mt-2 leading-relaxed">
               Des baumes et élixirs précieux infusés d’eau des glaciers suisses et d’actifs alpins pour nourrir et régénérer.
             </p>
-            <div className="w-12 h-[1px] bg-[#89C2D9] mx-auto mt-4"></div>
+            <div className="w-12 h-[1px] bg-[#B7DFF2] mx-auto mt-4"></div>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -176,21 +176,21 @@ export default function BoutiqueContent() {
 
 
 
-      {/* SECTION 6: ACCESSOIRES (Background #EAF3F6 - soft crème) */}
-      <section id="accessoires" className="bg-[#EAF3F6] py-20 border-b border-[#A8D5E2]/50 scroll-mt-32">
+      {/* SECTION 6: ACCESSOIRES (Background #E3F1F8 - soft crème) */}
+      <section id="accessoires" className="bg-[#E3F1F8] py-20 border-b border-[#8FC7E6]/50 scroll-mt-32">
         <div className="max-w-[1200px] mx-auto px-6 md:px-8">
           
           <div className="text-center max-w-xl mx-auto mb-16">
-            <span className="font-body text-[11px] uppercase tracking-[0.15em] text-[#4F8FA8] flex items-center justify-center gap-2">
+            <span className="font-body text-[11px] uppercase tracking-[0.15em] text-[#2F7EAF] flex items-center justify-center gap-2">
               <Scissors size={14} /> Outils de Coiffage
             </span>
-            <h2 className="font-display text-[28px] sm:text-[34px] font-medium text-[#2D4650] mt-2 leading-tight">
-              Accessoires <em className="font-display italic text-[#7CB7CC] font-normal">Artisanaux</em>
+            <h2 className="font-display text-[28px] sm:text-[34px] font-medium text-[#1F3F52] mt-2 leading-tight">
+              Accessoires <em className="font-display italic text-[#4496CC] font-normal">Artisanaux</em>
             </h2>
-            <p className="font-body text-[14px] font-light text-[#4F8FA8] mt-2 leading-relaxed">
+            <p className="font-body text-[14px] font-light text-[#2F7EAF] mt-2 leading-relaxed">
               Brosses en soie naturelle et peignes sculptés dans des essences de bois nobles pour un coiffage sain et voluptueux.
             </p>
-            <div className="w-12 h-[1px] bg-[#89C2D9] mx-auto mt-4"></div>
+            <div className="w-12 h-[1px] bg-[#B7DFF2] mx-auto mt-4"></div>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -202,18 +202,18 @@ export default function BoutiqueContent() {
         </div>
       </section>
 
-      {/* SECTION 7: FAQ MINI BLOCK (Background #FAFCFD) */}
-      <section className="bg-[#FAFCFD] py-20 border-b border-[#A8D5E2]/50">
+      {/* SECTION 7: FAQ MINI BLOCK (Background #F1F8FC) */}
+      <section className="bg-[#F1F8FC] py-20 border-b border-[#8FC7E6]/50">
         <div className="max-w-[1200px] mx-auto px-6 md:px-8">
           
           <div className="text-center max-w-xl mx-auto mb-16">
-            <span className="font-body text-[11px] uppercase tracking-[0.15em] text-[#4F8FA8]">
+            <span className="font-body text-[11px] uppercase tracking-[0.15em] text-[#2F7EAF]">
               Des questions sur vos achats ?
             </span>
-            <h2 className="font-display text-[28px] sm:text-[34px] font-medium text-[#2D4650] mt-2 leading-tight">
-              Aide &amp; <em className="font-display italic text-[#7CB7CC] font-normal">Conseils Boutique</em>
+            <h2 className="font-display text-[28px] sm:text-[34px] font-medium text-[#1F3F52] mt-2 leading-tight">
+              Aide &amp; <em className="font-display italic text-[#4496CC] font-normal">Conseils Boutique</em>
             </h2>
-            <div className="w-12 h-[1px] bg-[#89C2D9] mx-auto mt-4"></div>
+            <div className="w-12 h-[1px] bg-[#B7DFF2] mx-auto mt-4"></div>
           </div>
 
           <FAQAccordion items={boutiqueFAQs} />

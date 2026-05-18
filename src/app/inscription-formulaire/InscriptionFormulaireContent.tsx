@@ -47,17 +47,17 @@ export default function InscriptionFormulaireContent() {
 
   return (
     <div className="w-full">
-      <section className="border-b border-[#A8D5E2]/50 bg-[#FAFCFD] py-16 md:py-24">
+      <section className="border-b border-[#8FC7E6]/50 bg-[#F1F8FC] py-16 md:py-24">
         <div className="mx-auto max-w-[1200px] px-6 md:px-8">
           <div className="mx-auto max-w-3xl text-center">
-            <span className="inline-flex items-center gap-2 border border-[#89C2D9]/40 bg-[#EAF3F6] px-3 py-1 font-body text-[11px] uppercase tracking-[0.15em] text-[#4F8FA8]">
+            <span className="inline-flex items-center gap-2 border border-[#B7DFF2]/40 bg-[#E3F1F8] px-3 py-1 font-body text-[11px] uppercase tracking-[0.15em] text-[#2F7EAF]">
               <BriefcaseBusiness size={14} strokeWidth={1.5} />
               Espace Professionnel
             </span>
-            <h1 className="mt-5 font-display text-[36px] md:text-[54px] font-medium leading-tight text-[#2D4650]">
-              Inscription <em className="font-display font-normal italic text-[#7CB7CC]">Pro</em>
+            <h1 className="mt-5 font-display text-[36px] md:text-[54px] font-medium leading-tight text-[#1F3F52]">
+              Inscription <em className="font-display font-normal italic text-[#4496CC]">Pro</em>
             </h1>
-            <p className="mx-auto mt-4 max-w-2xl font-body text-[15px] font-light leading-relaxed text-[#4F8FA8] md:text-[17px]">
+            <p className="mx-auto mt-4 max-w-2xl font-body text-[15px] font-light leading-relaxed text-[#2F7EAF] md:text-[17px]">
               Rejoignez l&apos;univers Louise XIV en tant que salon partenaire, revendeur selectif ou concept store
               et recevez nos conditions professionnelles, notre accompagnement et nos rituels exclusifs.
             </p>
@@ -65,60 +65,60 @@ export default function InscriptionFormulaireContent() {
         </div>
       </section>
 
-      <section className="border-b border-[#A8D5E2]/50 bg-[#EAF3F6] py-16 md:py-20">
+      <section className="border-b border-[#8FC7E6]/50 bg-[#E3F1F8] py-16 md:py-20">
         <div className="mx-auto grid max-w-[1200px] grid-cols-1 gap-12 px-6 md:px-8 lg:grid-cols-12">
           <div className="space-y-8 lg:col-span-4">
-            <div className="border border-[#A8D5E2] bg-[#FAFCFD] p-8">
-              <span className="inline-flex items-center gap-2 font-body text-[11px] uppercase tracking-[0.14em] text-[#4F8FA8]">
-                <Sparkles size={14} strokeWidth={1.5} className="text-[#7CB7CC]" />
+            <div className="border border-[#8FC7E6] bg-[#F1F8FC] p-8">
+              <span className="inline-flex items-center gap-2 font-body text-[11px] uppercase tracking-[0.14em] text-[#2F7EAF]">
+                <Sparkles size={14} strokeWidth={1.5} className="text-[#4496CC]" />
                 Partenariat Premium
               </span>
-              <h2 className="mt-3 font-display text-[24px] font-medium text-[#2D4650]">
+              <h2 className="mt-3 font-display text-[24px] font-medium text-[#1F3F52]">
                 Une ouverture reservee aux professionnels du soin
               </h2>
-              <p className="mt-4 font-body text-[14px] font-light leading-relaxed text-[#4F8FA8]">
+              <p className="mt-4 font-body text-[14px] font-light leading-relaxed text-[#2F7EAF]">
                 Nous etudions chaque demande avec attention pour construire des collaborations coherentes,
                 exigeantes et durables.
               </p>
             </div>
 
-            <div className="border border-[#A8D5E2] bg-[#FAFCFD] p-8">
-              <h3 className="font-display text-[20px] font-medium text-[#2D4650]">Ce que vous recevez</h3>
+            <div className="border border-[#8FC7E6] bg-[#F1F8FC] p-8">
+              <h3 className="font-display text-[20px] font-medium text-[#1F3F52]">Ce que vous recevez</h3>
               <div className="mt-5 space-y-4">
                 <div className="flex gap-3">
-                  <span className="mt-1 h-2 w-2 shrink-0 rounded-full bg-[#7CB7CC]" />
-                  <p className="font-body text-[13.5px] font-light leading-relaxed text-[#4F8FA8]">
+                  <span className="mt-1 h-2 w-2 shrink-0 rounded-full bg-[#4496CC]" />
+                  <p className="font-body text-[13.5px] font-light leading-relaxed text-[#2F7EAF]">
                     Tarification professionnelle et conditions d&apos;ouverture de compte.
                   </p>
                 </div>
                 <div className="flex gap-3">
-                  <span className="mt-1 h-2 w-2 shrink-0 rounded-full bg-[#7CB7CC]" />
-                  <p className="font-body text-[13.5px] font-light leading-relaxed text-[#4F8FA8]">
+                  <span className="mt-1 h-2 w-2 shrink-0 rounded-full bg-[#4496CC]" />
+                  <p className="font-body text-[13.5px] font-light leading-relaxed text-[#2F7EAF]">
                     Documentation produit et argumentaires de vente adaptes au point de vente.
                   </p>
                 </div>
                 <div className="flex gap-3">
-                  <span className="mt-1 h-2 w-2 shrink-0 rounded-full bg-[#7CB7CC]" />
-                  <p className="font-body text-[13.5px] font-light leading-relaxed text-[#4F8FA8]">
+                  <span className="mt-1 h-2 w-2 shrink-0 rounded-full bg-[#4496CC]" />
+                  <p className="font-body text-[13.5px] font-light leading-relaxed text-[#2F7EAF]">
                     Accompagnement de lancement et recommandations de gamme sur-mesure.
                   </p>
                 </div>
               </div>
             </div>
 
-            <div className="border border-[#A8D5E2] bg-[#FAFCFD] p-8">
-              <h3 className="font-display text-[20px] font-medium text-[#2D4650]">Contact direct</h3>
-              <div className="mt-5 space-y-4 font-body text-[13.5px] text-[#4F8FA8]">
+            <div className="border border-[#8FC7E6] bg-[#F1F8FC] p-8">
+              <h3 className="font-display text-[20px] font-medium text-[#1F3F52]">Contact direct</h3>
+              <div className="mt-5 space-y-4 font-body text-[13.5px] text-[#2F7EAF]">
                 <div className="flex items-start gap-3">
-                  <Mail size={18} strokeWidth={1.5} className="mt-0.5 shrink-0 text-[#7CB7CC]" />
+                  <Mail size={18} strokeWidth={1.5} className="mt-0.5 shrink-0 text-[#4496CC]" />
                   <span>pro@louisexiv-apothicaire.ch</span>
                 </div>
                 <div className="flex items-start gap-3">
-                  <Phone size={18} strokeWidth={1.5} className="mt-0.5 shrink-0 text-[#7CB7CC]" />
+                  <Phone size={18} strokeWidth={1.5} className="mt-0.5 shrink-0 text-[#4496CC]" />
                   <span>+41 (0) 22 546 89 90</span>
                 </div>
                 <div className="flex items-start gap-3">
-                  <MapPin size={18} strokeWidth={1.5} className="mt-0.5 shrink-0 text-[#7CB7CC]" />
+                  <MapPin size={18} strokeWidth={1.5} className="mt-0.5 shrink-0 text-[#4496CC]" />
                   <span>Geneve, Suisse</span>
                 </div>
               </div>
@@ -126,13 +126,13 @@ export default function InscriptionFormulaireContent() {
           </div>
 
           <div className="lg:col-span-8">
-            <div className="border border-[#A8D5E2] bg-[#FAFCFD] p-8 md:p-10">
+            <div className="border border-[#8FC7E6] bg-[#F1F8FC] p-8 md:p-10">
               <div className="flex flex-wrap items-center justify-between gap-4">
                 <div>
-                  <span className="font-body text-[11px] uppercase tracking-[0.14em] text-[#4F8FA8]">
+                  <span className="font-body text-[11px] uppercase tracking-[0.14em] text-[#2F7EAF]">
                     Formulaire d&apos;ouverture
                   </span>
-                  <h2 className="mt-2 font-display text-[26px] font-medium text-[#2D4650]">
+                  <h2 className="mt-2 font-display text-[26px] font-medium text-[#1F3F52]">
                     Parlez-nous de votre structure
                   </h2>
                 </div>
@@ -144,7 +144,7 @@ export default function InscriptionFormulaireContent() {
               <form onSubmit={handleSubmit} className="mt-8 space-y-5 font-body">
                 <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
                   <div>
-                    <label htmlFor="businessName" className="mb-2 block text-[12px] font-semibold uppercase tracking-wider text-[#4F8FA8]">
+                    <label htmlFor="businessName" className="mb-2 block text-[12px] font-semibold uppercase tracking-wider text-[#2F7EAF]">
                       Nom du salon / entreprise
                     </label>
                     <input
@@ -153,14 +153,14 @@ export default function InscriptionFormulaireContent() {
                       type="text"
                       value={formData.businessName}
                       onChange={handleInputChange}
-                      className="w-full border border-[#89C2D9] bg-[#FAFCFD] px-3.5 py-2.5 text-[13px] text-[#2D4650] outline-none transition-colors focus:border-[#7CB7CC]"
+                      className="w-full border border-[#B7DFF2] bg-[#F1F8FC] px-3.5 py-2.5 text-[13px] text-[#1F3F52] outline-none transition-colors focus:border-[#4496CC]"
                       placeholder="Maison Exemple"
                       required
                     />
                   </div>
 
                   <div>
-                    <label htmlFor="contactName" className="mb-2 block text-[12px] font-semibold uppercase tracking-wider text-[#4F8FA8]">
+                    <label htmlFor="contactName" className="mb-2 block text-[12px] font-semibold uppercase tracking-wider text-[#2F7EAF]">
                       Nom du contact
                     </label>
                     <input
@@ -169,7 +169,7 @@ export default function InscriptionFormulaireContent() {
                       type="text"
                       value={formData.contactName}
                       onChange={handleInputChange}
-                      className="w-full border border-[#89C2D9] bg-[#FAFCFD] px-3.5 py-2.5 text-[13px] text-[#2D4650] outline-none transition-colors focus:border-[#7CB7CC]"
+                      className="w-full border border-[#B7DFF2] bg-[#F1F8FC] px-3.5 py-2.5 text-[13px] text-[#1F3F52] outline-none transition-colors focus:border-[#4496CC]"
                       placeholder="Camille Martin"
                       required
                     />
@@ -178,7 +178,7 @@ export default function InscriptionFormulaireContent() {
 
                 <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
                   <div>
-                    <label htmlFor="email" className="mb-2 block text-[12px] font-semibold uppercase tracking-wider text-[#4F8FA8]">
+                    <label htmlFor="email" className="mb-2 block text-[12px] font-semibold uppercase tracking-wider text-[#2F7EAF]">
                       Email professionnel
                     </label>
                     <input
@@ -187,14 +187,14 @@ export default function InscriptionFormulaireContent() {
                       type="email"
                       value={formData.email}
                       onChange={handleInputChange}
-                      className="w-full border border-[#89C2D9] bg-[#FAFCFD] px-3.5 py-2.5 text-[13px] text-[#2D4650] outline-none transition-colors focus:border-[#7CB7CC]"
+                      className="w-full border border-[#B7DFF2] bg-[#F1F8FC] px-3.5 py-2.5 text-[13px] text-[#1F3F52] outline-none transition-colors focus:border-[#4496CC]"
                       placeholder="contact@maisonexemple.com"
                       required
                     />
                   </div>
 
                   <div>
-                    <label htmlFor="phone" className="mb-2 block text-[12px] font-semibold uppercase tracking-wider text-[#4F8FA8]">
+                    <label htmlFor="phone" className="mb-2 block text-[12px] font-semibold uppercase tracking-wider text-[#2F7EAF]">
                       Telephone
                     </label>
                     <input
@@ -203,7 +203,7 @@ export default function InscriptionFormulaireContent() {
                       type="tel"
                       value={formData.phone}
                       onChange={handleInputChange}
-                      className="w-full border border-[#89C2D9] bg-[#FAFCFD] px-3.5 py-2.5 text-[13px] text-[#2D4650] outline-none transition-colors focus:border-[#7CB7CC]"
+                      className="w-full border border-[#B7DFF2] bg-[#F1F8FC] px-3.5 py-2.5 text-[13px] text-[#1F3F52] outline-none transition-colors focus:border-[#4496CC]"
                       placeholder="+41 ..."
                       required
                     />
@@ -212,7 +212,7 @@ export default function InscriptionFormulaireContent() {
 
                 <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
                   <div>
-                    <label htmlFor="city" className="mb-2 block text-[12px] font-semibold uppercase tracking-wider text-[#4F8FA8]">
+                    <label htmlFor="city" className="mb-2 block text-[12px] font-semibold uppercase tracking-wider text-[#2F7EAF]">
                       Ville / pays
                     </label>
                     <input
@@ -221,14 +221,14 @@ export default function InscriptionFormulaireContent() {
                       type="text"
                       value={formData.city}
                       onChange={handleInputChange}
-                      className="w-full border border-[#89C2D9] bg-[#FAFCFD] px-3.5 py-2.5 text-[13px] text-[#2D4650] outline-none transition-colors focus:border-[#7CB7CC]"
+                      className="w-full border border-[#B7DFF2] bg-[#F1F8FC] px-3.5 py-2.5 text-[13px] text-[#1F3F52] outline-none transition-colors focus:border-[#4496CC]"
                       placeholder="Geneve, Suisse"
                       required
                     />
                   </div>
 
                   <div>
-                    <label htmlFor="activity" className="mb-2 block text-[12px] font-semibold uppercase tracking-wider text-[#4F8FA8]">
+                    <label htmlFor="activity" className="mb-2 block text-[12px] font-semibold uppercase tracking-wider text-[#2F7EAF]">
                       Type d&apos;activite
                     </label>
                     <select
@@ -236,7 +236,7 @@ export default function InscriptionFormulaireContent() {
                       name="activity"
                       value={formData.activity}
                       onChange={handleInputChange}
-                      className="w-full border border-[#89C2D9] bg-[#FAFCFD] px-3.5 py-2.5 text-[13px] text-[#2D4650] outline-none transition-colors focus:border-[#7CB7CC]"
+                      className="w-full border border-[#B7DFF2] bg-[#F1F8FC] px-3.5 py-2.5 text-[13px] text-[#1F3F52] outline-none transition-colors focus:border-[#4496CC]"
                       required
                     >
                       <option value="">Selectionner</option>
@@ -249,7 +249,7 @@ export default function InscriptionFormulaireContent() {
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="mb-2 block text-[12px] font-semibold uppercase tracking-wider text-[#4F8FA8]">
+                  <label htmlFor="message" className="mb-2 block text-[12px] font-semibold uppercase tracking-wider text-[#2F7EAF]">
                     Votre projet
                   </label>
                   <textarea
@@ -258,7 +258,7 @@ export default function InscriptionFormulaireContent() {
                     rows={6}
                     value={formData.message}
                     onChange={handleInputChange}
-                    className="w-full resize-none border border-[#89C2D9] bg-[#FAFCFD] px-3.5 py-2.5 text-[13px] text-[#2D4650] outline-none transition-colors focus:border-[#7CB7CC]"
+                    className="w-full resize-none border border-[#B7DFF2] bg-[#F1F8FC] px-3.5 py-2.5 text-[13px] text-[#1F3F52] outline-none transition-colors focus:border-[#4496CC]"
                     placeholder="Expliquez votre univers, votre clientele et vos attentes."
                     required
                   />
@@ -272,13 +272,13 @@ export default function InscriptionFormulaireContent() {
                     <Send size={14} strokeWidth={1.5} />
                     Envoyer la demande
                   </button>
-                  <p className="font-body text-[12.5px] font-light text-[#4F8FA8]">
+                  <p className="font-body text-[12.5px] font-light text-[#2F7EAF]">
                     Retour sous 24 a 48 heures ouvrees.
                   </p>
                 </div>
 
                 {submitted && (
-                  <div className="flex items-center gap-2 border border-[#89C2D9]/20 bg-[#EAF3F6] p-4 text-[#7CB7CC] animate-fade-in">
+                  <div className="flex items-center gap-2 border border-[#B7DFF2]/20 bg-[#E3F1F8] p-4 text-[#4496CC] animate-fade-in">
                     <Check size={18} strokeWidth={1.5} />
                     <span className="text-[13px] font-semibold">
                       Votre demande professionnelle a bien ete envoyee. Notre equipe revient vers vous tres vite.

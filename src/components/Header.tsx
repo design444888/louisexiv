@@ -53,9 +53,9 @@ export default function Header() {
   };
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-[#89C2D9]/50 bg-[#FAFCFD]/60 shadow-none backdrop-blur-md">
+    <header className="sticky top-0 z-50 w-full border-b border-[#B7DFF2]/50 bg-[#F1F8FC]/60 shadow-none backdrop-blur-md">
       {showCartAlert && (
-        <div className="absolute top-full left-1/2 z-50 mt-4 -translate-x-1/2 rounded-none bg-[#89C2D9] px-4 py-2 font-body text-[13px] tracking-wide text-[#FAFCFD] shadow-none animate-fade-in">
+        <div className="absolute top-full left-1/2 z-50 mt-4 -translate-x-1/2 rounded-none bg-[#B7DFF2] px-4 py-2 font-body text-[13px] tracking-wide text-[#F1F8FC] shadow-none animate-fade-in">
           Produit ajoute au panier !
         </div>
       )}
@@ -63,7 +63,7 @@ export default function Header() {
       <div className="mx-auto flex h-20 max-w-[1200px] items-center justify-between px-6 md:grid md:grid-cols-3 md:px-8">
         <div className="flex items-center justify-start gap-4">
           <button
-            className="cursor-pointer text-[#7CB7CC] hover:text-[#4F8FA8] md:hidden"
+            className="cursor-pointer text-[#4496CC] hover:text-[#2F7EAF] md:hidden"
             onClick={() => setMobileMenuOpen(true)}
             aria-label="Ouvrir le menu"
           >
@@ -100,7 +100,7 @@ export default function Header() {
           >
             <Link
               href="/boutique"
-              className={`flex cursor-pointer items-center gap-1 py-2 font-body text-[13px] font-semibold uppercase tracking-[0.15em] text-[#7CB7CC] transition-colors hover:text-[#4F8FA8] ${pathname.startsWith('/boutique') ? 'underline underline-offset-[6px]' : ''}`}
+              className={`flex cursor-pointer items-center gap-1 py-2 font-body text-[13px] font-semibold uppercase tracking-[0.15em] text-[#4496CC] transition-colors hover:text-[#2F7EAF] ${pathname.startsWith('/boutique') ? 'underline underline-offset-[6px]' : ''}`}
             >
               Boutique
               <ChevronDown
@@ -111,7 +111,7 @@ export default function Header() {
             </Link>
 
             <div
-              className={`absolute top-full left-1/2 z-20 w-[280px] -translate-x-1/2 border border-[#A8D5E2] bg-[#EAF3F6] p-4 shadow-none before:absolute before:-top-4 before:left-0 before:h-4 before:w-full transition-all duration-200 ease-out ${
+              className={`absolute top-full left-1/2 z-20 w-[280px] -translate-x-1/2 border border-[#8FC7E6] bg-[#E3F1F8] p-4 shadow-none before:absolute before:-top-4 before:left-0 before:h-4 before:w-full transition-all duration-200 ease-out ${
                 activeDropdown === 'boutique'
                   ? 'visible translate-y-0 opacity-100 pointer-events-auto'
                   : 'invisible translate-y-2 opacity-0 pointer-events-none'
@@ -121,43 +121,43 @@ export default function Header() {
                 <Link
                   href="/boutique#colorations"
                   onClick={() => setActiveDropdown(null)}
-                  className="flex items-center gap-3 rounded-none p-2.5 text-[#2D4650] transition-all hover:bg-[#A8D5E2] hover:text-[#7CB7CC]"
+                  className="flex items-center gap-3 rounded-none p-2.5 text-[#1F3F52] transition-all hover:bg-[#8FC7E6] hover:text-[#4496CC]"
                 >
-                  <Leaf size={18} strokeWidth={1.5} className="text-[#7CB7CC]" />
+                  <Leaf size={18} strokeWidth={1.5} className="text-[#4496CC]" />
                   <div className="text-left">
                     <div className="font-display text-[14px] font-medium">Colorations Naturelles</div>
-                    <div className="font-body text-[11px] font-light text-[#4F8FA8]">Pigments botaniques et soins</div>
+                    <div className="font-body text-[11px] font-light text-[#2F7EAF]">Pigments botaniques et soins</div>
                   </div>
                 </Link>
                 <Link
                   href="/boutique#soins"
                   onClick={() => setActiveDropdown(null)}
-                  className="flex items-center gap-3 rounded-none p-2.5 text-[#2D4650] transition-all hover:bg-[#A8D5E2] hover:text-[#7CB7CC]"
+                  className="flex items-center gap-3 rounded-none p-2.5 text-[#1F3F52] transition-all hover:bg-[#8FC7E6] hover:text-[#4496CC]"
                 >
-                  <Droplets size={18} strokeWidth={1.5} className="text-[#7CB7CC]" />
+                  <Droplets size={18} strokeWidth={1.5} className="text-[#4496CC]" />
                   <div className="text-left">
                     <div className="font-display text-[14px] font-medium">Soins Capillaires</div>
-                    <div className="font-body text-[11px] font-light text-[#4F8FA8]">Rituels hydratants des Alpes</div>
+                    <div className="font-body text-[11px] font-light text-[#2F7EAF]">Rituels hydratants des Alpes</div>
                   </div>
                 </Link>
                 <Link
                   href="/boutique#accessoires"
                   onClick={() => setActiveDropdown(null)}
-                  className="flex items-center gap-3 rounded-none p-2.5 text-[#2D4650] transition-all hover:bg-[#A8D5E2] hover:text-[#7CB7CC]"
+                  className="flex items-center gap-3 rounded-none p-2.5 text-[#1F3F52] transition-all hover:bg-[#8FC7E6] hover:text-[#4496CC]"
                 >
-                  <Sparkles size={18} strokeWidth={1.5} className="text-[#7CB7CC]" />
+                  <Sparkles size={18} strokeWidth={1.5} className="text-[#4496CC]" />
                   <div className="text-left">
                     <div className="font-display text-[14px] font-medium">Accessoires</div>
-                    <div className="font-body text-[11px] font-light text-[#4F8FA8]">Outils artisanaux en bois noble</div>
+                    <div className="font-body text-[11px] font-light text-[#2F7EAF]">Outils artisanaux en bois noble</div>
                   </div>
                 </Link>
-                <div className="my-1 border-t border-[#A8D5E2]/50 pt-1.5">
+                <div className="my-1 border-t border-[#8FC7E6]/50 pt-1.5">
                   <Link
                     href="/boutique"
                     onClick={() => setActiveDropdown(null)}
-                    className="flex items-center gap-3 rounded-none p-2.5 font-body text-[12px] font-semibold uppercase tracking-wider text-[#2D4650] transition-all hover:bg-[#A8D5E2] hover:text-[#7CB7CC]"
+                    className="flex items-center gap-3 rounded-none p-2.5 font-body text-[12px] font-semibold uppercase tracking-wider text-[#1F3F52] transition-all hover:bg-[#8FC7E6] hover:text-[#4496CC]"
                   >
-                    <MoreHorizontal size={18} strokeWidth={1.5} className="text-[#7CB7CC]" />
+                    <MoreHorizontal size={18} strokeWidth={1.5} className="text-[#4496CC]" />
                     Voir tous les produits
                   </Link>
                 </div>
@@ -174,7 +174,7 @@ export default function Header() {
           >
             <Link
               href="/conseils"
-              className={`flex cursor-pointer items-center gap-1 py-2 font-body text-[13px] font-semibold uppercase tracking-[0.15em] text-[#7CB7CC] transition-colors hover:text-[#4F8FA8] ${pathname.startsWith('/conseils') ? 'underline underline-offset-[6px]' : ''}`}
+              className={`flex cursor-pointer items-center gap-1 py-2 font-body text-[13px] font-semibold uppercase tracking-[0.15em] text-[#4496CC] transition-colors hover:text-[#2F7EAF] ${pathname.startsWith('/conseils') ? 'underline underline-offset-[6px]' : ''}`}
             >
               Conseils
               <ChevronDown
@@ -185,7 +185,7 @@ export default function Header() {
             </Link>
 
             <div
-              className={`absolute top-full left-1/2 z-20 w-[240px] -translate-x-1/2 border border-[#A8D5E2] bg-[#EAF3F6] p-4 shadow-none before:absolute before:-top-4 before:left-0 before:h-4 before:w-full transition-all duration-200 ease-out ${
+              className={`absolute top-full left-1/2 z-20 w-[240px] -translate-x-1/2 border border-[#8FC7E6] bg-[#E3F1F8] p-4 shadow-none before:absolute before:-top-4 before:left-0 before:h-4 before:w-full transition-all duration-200 ease-out ${
                 activeDropdown === 'conseils'
                   ? 'visible translate-y-0 opacity-100 pointer-events-auto'
                   : 'invisible translate-y-2 opacity-0 pointer-events-none'
@@ -195,25 +195,25 @@ export default function Header() {
                 <Link
                   href="/conseils#blog-section"
                   onClick={() => setActiveDropdown(null)}
-                  className="flex items-center gap-3 rounded-none p-2 text-[#2D4650] transition-all hover:bg-[#A8D5E2] hover:text-[#7CB7CC]"
+                  className="flex items-center gap-3 rounded-none p-2 text-[#1F3F52] transition-all hover:bg-[#8FC7E6] hover:text-[#4496CC]"
                 >
-                  <BookOpen size={16} strokeWidth={1.5} className="text-[#7CB7CC]" />
+                  <BookOpen size={16} strokeWidth={1.5} className="text-[#4496CC]" />
                   <span className="font-body text-[13.5px]">Le Blog Officiel</span>
                 </Link>
                 <Link
                   href="/conseils#faq-section"
                   onClick={() => setActiveDropdown(null)}
-                  className="flex items-center gap-3 rounded-none p-2 text-[#2D4650] transition-all hover:bg-[#A8D5E2] hover:text-[#7CB7CC]"
+                  className="flex items-center gap-3 rounded-none p-2 text-[#1F3F52] transition-all hover:bg-[#8FC7E6] hover:text-[#4496CC]"
                 >
-                  <HelpCircle size={16} strokeWidth={1.5} className="text-[#7CB7CC]" />
+                  <HelpCircle size={16} strokeWidth={1.5} className="text-[#4496CC]" />
                   <span className="font-body text-[13.5px]">Foire Aux Questions</span>
                 </Link>
                 <Link
                   href="/conseils#reviews-section"
                   onClick={() => setActiveDropdown(null)}
-                  className="flex items-center gap-3 rounded-none p-2 text-[#2D4650] transition-all hover:bg-[#A8D5E2] hover:text-[#7CB7CC]"
+                  className="flex items-center gap-3 rounded-none p-2 text-[#1F3F52] transition-all hover:bg-[#8FC7E6] hover:text-[#4496CC]"
                 >
-                  <MessageSquare size={16} strokeWidth={1.5} className="text-[#7CB7CC]" />
+                  <MessageSquare size={16} strokeWidth={1.5} className="text-[#4496CC]" />
                   <span className="font-body text-[13.5px]">Avis Clients</span>
                 </Link>
               </div>
@@ -229,7 +229,7 @@ export default function Header() {
           >
             <Link
               href="/a-propos"
-              className={`flex cursor-pointer items-center gap-1 py-2 font-body text-[13px] font-semibold uppercase tracking-[0.15em] text-[#7CB7CC] transition-colors hover:text-[#4F8FA8] ${pathname.startsWith('/a-propos') ? 'underline underline-offset-[6px]' : ''}`}
+              className={`flex cursor-pointer items-center gap-1 py-2 font-body text-[13px] font-semibold uppercase tracking-[0.15em] text-[#4496CC] transition-colors hover:text-[#2F7EAF] ${pathname.startsWith('/a-propos') ? 'underline underline-offset-[6px]' : ''}`}
             >
               A Propos
               <ChevronDown
@@ -240,7 +240,7 @@ export default function Header() {
             </Link>
 
             <div
-              className={`absolute top-full left-1/2 z-20 w-[240px] -translate-x-1/2 border border-[#A8D5E2] bg-[#EAF3F6] p-4 shadow-none before:absolute before:-top-4 before:left-0 before:h-4 before:w-full transition-all duration-200 ease-out ${
+              className={`absolute top-full left-1/2 z-20 w-[240px] -translate-x-1/2 border border-[#8FC7E6] bg-[#E3F1F8] p-4 shadow-none before:absolute before:-top-4 before:left-0 before:h-4 before:w-full transition-all duration-200 ease-out ${
                 activeDropdown === 'a-propos'
                   ? 'visible translate-y-0 opacity-100 pointer-events-auto'
                   : 'invisible translate-y-2 opacity-0 pointer-events-none'
@@ -250,33 +250,33 @@ export default function Header() {
                 <Link
                   href="/a-propos#histoire"
                   onClick={() => setActiveDropdown(null)}
-                  className="flex items-center gap-3 rounded-none p-2 text-[#2D4650] transition-all hover:bg-[#A8D5E2] hover:text-[#7CB7CC]"
+                  className="flex items-center gap-3 rounded-none p-2 text-[#1F3F52] transition-all hover:bg-[#8FC7E6] hover:text-[#4496CC]"
                 >
-                  <Users size={16} strokeWidth={1.5} className="text-[#7CB7CC]" />
+                  <Users size={16} strokeWidth={1.5} className="text-[#4496CC]" />
                   <span className="font-body text-[13.5px]">Notre Histoire</span>
                 </Link>
                 <Link
                   href="/a-propos#engagements"
                   onClick={() => setActiveDropdown(null)}
-                  className="flex items-center gap-3 rounded-none p-2 text-[#2D4650] transition-all hover:bg-[#A8D5E2] hover:text-[#7CB7CC]"
+                  className="flex items-center gap-3 rounded-none p-2 text-[#1F3F52] transition-all hover:bg-[#8FC7E6] hover:text-[#4496CC]"
                 >
-                  <Sprout size={16} strokeWidth={1.5} className="text-[#7CB7CC]" />
+                  <Sprout size={16} strokeWidth={1.5} className="text-[#4496CC]" />
                   <span className="font-body text-[13.5px]">Nos Engagements</span>
                 </Link>
                 <Link
                   href="/a-propos#innovation"
                   onClick={() => setActiveDropdown(null)}
-                  className="flex items-center gap-3 rounded-none p-2 text-[#2D4650] transition-all hover:bg-[#A8D5E2] hover:text-[#7CB7CC]"
+                  className="flex items-center gap-3 rounded-none p-2 text-[#1F3F52] transition-all hover:bg-[#8FC7E6] hover:text-[#4496CC]"
                 >
-                  <Lightbulb size={16} strokeWidth={1.5} className="text-[#7CB7CC]" />
+                  <Lightbulb size={16} strokeWidth={1.5} className="text-[#4496CC]" />
                   <span className="font-body text-[13.5px]">Innovation Suisse</span>
                 </Link>
                 <Link
                   href="/a-propos#contact"
                   onClick={() => setActiveDropdown(null)}
-                  className="flex items-center gap-3 rounded-none p-2 text-[#2D4650] transition-all hover:bg-[#A8D5E2] hover:text-[#7CB7CC]"
+                  className="flex items-center gap-3 rounded-none p-2 text-[#1F3F52] transition-all hover:bg-[#8FC7E6] hover:text-[#4496CC]"
                 >
-                  <Mail size={16} strokeWidth={1.5} className="text-[#7CB7CC]" />
+                  <Mail size={16} strokeWidth={1.5} className="text-[#4496CC]" />
                   <span className="font-body text-[13.5px]">Contact & Salon</span>
                 </Link>
               </div>
@@ -287,19 +287,19 @@ export default function Header() {
         <div className="flex items-center justify-end gap-4">
           <Link
             href="/inscription-formulaire"
-            className="hidden md:inline-flex items-center justify-center rounded-[4px] bg-[#7CB7CC] px-4 py-2 font-body text-[11px] font-semibold uppercase tracking-[0.12em] text-[#FAFCFD] transition-all duration-200 hover:bg-[#4F8FA8] hover:-translate-y-[1px]"
+            className="hidden md:inline-flex items-center justify-center rounded-[4px] bg-[#4496CC] px-4 py-2 font-body text-[11px] font-semibold uppercase tracking-[0.12em] text-[#F1F8FC] transition-all duration-200 hover:bg-[#2F7EAF] hover:-translate-y-[1px]"
           >
             Inscription Pro
           </Link>
 
           <button
-            className="relative flex items-center justify-center p-1.5 text-[#7CB7CC] transition-all hover:scale-105 hover:text-[#4F8FA8]"
+            className="relative flex items-center justify-center p-1.5 text-[#4496CC] transition-all hover:scale-105 hover:text-[#2F7EAF]"
             onClick={() => {
               alert(`Votre panier contient actuellement ${cartCount} produit(s). Le systeme de paiement de demonstration s'activera prochainement.`);
             }}
           >
             <ShoppingBag size={20} strokeWidth={1.5} />
-            <span className="absolute -top-1 -right-1 flex h-4.5 w-4.5 items-center justify-center rounded-full bg-[#7CB7CC] font-body text-[9px] font-semibold text-[#FAFCFD]">
+            <span className="absolute -top-1 -right-1 flex h-4.5 w-4.5 items-center justify-center rounded-full bg-[#4496CC] font-body text-[9px] font-semibold text-[#F1F8FC]">
               {cartCount}
             </span>
           </button>
@@ -307,10 +307,10 @@ export default function Header() {
       </div>
 
       {mobileMenuOpen && (
-        <div className="fixed inset-0 z-50 flex justify-start bg-[#2D4650]/60 backdrop-blur-xs transition-all duration-300 md:hidden">
-          <div className="flex h-full w-[300px] flex-col justify-between overflow-y-auto bg-[#FAFCFD] p-6 shadow-2xl animate-slide-right">
+        <div className="fixed inset-0 z-50 flex justify-start bg-[#1F3F52]/60 backdrop-blur-xs transition-all duration-300 md:hidden">
+          <div className="flex h-full w-[300px] flex-col justify-between overflow-y-auto bg-[#F1F8FC] p-6 shadow-2xl animate-slide-right">
             <div>
-              <div className="mb-8 flex items-center justify-between border-b border-[#89C2D9]/40 pb-4">
+              <div className="mb-8 flex items-center justify-between border-b border-[#B7DFF2]/40 pb-4">
                 <Link
                   href="/"
                   className="relative block h-[43px] w-[52px] py-1 transition-transform duration-300 hover:scale-102"
@@ -324,7 +324,7 @@ export default function Header() {
                     className="object-contain"
                   />
                 </Link>
-                <button className="text-[#7CB7CC]" onClick={() => setMobileMenuOpen(false)}>
+                <button className="text-[#4496CC]" onClick={() => setMobileMenuOpen(false)}>
                   <X size={22} strokeWidth={1.5} />
                 </button>
               </div>
@@ -333,15 +333,15 @@ export default function Header() {
                 <Link
                   href="/inscription-formulaire"
                   onClick={() => setMobileMenuOpen(false)}
-                  className="flex w-full items-center justify-center rounded-[4px] bg-[#7CB7CC] px-4 py-3 text-[12px] font-semibold uppercase tracking-[0.12em] text-[#FAFCFD] transition-all duration-200 hover:bg-[#4F8FA8]"
+                  className="flex w-full items-center justify-center rounded-[4px] bg-[#4496CC] px-4 py-3 text-[12px] font-semibold uppercase tracking-[0.12em] text-[#F1F8FC] transition-all duration-200 hover:bg-[#2F7EAF]"
                 >
                   Inscription Pro
                 </Link>
 
-                <div className="border-b border-[#A8D5E2]/50 pb-2">
+                <div className="border-b border-[#8FC7E6]/50 pb-2">
                   <button
                     onClick={() => toggleMobileAccordion('boutique')}
-                    className="flex w-full items-center justify-between py-2 text-left font-body text-[13px] font-semibold uppercase tracking-wider text-[#7CB7CC]"
+                    className="flex w-full items-center justify-between py-2 text-left font-body text-[13px] font-semibold uppercase tracking-wider text-[#4496CC]"
                   >
                     Boutique
                     <ChevronDown
@@ -351,27 +351,27 @@ export default function Header() {
                   </button>
 
                   {mobileAccordion === 'boutique' && (
-                    <div className="mt-2 ml-3 space-y-2.5 border-l border-[#A8D5E2] py-1 pl-3 animate-slide-down">
-                      <Link href="/boutique#colorations" onClick={() => setMobileMenuOpen(false)} className="block text-[13.5px] text-[#4F8FA8] hover:text-[#7CB7CC]">
+                    <div className="mt-2 ml-3 space-y-2.5 border-l border-[#8FC7E6] py-1 pl-3 animate-slide-down">
+                      <Link href="/boutique#colorations" onClick={() => setMobileMenuOpen(false)} className="block text-[13.5px] text-[#2F7EAF] hover:text-[#4496CC]">
                         Colorations Naturelles
                       </Link>
-                      <Link href="/boutique#soins" onClick={() => setMobileMenuOpen(false)} className="block text-[13.5px] text-[#4F8FA8] hover:text-[#7CB7CC]">
+                      <Link href="/boutique#soins" onClick={() => setMobileMenuOpen(false)} className="block text-[13.5px] text-[#2F7EAF] hover:text-[#4496CC]">
                         Soins Capillaires
                       </Link>
-                      <Link href="/boutique#accessoires" onClick={() => setMobileMenuOpen(false)} className="block text-[13.5px] text-[#4F8FA8] hover:text-[#7CB7CC]">
+                      <Link href="/boutique#accessoires" onClick={() => setMobileMenuOpen(false)} className="block text-[13.5px] text-[#2F7EAF] hover:text-[#4496CC]">
                         Accessoires
                       </Link>
-                      <Link href="/boutique" onClick={() => setMobileMenuOpen(false)} className="block pt-1 text-[13px] font-semibold uppercase tracking-wider text-[#7CB7CC]">
+                      <Link href="/boutique" onClick={() => setMobileMenuOpen(false)} className="block pt-1 text-[13px] font-semibold uppercase tracking-wider text-[#4496CC]">
                         Tous les produits
                       </Link>
                     </div>
                   )}
                 </div>
 
-                <div className="border-b border-[#A8D5E2]/50 pb-2">
+                <div className="border-b border-[#8FC7E6]/50 pb-2">
                   <button
                     onClick={() => toggleMobileAccordion('conseils')}
-                    className="flex w-full items-center justify-between py-2 text-left font-body text-[13px] font-semibold uppercase tracking-wider text-[#7CB7CC]"
+                    className="flex w-full items-center justify-between py-2 text-left font-body text-[13px] font-semibold uppercase tracking-wider text-[#4496CC]"
                   >
                     Conseils
                     <ChevronDown
@@ -381,24 +381,24 @@ export default function Header() {
                   </button>
 
                   {mobileAccordion === 'conseils' && (
-                    <div className="mt-2 ml-3 space-y-2.5 border-l border-[#A8D5E2] py-1 pl-3 animate-slide-down">
-                      <Link href="/conseils#blog-section" onClick={() => setMobileMenuOpen(false)} className="block text-[13.5px] text-[#4F8FA8] hover:text-[#7CB7CC]">
+                    <div className="mt-2 ml-3 space-y-2.5 border-l border-[#8FC7E6] py-1 pl-3 animate-slide-down">
+                      <Link href="/conseils#blog-section" onClick={() => setMobileMenuOpen(false)} className="block text-[13.5px] text-[#2F7EAF] hover:text-[#4496CC]">
                         Blog
                       </Link>
-                      <Link href="/conseils#faq-section" onClick={() => setMobileMenuOpen(false)} className="block text-[13.5px] text-[#4F8FA8] hover:text-[#7CB7CC]">
+                      <Link href="/conseils#faq-section" onClick={() => setMobileMenuOpen(false)} className="block text-[13.5px] text-[#2F7EAF] hover:text-[#4496CC]">
                         FAQ
                       </Link>
-                      <Link href="/conseils#reviews-section" onClick={() => setMobileMenuOpen(false)} className="block text-[13.5px] text-[#4F8FA8] hover:text-[#7CB7CC]">
+                      <Link href="/conseils#reviews-section" onClick={() => setMobileMenuOpen(false)} className="block text-[13.5px] text-[#2F7EAF] hover:text-[#4496CC]">
                         Avis clients
                       </Link>
                     </div>
                   )}
                 </div>
 
-                <div className="border-b border-[#A8D5E2]/50 pb-2">
+                <div className="border-b border-[#8FC7E6]/50 pb-2">
                   <button
                     onClick={() => toggleMobileAccordion('a-propos')}
-                    className="flex w-full items-center justify-between py-2 text-left font-body text-[13px] font-semibold uppercase tracking-wider text-[#7CB7CC]"
+                    className="flex w-full items-center justify-between py-2 text-left font-body text-[13px] font-semibold uppercase tracking-wider text-[#4496CC]"
                   >
                     A Propos
                     <ChevronDown
@@ -408,17 +408,17 @@ export default function Header() {
                   </button>
 
                   {mobileAccordion === 'a-propos' && (
-                    <div className="mt-2 ml-3 space-y-2.5 border-l border-[#A8D5E2] py-1 pl-3 animate-slide-down">
-                      <Link href="/a-propos#histoire" onClick={() => setMobileMenuOpen(false)} className="block text-[13.5px] text-[#4F8FA8] hover:text-[#7CB7CC]">
+                    <div className="mt-2 ml-3 space-y-2.5 border-l border-[#8FC7E6] py-1 pl-3 animate-slide-down">
+                      <Link href="/a-propos#histoire" onClick={() => setMobileMenuOpen(false)} className="block text-[13.5px] text-[#2F7EAF] hover:text-[#4496CC]">
                         Notre histoire
                       </Link>
-                      <Link href="/a-propos#engagements" onClick={() => setMobileMenuOpen(false)} className="block text-[13.5px] text-[#4F8FA8] hover:text-[#7CB7CC]">
+                      <Link href="/a-propos#engagements" onClick={() => setMobileMenuOpen(false)} className="block text-[13.5px] text-[#2F7EAF] hover:text-[#4496CC]">
                         Nos engagements
                       </Link>
-                      <Link href="/a-propos#innovation" onClick={() => setMobileMenuOpen(false)} className="block text-[13.5px] text-[#4F8FA8] hover:text-[#7CB7CC]">
+                      <Link href="/a-propos#innovation" onClick={() => setMobileMenuOpen(false)} className="block text-[13.5px] text-[#2F7EAF] hover:text-[#4496CC]">
                         Innovation
                       </Link>
-                      <Link href="/a-propos#contact" onClick={() => setMobileMenuOpen(false)} className="block text-[13.5px] text-[#4F8FA8] hover:text-[#7CB7CC]">
+                      <Link href="/a-propos#contact" onClick={() => setMobileMenuOpen(false)} className="block text-[13.5px] text-[#2F7EAF] hover:text-[#4496CC]">
                         Contact
                       </Link>
                     </div>
@@ -427,7 +427,7 @@ export default function Header() {
               </div>
             </div>
 
-            <div className="border-t border-[#89C2D9]/40 pt-6 text-center font-body text-[11px] text-[#4F8FA8]">
+            <div className="border-t border-[#B7DFF2]/40 pt-6 text-center font-body text-[11px] text-[#2F7EAF]">
               <p>Maison Louise XIV - Suisse</p>
               <p className="mt-1 font-light">Rituels botaniques de prestige</p>
             </div>

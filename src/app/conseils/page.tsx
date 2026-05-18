@@ -11,8 +11,8 @@ export default function ConseilsPage() {
   return (
     <Suspense 
       fallback={
-        <div className="min-h-[60vh] flex flex-col items-center justify-center bg-[#FAFCFD] text-[#4F8FA8] font-body">
-          <div className="flex items-center justify-center w-8 h-8 rounded-full border-t-2 border-[#7CB7CC] animate-spin mb-4"></div>
+        <div className="min-h-[60vh] flex flex-col items-center justify-center bg-[#F1F8FC] text-[#2F7EAF] font-body">
+          <div className="flex items-center justify-center w-8 h-8 rounded-full border-t-2 border-[#4496CC] animate-spin mb-4"></div>
           <p className="text-[13px] tracking-widest uppercase">Chargement des conseils...</p>
         </div>
       }
