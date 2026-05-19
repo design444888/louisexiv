@@ -19,7 +19,7 @@ export default function CTASection({
   buttonLink = "/boutique"
 }: CTASectionProps) {
   return (
-    <section className="bg-[#402312] border-y border-[#C8A893]/30 text-[#FFFAFA] py-20 px-6 md:px-12 text-center relative overflow-hidden">
+    <section className="bg-[#7E9797] border-y border-[#C8A893]/30 text-[#FFFAFA] py-20 px-6 md:px-12 text-center relative overflow-hidden">
       {/* Delicate floral/organic design element (fleur-de-lis backdrop mock) */}
       <div className="absolute inset-0 opacity-[0.03] flex items-center justify-center pointer-events-none select-none">
         <span className="font-display italic text-[240px] font-bold text-[#FFFAFA]">
@@ -35,7 +35,7 @@ export default function CTASection({
           <em className="font-display italic text-[#E4D3C8] font-normal">{italicTitle}</em>
         </h2>
 
-        <p className="font-body text-[14px] md:text-[15px] font-light text-[#E4D3C8] mb-8 max-w-xl mx-auto leading-relaxed">
+        <p className="font-body text-[14px] md:text-[15px] font-medium text-[#FFFAFA] mb-8 max-w-xl mx-auto leading-relaxed">
           {description}
         </p>
 
