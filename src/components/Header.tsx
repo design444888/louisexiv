@@ -42,6 +42,19 @@ export default function Header() {
     return () => window.removeEventListener('add-to-cart', handleAddToCart);
   }, []);
 
+  useEffect(() => {
+    if (!mobileMenuOpen) {
+      document.body.style.overflow = '';
+      return;
+    }
+
+    document.body.style.overflow = 'hidden';
+
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [mobileMenuOpen]);
+
   const handleDesktopDropdownBlur = (event: React.FocusEvent<HTMLDivElement>) => {
     if (!event.currentTarget.contains(event.relatedTarget as Node | null)) {
       setActiveDropdown(null);
@@ -60,8 +73,8 @@ export default function Header() {
         </div>
       )}
 
-      <div className="mx-auto flex h-20 max-w-[1200px] items-center justify-between px-6 md:grid md:grid-cols-3 md:px-8">
-        <div className="flex items-center justify-start gap-4">
+      <div className="relative mx-auto flex h-20 max-w-[1200px] items-center justify-between px-6 md:grid md:grid-cols-3 md:px-8">
+        <div className="flex items-center justify-start md:gap-4">
           <button
             className="cursor-pointer text-[#573119] hover:text-[#6E4226] md:hidden"
             onClick={() => setMobileMenuOpen(true)}
@@ -69,26 +82,29 @@ export default function Header() {
           >
             <Menu size={24} strokeWidth={1.5} />
           </button>
-
-          <Link href="/" className="flex items-center group py-1 select-none transition-transform duration-300 hover:scale-102">
-            <Image
-              src="/logo.svg"
-              alt="Louise XIV"
-              width={64}
-              height={53}
-              priority
-              className="hidden object-contain md:block"
-            />
-            <Image
-              src="/logo.svg"
-              alt="Louise XIV"
-              width={52}
-              height={43}
-              priority
-              className="block object-contain md:hidden"
-            />
-          </Link>
         </div>
+
+        <Link
+          href="/"
+          className="absolute left-1/2 top-1/2 flex -translate-x-1/2 -translate-y-1/2 items-center py-1 select-none transition-transform duration-300 hover:scale-102 md:static md:left-auto md:top-auto md:translate-x-0 md:translate-y-0"
+        >
+          <Image
+            src="/logo.svg"
+            alt="Louise XIV"
+            width={64}
+            height={53}
+            priority
+            className="hidden object-contain md:block"
+          />
+          <Image
+            src="/logo.svg"
+            alt="Louise XIV"
+            width={52}
+            height={43}
+            priority
+            className="block object-contain md:hidden"
+          />
+        </Link>
 
         <nav className="relative hidden h-full items-center justify-center gap-8 md:flex">
           <div
@@ -313,13 +329,13 @@ export default function Header() {
       </div>
 
       {mobileMenuOpen && (
-        <div className="fixed inset-0 z-50 flex justify-start bg-[#402312]/60 backdrop-blur-xs transition-all duration-300 md:hidden">
-          <div className="flex h-full w-[300px] flex-col justify-between overflow-y-auto bg-[#FFFAFA] p-6 shadow-2xl animate-slide-right">
+        <div className="fixed inset-0 z-50 bg-[#402312]/60 backdrop-blur-xs transition-all duration-300 md:hidden">
+          <div className="flex h-full w-full flex-col justify-between overflow-y-auto bg-[#FFFAFA] px-6 py-6 shadow-2xl animate-fade-in">
             <div>
-              <div className="mb-8 flex items-center justify-between border-b border-[#C8A893]/40 pb-4">
+              <div className="mb-10 flex items-center justify-between border-b border-[#C8A893]/40 pb-5">
                 <Link
                   href="/"
-                  className="relative block h-[43px] w-[52px] py-1 transition-transform duration-300 hover:scale-102"
+                  className="relative block h-[52px] w-[64px] py-1 transition-transform duration-300 hover:scale-102"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   <Image
@@ -335,19 +351,19 @@ export default function Header() {
                 </button>
               </div>
 
-              <div className="space-y-4 font-body">
+              <div className="space-y-5 font-body">
                 <Link
                   href="/inscription-formulaire"
                   onClick={() => setMobileMenuOpen(false)}
-                  className="flex w-full items-center justify-center rounded-[4px] bg-[#7E9797] px-4 py-3 text-[12px] font-semibold uppercase tracking-[0.12em] text-[#FFFAFA] transition-all duration-200 hover:bg-[#6F8787]"
+                  className="flex w-full items-center justify-center rounded-[4px] bg-[#7E9797] px-4 py-3.5 text-[12px] font-semibold uppercase tracking-[0.12em] text-[#FFFAFA] transition-all duration-200 hover:bg-[#6F8787]"
                 >
                   Inscription Pro
                 </Link>
 
-                <div className="border-b border-[#E4D3C8]/50 pb-2">
+                <div className="border-b border-[#E4D3C8]/50 pb-3">
                   <button
                     onClick={() => toggleMobileAccordion('boutique')}
-                    className="flex w-full items-center justify-between py-2 text-left font-body text-[13px] font-semibold uppercase tracking-wider text-[#573119]"
+                    className="flex w-full items-center justify-between py-2.5 text-left font-body text-[15px] font-semibold uppercase tracking-wider text-[#573119]"
                   >
                     Boutique
                     <ChevronDown
@@ -357,27 +373,27 @@ export default function Header() {
                   </button>
 
                   {mobileAccordion === 'boutique' && (
-                    <div className="mt-2 ml-3 space-y-2.5 border-l border-[#E4D3C8] py-1 pl-3 animate-slide-down">
-                      <Link href="/boutique#colorations" onClick={() => setMobileMenuOpen(false)} className="block text-[13.5px] text-[#6E4226] hover:text-[#573119]">
+                    <div className="mt-3 ml-3 space-y-3 border-l border-[#E4D3C8] py-1 pl-4 animate-slide-down">
+                      <Link href="/boutique#colorations" onClick={() => setMobileMenuOpen(false)} className="block text-[15px] text-[#6E4226] hover:text-[#573119]">
                         Colorations Naturelles
                       </Link>
-                      <Link href="/boutique#soins" onClick={() => setMobileMenuOpen(false)} className="block text-[13.5px] text-[#6E4226] hover:text-[#573119]">
+                      <Link href="/boutique#soins" onClick={() => setMobileMenuOpen(false)} className="block text-[15px] text-[#6E4226] hover:text-[#573119]">
                         Soins Capillaires
                       </Link>
-                      <Link href="/boutique#accessoires" onClick={() => setMobileMenuOpen(false)} className="block text-[13.5px] text-[#6E4226] hover:text-[#573119]">
+                      <Link href="/boutique#accessoires" onClick={() => setMobileMenuOpen(false)} className="block text-[15px] text-[#6E4226] hover:text-[#573119]">
                         Accessoires
                       </Link>
-                      <Link href="/boutique" onClick={() => setMobileMenuOpen(false)} className="block pt-1 text-[13px] font-semibold uppercase tracking-wider text-[#573119]">
+                      <Link href="/boutique" onClick={() => setMobileMenuOpen(false)} className="block pt-1 text-[14px] font-semibold uppercase tracking-wider text-[#573119]">
                         Tous les produits
                       </Link>
                     </div>
                   )}
                 </div>
 
-                <div className="border-b border-[#E4D3C8]/50 pb-2">
+                <div className="border-b border-[#E4D3C8]/50 pb-3">
                   <button
                     onClick={() => toggleMobileAccordion('conseils')}
-                    className="flex w-full items-center justify-between py-2 text-left font-body text-[13px] font-semibold uppercase tracking-wider text-[#573119]"
+                    className="flex w-full items-center justify-between py-2.5 text-left font-body text-[15px] font-semibold uppercase tracking-wider text-[#573119]"
                   >
                     Conseils
                     <ChevronDown
@@ -387,24 +403,24 @@ export default function Header() {
                   </button>
 
                   {mobileAccordion === 'conseils' && (
-                    <div className="mt-2 ml-3 space-y-2.5 border-l border-[#E4D3C8] py-1 pl-3 animate-slide-down">
-                      <Link href="/conseils#blog-section" onClick={() => setMobileMenuOpen(false)} className="block text-[13.5px] text-[#6E4226] hover:text-[#573119]">
+                    <div className="mt-3 ml-3 space-y-3 border-l border-[#E4D3C8] py-1 pl-4 animate-slide-down">
+                      <Link href="/conseils#blog-section" onClick={() => setMobileMenuOpen(false)} className="block text-[15px] text-[#6E4226] hover:text-[#573119]">
                         Blog
                       </Link>
-                      <Link href="/conseils#faq-section" onClick={() => setMobileMenuOpen(false)} className="block text-[13.5px] text-[#6E4226] hover:text-[#573119]">
+                      <Link href="/conseils#faq-section" onClick={() => setMobileMenuOpen(false)} className="block text-[15px] text-[#6E4226] hover:text-[#573119]">
                         FAQ
                       </Link>
-                      <Link href="/conseils#reviews-section" onClick={() => setMobileMenuOpen(false)} className="block text-[13.5px] text-[#6E4226] hover:text-[#573119]">
+                      <Link href="/conseils#reviews-section" onClick={() => setMobileMenuOpen(false)} className="block text-[15px] text-[#6E4226] hover:text-[#573119]">
                         Avis clients
                       </Link>
                     </div>
                   )}
                 </div>
 
-                <div className="border-b border-[#E4D3C8]/50 pb-2">
+                <div className="border-b border-[#E4D3C8]/50 pb-3">
                   <button
                     onClick={() => toggleMobileAccordion('a-propos')}
-                    className="flex w-full items-center justify-between py-2 text-left font-body text-[13px] font-semibold uppercase tracking-wider text-[#573119]"
+                    className="flex w-full items-center justify-between py-2.5 text-left font-body text-[15px] font-semibold uppercase tracking-wider text-[#573119]"
                   >
                     A Propos
                     <ChevronDown
@@ -414,17 +430,17 @@ export default function Header() {
                   </button>
 
                   {mobileAccordion === 'a-propos' && (
-                    <div className="mt-2 ml-3 space-y-2.5 border-l border-[#E4D3C8] py-1 pl-3 animate-slide-down">
-                      <Link href="/a-propos#histoire" onClick={() => setMobileMenuOpen(false)} className="block text-[13.5px] text-[#6E4226] hover:text-[#573119]">
+                    <div className="mt-3 ml-3 space-y-3 border-l border-[#E4D3C8] py-1 pl-4 animate-slide-down">
+                      <Link href="/a-propos#histoire" onClick={() => setMobileMenuOpen(false)} className="block text-[15px] text-[#6E4226] hover:text-[#573119]">
                         Notre histoire
                       </Link>
-                      <Link href="/a-propos#engagements" onClick={() => setMobileMenuOpen(false)} className="block text-[13.5px] text-[#6E4226] hover:text-[#573119]">
+                      <Link href="/a-propos#engagements" onClick={() => setMobileMenuOpen(false)} className="block text-[15px] text-[#6E4226] hover:text-[#573119]">
                         Nos engagements
                       </Link>
-                      <Link href="/a-propos#innovation" onClick={() => setMobileMenuOpen(false)} className="block text-[13.5px] text-[#6E4226] hover:text-[#573119]">
+                      <Link href="/a-propos#innovation" onClick={() => setMobileMenuOpen(false)} className="block text-[15px] text-[#6E4226] hover:text-[#573119]">
                         Innovation
                       </Link>
-                      <Link href="/a-propos#contact" onClick={() => setMobileMenuOpen(false)} className="block text-[13.5px] text-[#6E4226] hover:text-[#573119]">
+                      <Link href="/a-propos#contact" onClick={() => setMobileMenuOpen(false)} className="block text-[15px] text-[#6E4226] hover:text-[#573119]">
                         Contact
                       </Link>
                     </div>
