@@ -72,7 +72,7 @@ export const PRODUCTS: Product[] = [
     categorySlug: "colorations",
     description: "Une coloration botanique en poudre pensée par Louise XIV pour sublimer les reflets, gainer la fibre et offrir un rituel végétal d'exception.",
     price: 39,
-    image: "Photos/coloration-pouredre.webp",
+    image: "Photos/bol-verre-coloration-coiffure.webp",
     rating: 4.8,
     volumeOrSize: "100g",
     details: [
