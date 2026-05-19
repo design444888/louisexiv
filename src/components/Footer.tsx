@@ -164,7 +164,7 @@ export default function Footer() {
       >
         <div className="max-w-[1200px] mx-auto flex flex-col sm:flex-row justify-center items-center gap-1.5 flex-wrap leading-relaxed">
           <span>
-            Réalisation : <a href="https://havetdigital.fr" target="_blank" rel="noopener noreferrer" className="text-[#573119] hover:underline font-medium">Havet Digital</a> © Louise XIV Suisse  {new Date().getFullYear()}
+            Réalisation : <a href="https://havetdigital.fr" target="_blank" rel="noopener noreferrer" className="text-[#FFFAFA] hover:underline font-medium">Havet Digital</a> © Louise XIV Suisse  {new Date().getFullYear()}
           </span>
           <span className="hidden sm:inline text-[#E4D3C8]/30">|</span>
           <Link href="/a-propos" className="hover:text-[#FFFAFA] transition-colors">

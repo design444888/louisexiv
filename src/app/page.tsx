@@ -108,7 +108,7 @@ export default function HomePage() {
             <div className="relative aspect-[4/5] rounded-none overflow-hidden border border-[#E4D3C8] shadow-none">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="Photos/PLV-lagourmande.webp"
+                src="Photos/image hero.webp"
                 alt="Louise XIV La Flamboyante"
                 className="object-cover w-full h-full transform hover:scale-102 transition-transform duration-700"
               />
