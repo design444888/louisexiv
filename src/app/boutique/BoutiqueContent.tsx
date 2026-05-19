@@ -9,9 +9,9 @@ import { Leaf, Droplets, Scissors } from 'lucide-react';
 
 export default function BoutiqueContent() {
   // Group products by category slug
-  const colorationsProducts = PRODUCTS.filter(p => p.categorySlug === 'colorations');
-  const soinsProducts = PRODUCTS.filter(p => p.categorySlug === 'soins');
-  const accessoiresProducts = PRODUCTS.filter(p => p.categorySlug === 'accessoires');
+  const colorationsProducts = PRODUCTS.filter(p => p.categorySlug === 'colorations').slice(0, 3);
+  const soinsProducts = PRODUCTS.filter(p => p.categorySlug === 'soins').slice(0, 3);
+  const accessoiresProducts = PRODUCTS.filter(p => p.categorySlug === 'accessoires').slice(0, 3);
 
   const [isScrolled, setIsScrolled] = React.useState(false);
 
