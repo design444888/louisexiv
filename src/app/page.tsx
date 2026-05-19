@@ -78,10 +78,10 @@ export default function HomePage() {
               </p>
               <div className="flex flex-wrap items-center gap-4">
                 <Link href="/boutique" className="btn-primary">
-                  Voir la boutique
+                  DÉCOUVRIR NOS COLORATIONS
                 </Link>
                 <Link href="/a-propos" className="btn-secondary">
-                  En savoir plus
+                  TROUVER MA COULEUR
                 </Link>
               </div>
             </div>
