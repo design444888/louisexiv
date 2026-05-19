@@ -65,7 +65,7 @@ export default function ProductCard({
 
       {showTechnicalSheetOnHover && (
         <div
-          className="pointer-events-none absolute inset-0 flex translate-y-3 flex-col justify-between bg-[linear-gradient(180deg,rgba(241,248,252,0.94)_0%,rgba(227,241,248,0.985)_100%)] p-5 opacity-0 backdrop-blur-[2px] transition-all duration-300 ease-out group-hover:pointer-events-auto group-hover:translate-y-0 group-hover:opacity-100 group-focus-within:pointer-events-auto group-focus-within:translate-y-0 group-focus-within:opacity-100"
+          className="pointer-events-none absolute inset-0 translate-y-3 overflow-y-auto bg-[linear-gradient(180deg,rgba(241,248,252,0.94)_0%,rgba(227,241,248,0.985)_100%)] p-5 opacity-0 backdrop-blur-[2px] transition-all duration-300 ease-out group-hover:pointer-events-auto group-hover:translate-y-0 group-hover:opacity-100 group-focus-within:pointer-events-auto group-focus-within:translate-y-0 group-focus-within:opacity-100"
           aria-hidden="true"
         >
           <div className="space-y-4">
@@ -95,15 +95,15 @@ export default function ProductCard({
                 </li>
               ))}
             </ul>
-          </div>
 
-          <div className="border-t border-[#B7DFF2]/40 pt-3">
-            <p className="font-body text-[10.5px] uppercase tracking-[0.14em] text-[#2F7EAF]">
-              Prix
-            </p>
-            <p className="mt-1 font-display text-[21px] font-semibold text-[#4496CC]">
-              {product.price},00 €
-            </p>
+            <div className="border-t border-[#B7DFF2]/40 pt-3">
+              <p className="font-body text-[10.5px] uppercase tracking-[0.14em] text-[#2F7EAF]">
+                Prix
+              </p>
+              <p className="mt-1 font-display text-[21px] font-semibold text-[#4496CC]">
+                {product.price},00 €
+              </p>
+            </div>
           </div>
         </div>
       )}
