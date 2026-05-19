@@ -91,7 +91,7 @@ export const PRODUCTS: Product[] = [
     categorySlug: "colorations",
     description: "Coloration soin cuivrée naturelle, reflets chauds intenses et brillance miroir.",
     price: 39,
-    image: "Photos/pinceau-coloration-louisexiv.webp",
+    image: "Photos/la-lumineuse-louisexiv-1.webp",
     rating: 4.9,
     volumeOrSize: "100g",
     details: [
@@ -125,7 +125,23 @@ export const PRODUCTS: Product[] = [
       "Application sur cheveux humides ou secs en finition de rituel."
     ]
   },
-
+  {
+    id: 'p4',
+    name: "La Crème de Soie",
+    category: "Soins Capillaires",
+    categorySlug: "soins",
+    description: "Masque hydratant intense au beurre de karité bio et protéines de soie naturelle.",
+    price: 48,
+    image: "https://images.unsplash.com/photo-1601049541289-9b1b7bbbfe19?auto=format&fit=crop&q=80&w=600",
+    rating: 4.7,
+    volumeOrSize: "200ml",
+    details: [
+      "Texture crème onctueuse enveloppante.",
+      "Hydratation en profondeur qui redéfinit les boucles et lisse les frisottis.",
+      "Ingrédients rigoureusement sélectionnés en Suisse.",
+      "Laisser poser 5 à 10 minutes puis rincer abondamment."
+    ]
+  },
   {
     id: 'p5',
     name: "La Rosée Lactée",
@@ -213,19 +229,24 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: 'p10',
-    name: "Châtain Impérial",
-    category: "Colorations Naturelles",
+    name: "La Somptueuse (6.3)",
+    category: "Coloration végétale",
     categorySlug: "colorations",
     description: "Coloration végétale châtain profond aux nuances de cacao et d'ortie dioïque alpine.",
     price: 39,
-    image: "https://images.unsplash.com/photo-1519735797-40290fe68997?auto=format&fit=crop&q=80&w=600",
+    image: "Photos/la-somptueuse-louisexiv-1.webp",
     rating: 4.7,
     volumeOrSize: "100g",
     details: [
-      "Couvrance intense et reflets profonds d'une tenue exceptionnelle.",
-      "Composée à 100% de plantes sèches récoltées éthiquement.",
-      "Protège et renforce l'éclat des cheveux foncés.",
-      "Formulée sans aucun métaux lourds ni additifs synthétiques."
+      "La Somptueuse®- La charme d’un blond foncé doré ",
+       "La Somptueuse® est un véritable blond foncé doré qui s’utilise seule ou en mélange avec les gels et les autres poudres de la gamme Louise XIV®. Elle permet d’obtenir des blonds foncés légèrement doré. ",
+       "Les colorations permanentes Louise XIV® se déposent et se fixent sur le cheveu sans altérer la structure de la fibre capillaire, elles enrobent et gainent le cheveu pour un résultat brillant,  doux et soyeux. Que vous soyez Somptueuse, Mystérieuse ,Ravissante, Lumineuse, Rêveuse®, Flamboyante® ou Gourmande®, la couleur finale dépendra de la teinte et de la nature de vos cheveux-, offrant ainsi un résultat unique à chaque femme.",
+
+       "Dans un bol, ajouter trois fois le poids de la poudre en eau bouillante, mélanger jusqu’à obtention d’une crème fluide homogène sans grumeaux. Après rinçage du masque purifiant Louise XIV®, démêler l’ensemble de la chevelure et appliquer généreusement le mélange sur cheveux essorés, en raies fines (en commençant par la bordure du visage). Laisser poser sous un film ou charlotte et sous une source de chaleur (climazon- bonnet- casque chauffant...) durant 1h00. Rincer abondamment sans shampoing jusqu’à obtention d’une eau claire. ",
+
+       "Liste des ingrédients : LAWSONIA INERMIS LEAF POWDER- CASSIA OBAVATA LEAF POWDER- POLYGONUM MULTIFLORUM ROOT EXTRACT- GLYCINE SOJA EXTRACT- HAEMATOXYLUM CAMPECHIANUM WOOD EXTRACT- EMBLICA OFFICINALIS FRUIT EXTRACT- TRIGONELLA FOENUM-GRAECUM SEED EXTRACT- INDIGO TINCTORIA LEAF POWDER- CAMELLIA SINENSIS LEAF POWDER- CHARCOAL POWDER- SODIUM",
+       "HYDROXIDE- ACACIA SENEGAL GUM- XANTHAN GUM- LAWSONIA INERMIS LEAF EXTRACT- ILLITE- KAOLIN- LYSINE HYDROCHLORIDE",
+
     ]
   },
   {
