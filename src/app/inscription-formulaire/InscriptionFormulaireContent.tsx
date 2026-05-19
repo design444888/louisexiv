@@ -5,32 +5,36 @@ import Link from 'next/link';
 import { BriefcaseBusiness, Check, Mail, MapPin, Phone, Send, Sparkles } from 'lucide-react';
 
 type ProFormData = {
-  businessName: string;
-  contactName: string;
+  societe: string;
+  nom: string;
+  prenom: string;
   email: string;
-  phone: string;
+  telPortable: string;
+  telFixe: string;
+  address: string;
+  codePostal: string;
   city: string;
-  activity: string;
-  message: string;
+  instagram: string;
 };
 
 const initialFormData: ProFormData = {
-  businessName: '',
-  contactName: '',
+  societe: '',
+  nom: '',
+  prenom: '',
   email: '',
-  phone: '',
+  telPortable: '',
+  telFixe: '',
+  address: '',
+  codePostal: '',
   city: '',
-  activity: '',
-  message: '',
+  instagram: '',
 };
 
 export default function InscriptionFormulaireContent() {
   const [formData, setFormData] = useState<ProFormData>(initialFormData);
   const [submitted, setSubmitted] = useState(false);
 
-  const handleInputChange = (
-    event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
-  ) => {
+  const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = event.target;
     setFormData((current) => ({
       ...current,
@@ -54,7 +58,7 @@ export default function InscriptionFormulaireContent() {
               <BriefcaseBusiness size={14} strokeWidth={1.5} />
               Espace Professionnel
             </span>
-            <h1 className="mt-5 font-display text-[36px] md:text-[54px] font-medium leading-tight text-[#1F3F52]">
+            <h1 className="mt-5 font-display text-[36px] font-medium leading-tight text-[#1F3F52] md:text-[54px]">
               Inscription <em className="font-display font-normal italic text-[#4496CC]">Pro</em>
             </h1>
             <p className="mx-auto mt-4 max-w-2xl font-body text-[15px] font-light leading-relaxed text-[#2F7EAF] md:text-[17px]">
@@ -144,14 +148,17 @@ export default function InscriptionFormulaireContent() {
               <form onSubmit={handleSubmit} className="mt-8 space-y-5 font-body">
                 <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
                   <div>
-                    <label htmlFor="businessName" className="mb-2 block text-[12px] font-semibold uppercase tracking-wider text-[#2F7EAF]">
-                      Nom du salon / entreprise
+                    <label
+                      htmlFor="societe"
+                      className="mb-2 block text-[12px] font-semibold uppercase tracking-wider text-[#2F7EAF]"
+                    >
+                      Societe
                     </label>
                     <input
-                      id="businessName"
-                      name="businessName"
+                      id="societe"
+                      name="societe"
                       type="text"
-                      value={formData.businessName}
+                      value={formData.societe}
                       onChange={handleInputChange}
                       className="w-full border border-[#B7DFF2] bg-[#F1F8FC] px-3.5 py-2.5 text-[13px] text-[#1F3F52] outline-none transition-colors focus:border-[#4496CC]"
                       placeholder="Maison Exemple"
@@ -160,17 +167,20 @@ export default function InscriptionFormulaireContent() {
                   </div>
 
                   <div>
-                    <label htmlFor="contactName" className="mb-2 block text-[12px] font-semibold uppercase tracking-wider text-[#2F7EAF]">
-                      Nom du contact
+                    <label
+                      htmlFor="nom"
+                      className="mb-2 block text-[12px] font-semibold uppercase tracking-wider text-[#2F7EAF]"
+                    >
+                      Nom
                     </label>
                     <input
-                      id="contactName"
-                      name="contactName"
+                      id="nom"
+                      name="nom"
                       type="text"
-                      value={formData.contactName}
+                      value={formData.nom}
                       onChange={handleInputChange}
                       className="w-full border border-[#B7DFF2] bg-[#F1F8FC] px-3.5 py-2.5 text-[13px] text-[#1F3F52] outline-none transition-colors focus:border-[#4496CC]"
-                      placeholder="Camille Martin"
+                      placeholder="Martin"
                       required
                     />
                   </div>
@@ -178,8 +188,30 @@ export default function InscriptionFormulaireContent() {
 
                 <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
                   <div>
-                    <label htmlFor="email" className="mb-2 block text-[12px] font-semibold uppercase tracking-wider text-[#2F7EAF]">
-                      Email professionnel
+                    <label
+                      htmlFor="prenom"
+                      className="mb-2 block text-[12px] font-semibold uppercase tracking-wider text-[#2F7EAF]"
+                    >
+                      Prenom
+                    </label>
+                    <input
+                      id="prenom"
+                      name="prenom"
+                      type="text"
+                      value={formData.prenom}
+                      onChange={handleInputChange}
+                      className="w-full border border-[#B7DFF2] bg-[#F1F8FC] px-3.5 py-2.5 text-[13px] text-[#1F3F52] outline-none transition-colors focus:border-[#4496CC]"
+                      placeholder="Camille"
+                      required
+                    />
+                  </div>
+
+                  <div>
+                    <label
+                      htmlFor="email"
+                      className="mb-2 block text-[12px] font-semibold uppercase tracking-wider text-[#2F7EAF]"
+                    >
+                      Email
                     </label>
                     <input
                       id="email"
@@ -192,19 +224,82 @@ export default function InscriptionFormulaireContent() {
                       required
                     />
                   </div>
+                </div>
 
+                <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
                   <div>
-                    <label htmlFor="phone" className="mb-2 block text-[12px] font-semibold uppercase tracking-wider text-[#2F7EAF]">
-                      Telephone
+                    <label
+                      htmlFor="telPortable"
+                      className="mb-2 block text-[12px] font-semibold uppercase tracking-wider text-[#2F7EAF]"
+                    >
+                      Tel portable
                     </label>
                     <input
-                      id="phone"
-                      name="phone"
+                      id="telPortable"
+                      name="telPortable"
                       type="tel"
-                      value={formData.phone}
+                      value={formData.telPortable}
                       onChange={handleInputChange}
                       className="w-full border border-[#B7DFF2] bg-[#F1F8FC] px-3.5 py-2.5 text-[13px] text-[#1F3F52] outline-none transition-colors focus:border-[#4496CC]"
                       placeholder="+41 ..."
+                      required
+                    />
+                  </div>
+
+                  <div>
+                    <label
+                      htmlFor="telFixe"
+                      className="mb-2 block text-[12px] font-semibold uppercase tracking-wider text-[#2F7EAF]"
+                    >
+                      Tel fixe
+                    </label>
+                    <input
+                      id="telFixe"
+                      name="telFixe"
+                      type="tel"
+                      value={formData.telFixe}
+                      onChange={handleInputChange}
+                      className="w-full border border-[#B7DFF2] bg-[#F1F8FC] px-3.5 py-2.5 text-[13px] text-[#1F3F52] outline-none transition-colors focus:border-[#4496CC]"
+                      placeholder="+41 ..."
+                    />
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
+                  <div>
+                    <label
+                      htmlFor="address"
+                      className="mb-2 block text-[12px] font-semibold uppercase tracking-wider text-[#2F7EAF]"
+                    >
+                      Adress
+                    </label>
+                    <input
+                      id="address"
+                      name="address"
+                      type="text"
+                      value={formData.address}
+                      onChange={handleInputChange}
+                      className="w-full border border-[#B7DFF2] bg-[#F1F8FC] px-3.5 py-2.5 text-[13px] text-[#1F3F52] outline-none transition-colors focus:border-[#4496CC]"
+                      placeholder="12 rue Exemple"
+                      required
+                    />
+                  </div>
+
+                  <div>
+                    <label
+                      htmlFor="codePostal"
+                      className="mb-2 block text-[12px] font-semibold uppercase tracking-wider text-[#2F7EAF]"
+                    >
+                      Code postale
+                    </label>
+                    <input
+                      id="codePostal"
+                      name="codePostal"
+                      type="text"
+                      value={formData.codePostal}
+                      onChange={handleInputChange}
+                      className="w-full border border-[#B7DFF2] bg-[#F1F8FC] px-3.5 py-2.5 text-[13px] text-[#1F3F52] outline-none transition-colors focus:border-[#4496CC]"
+                      placeholder="1201"
                       required
                     />
                   </div>
@@ -212,8 +307,11 @@ export default function InscriptionFormulaireContent() {
 
                 <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
                   <div>
-                    <label htmlFor="city" className="mb-2 block text-[12px] font-semibold uppercase tracking-wider text-[#2F7EAF]">
-                      Ville / pays
+                    <label
+                      htmlFor="city"
+                      className="mb-2 block text-[12px] font-semibold uppercase tracking-wider text-[#2F7EAF]"
+                    >
+                      Ville
                     </label>
                     <input
                       id="city"
@@ -222,46 +320,28 @@ export default function InscriptionFormulaireContent() {
                       value={formData.city}
                       onChange={handleInputChange}
                       className="w-full border border-[#B7DFF2] bg-[#F1F8FC] px-3.5 py-2.5 text-[13px] text-[#1F3F52] outline-none transition-colors focus:border-[#4496CC]"
-                      placeholder="Geneve, Suisse"
+                      placeholder="Geneve"
                       required
                     />
                   </div>
 
                   <div>
-                    <label htmlFor="activity" className="mb-2 block text-[12px] font-semibold uppercase tracking-wider text-[#2F7EAF]">
-                      Type d&apos;activite
+                    <label
+                      htmlFor="instagram"
+                      className="mb-2 block text-[12px] font-semibold uppercase tracking-wider text-[#2F7EAF]"
+                    >
+                      Instagram
                     </label>
-                    <select
-                      id="activity"
-                      name="activity"
-                      value={formData.activity}
+                    <input
+                      id="instagram"
+                      name="instagram"
+                      type="text"
+                      value={formData.instagram}
                       onChange={handleInputChange}
                       className="w-full border border-[#B7DFF2] bg-[#F1F8FC] px-3.5 py-2.5 text-[13px] text-[#1F3F52] outline-none transition-colors focus:border-[#4496CC]"
-                      required
-                    >
-                      <option value="">Selectionner</option>
-                      <option value="salon">Salon de coiffure</option>
-                      <option value="spa">Spa / institut</option>
-                      <option value="retail">Concept store / retail</option>
-                      <option value="distributeur">Distributeur</option>
-                    </select>
+                      placeholder="@votrecompte"
+                    />
                   </div>
-                </div>
-
-                <div>
-                  <label htmlFor="message" className="mb-2 block text-[12px] font-semibold uppercase tracking-wider text-[#2F7EAF]">
-                    Votre projet
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    rows={6}
-                    value={formData.message}
-                    onChange={handleInputChange}
-                    className="w-full resize-none border border-[#B7DFF2] bg-[#F1F8FC] px-3.5 py-2.5 text-[13px] text-[#1F3F52] outline-none transition-colors focus:border-[#4496CC]"
-                    placeholder="Expliquez votre univers, votre clientele et vos attentes."
-                    required
-                  />
                 </div>
 
                 <div className="flex flex-wrap items-center gap-4 pt-2">
@@ -278,7 +358,7 @@ export default function InscriptionFormulaireContent() {
                 </div>
 
                 {submitted && (
-                  <div className="flex items-center gap-2 border border-[#B7DFF2]/20 bg-[#E3F1F8] p-4 text-[#4496CC] animate-fade-in">
+                  <div className="animate-fade-in flex items-center gap-2 border border-[#B7DFF2]/20 bg-[#E3F1F8] p-4 text-[#4496CC]">
                     <Check size={18} strokeWidth={1.5} />
                     <span className="text-[13px] font-semibold">
                       Votre demande professionnelle a bien ete envoyee. Notre equipe revient vers vous tres vite.
