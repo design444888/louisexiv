@@ -206,7 +206,7 @@ export default function HomePage() {
               <div className="relative w-full h-[400px] lg:h-[720px] rounded-none overflow-hidden">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src="https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&q=80&w=800"
+                  src="Photos/shampoing-louise-xiv.webp"
                   alt="Apothecary Ingredients"
                   className="object-cover w-full h-full"
                 />
