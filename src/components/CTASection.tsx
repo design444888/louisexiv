@@ -31,8 +31,8 @@ export default function CTASection({
 
 
         <h2 className="font-display text-[28px] md:text-[38px] font-medium mb-4 leading-tight">
-          <span className="text-[#FFFAFA]/60">{title}</span> <br className="hidden sm:inline" />
-          <em className="font-display italic text-[#E4D3C8] font-normal">{italicTitle}</em>
+          <span className="text-[#FFFAFA]">{title}</span> <br className="hidden sm:inline" />
+          <em className="font-display italic text-[#FFFAFA] font-normal">{italicTitle}</em>
         </h2>
 
         <p className="font-body text-[14px] md:text-[15px] font-medium text-[#FFFAFA] mb-8 max-w-xl mx-auto leading-relaxed">
