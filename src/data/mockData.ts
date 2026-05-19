@@ -67,10 +67,10 @@ export const CATEGORIES: Category[] = [
 export const PRODUCTS: Product[] = [
   {
     id: 'p1',
-    name: "L'Or Végétal",
+    name: "Les colorations en poudre Louise XIV®",
     category: "Colorations Naturelles",
     categorySlug: "colorations",
-    description: "Coloration végétale châtain doré aux extraits de camomille et henné neutre suisse.",
+    description: "Une coloration botanique en poudre pensée par Louise XIV pour sublimer les reflets, gainer la fibre et offrir un rituel végétal d'exception.",
     price: 39,
     image: "https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?auto=format&fit=crop&q=80&w=600",
     rating: 4.8,
