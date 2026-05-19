@@ -12,3 +12,5 @@ Creating turbopack project { dir: 'A:\\projet 2026\\iaweb\\louise', testMode: tr
  GET / 200 in 1294ms (next.js: 585ms, application-code: 709ms)
 [browser] Image with src "/partners.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes (file://A:/projet 2026/iaweb/louise/.next/dev/static/chunks/node_modules_next_dist_115brz8._.js:2477:13)
 ✓ Compiled in 5.1s
+✓ Compiled in 307ms
+✓ Compiled in 219ms

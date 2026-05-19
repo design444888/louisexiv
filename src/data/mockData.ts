@@ -72,15 +72,15 @@ export const PRODUCTS: Product[] = [
     categorySlug: "colorations",
     description: "Une coloration botanique en poudre pensée par Louise XIV pour sublimer les reflets, gainer la fibre et offrir un rituel végétal d'exception.",
     price: 39,
-    image: "https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?auto=format&fit=crop&q=80&w=600",
+    image: "Photos/coloration-poudre.webp",
     rating: 4.8,
     volumeOrSize: "100g",
     details: [
-      " PRO : En une seule étape quelque soit la couleur choisie et le pourcentage de cheveux blancs. Sans reflet disgracieux au rinçage et au vieillissement. Possibilité de faire des balayages et tout autre acte tecnhique avant ou après la coloration.
-Les colorations en poudre Louise XIV® ont été concues pour une utilisation simplifiée. Toutes les colorations de la gamme mélangent entre elles. N'hésitez pas à demander conseil sur notre chat en ligne.
-L'expertise de Louise XIV® a permis de déveloper une gamme étendue de couleurs grâce à l'introduction d'extraits colorants végétaux et de ingrédients naturelles garantissant le confort d'application et de rinçage.
-Son brevet portant sur la fixation de molécules naturelles sur la fibre capillaire encourage l'industrie à explorer de nouvelles solutions de colorations naturelles accéssibles au plus grand nombre. 
-La tenue dans le temps est garantie grâce à l'utilisation de soins naturels comme le Shampoing Doux Louise XIV® aux extraits d’ortie- sauge- cresson- arnica et romarin et le Soin Nutritif Intense à la mirabelle de Lorraine. ",
+      " PRO : En une seule étape quelque soit la couleur choisie et le pourcentage de cheveux blancs. Sans reflet disgracieux au rinçage et au vieillissement. Possibilité de faire des balayages et tout autre acte tecnhique avant ou après la coloration.",
+          "Les colorations en poudre Louise XIV® ont été concues pour une utilisation simplifiée. Toutes les colorations de la gamme mélangent entre elles. N'hésitez pas à demander conseil sur notre chat en ligne.",
+          "L'expertise de Louise XIV® a permis de déveloper une gamme étendue de couleurs grâce à l'introduction d'extraits colorants végétaux et de ingrédients naturelles garantissant le confort d'application et de rinçage.",
+          "Son brevet portant sur la fixation de molécules naturelles sur la fibre capillaire encourage l'industrie à explorer de nouvelles solutions de colorations naturelles accéssibles au plus grand nombre. ",
+          "La tenue dans le temps est garantie grâce à l'utilisation de soins naturels comme le Shampoing Doux Louise XIV® aux extraits d’ortie- sauge- cresson- arnica et romarin et le Soin Nutritif Intense à la mirabelle de Lorraine. ",
       
     ]
   },
