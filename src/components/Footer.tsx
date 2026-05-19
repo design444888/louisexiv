@@ -182,6 +182,7 @@ export default function Footer() {
           <Link href="/a-propos" className="hover:text-[#F1F8FC] transition-colors">
             Cookies
           </Link>
+          <span> <a href="https://louisexiv.com/" target="_blank" rel="noopener noreferrer" className="text-[#4496CC] hover:underline font-medium">Louise XIV france</a></span>
         </div>
       </div>
 
