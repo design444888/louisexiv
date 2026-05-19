@@ -250,23 +250,7 @@ export const PRODUCTS: Product[] = [
 
     ]
   },
-  {
-    id: 'p11',
-    name: "Blond Polaire",
-    category: "Colorations Naturelles",
-    categorySlug: "colorations",
-    description: "Soin gloss illuminateur et neutralisateur de reflets jaunes pour blonds délicats.",
-    price: 42,
-    image: "https://images.unsplash.com/photo-1552046122-03184de85e08?auto=format&fit=crop&q=80&w=600",
-    rating: 4.9,
-    volumeOrSize: "100g",
-    details: [
-      "Nuance et illumine les blonds naturels, méchés ou décolorés.",
-      "Sublime la clarté et apporte des reflets froids nacrés.",
-      "Soin d'exception ultra-doux enrichi en camomille matricaire.",
-      "Ingrédients d'origine suisse 100% naturels."
-    ]
-  },
+
   {
     id: 'p12',
     name: "La Brume de Quartz",
