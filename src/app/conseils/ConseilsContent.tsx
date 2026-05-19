@@ -68,7 +68,7 @@ export default function ConseilsContent() {
       {/* SECTION 1: INTRO (Background #F1F8FC) */}
       <section className="bg-[#F1F8FC] py-12 md:py-20 border-b border-[#8FC7E6]/50">
         <div className="max-w-[1200px] mx-auto px-6 md:px-8 text-center">
-          <div className="inline-flex items-center justify-center gap-2 border border-[#B7DFF2]/40 bg-[#E3F1F8] px-3 py-1 rounded-none mb-6">
+          <div className="inline-flex items-center justify-center gap-2 border border-[#89C2D9]/40 bg-[#E3F1F8] px-3 py-1 rounded-none mb-6">
             <BookOpen size={14} strokeWidth={1.5} className="text-[#2F7EAF]" />
             <span className="font-body text-[11px] uppercase tracking-[0.15em] text-[#2F7EAF]">
               L&apos;Écriture de l&apos;Apothicaire
@@ -96,7 +96,7 @@ export default function ConseilsContent() {
             <h2 className="font-display text-[28px] sm:text-[34px] font-medium text-[#1F3F52] mt-2 leading-tight">
               Dossiers &amp; <em className="font-display italic text-[#4496CC] font-normal">Rituels</em>
             </h2>
-            <div className="w-12 h-[1px] bg-[#B7DFF2] mx-auto mt-4"></div>
+            <div className="w-12 h-[1px] bg-[#89C2D9] mx-auto mt-4"></div>
           </div>
 
           {/* Renders dynamic article details reading layout if an article is selected */}
@@ -110,7 +110,7 @@ export default function ConseilsContent() {
                 Retour aux dossiers
               </button>
 
-              <div className="flex items-center gap-3 font-body text-[11px] text-[#B7DFF2] mb-4">
+              <div className="flex items-center gap-3 font-body text-[11px] text-[#89C2D9] mb-4">
                 <span className="bg-[#E3F1F8] text-[#2F7EAF] px-2 py-0.5 rounded-none font-medium">
                   {selectedArticle.category}
                 </span>
@@ -174,7 +174,7 @@ export default function ConseilsContent() {
             <p className="font-body text-[14px] text-[#2F7EAF] font-light mt-2">
               Retrouvez les interrogations les plus fréquentes reçues par notre laboratoire de Genève.
             </p>
-            <div className="w-12 h-[1px] bg-[#B7DFF2] mx-auto mt-4"></div>
+            <div className="w-12 h-[1px] bg-[#89C2D9] mx-auto mt-4"></div>
           </div>
 
           <FAQAccordion items={FAQS} />
@@ -193,7 +193,7 @@ export default function ConseilsContent() {
             <h2 className="font-display text-[28px] sm:text-[34px] font-medium text-[#1F3F52] mt-2 leading-tight">
               Avis <em className="font-display italic text-[#4496CC] font-normal">Clients</em>
             </h2>
-            <div className="w-12 h-[1px] bg-[#B7DFF2] mx-auto mt-4"></div>
+            <div className="w-12 h-[1px] bg-[#89C2D9] mx-auto mt-4"></div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -225,13 +225,13 @@ export default function ConseilsContent() {
                     <h4 className="font-display text-[15px] font-semibold text-[#1F3F52]">
                       {review.name}
                     </h4>
-                    <span className="font-body text-[10px] text-[#B7DFF2]">
+                    <span className="font-body text-[10px] text-[#89C2D9]">
                       {review.date}
                     </span>
                   </div>
                   
                   {/* Hair Type Badge */}
-                  <div className="inline-block mt-2 bg-[#E3F1F8] text-[#B7DFF2] px-2 py-0.5 rounded-none">
+                  <div className="inline-block mt-2 bg-[#E3F1F8] text-[#89C2D9] px-2 py-0.5 rounded-none">
                     <span className="font-body text-[10px] font-semibold uppercase tracking-wider">
                       {review.hairType}
                     </span>

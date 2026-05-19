@@ -54,7 +54,7 @@ export default function InscriptionFormulaireContent() {
       <section className="border-b border-[#8FC7E6]/50 bg-[#F1F8FC] py-16 md:py-24">
         <div className="mx-auto max-w-[1200px] px-6 md:px-8">
           <div className="mx-auto max-w-3xl text-center">
-            <span className="inline-flex items-center gap-2 border border-[#B7DFF2]/40 bg-[#E3F1F8] px-3 py-1 font-body text-[11px] uppercase tracking-[0.15em] text-[#2F7EAF]">
+            <span className="inline-flex items-center gap-2 border border-[#89C2D9]/40 bg-[#E3F1F8] px-3 py-1 font-body text-[11px] uppercase tracking-[0.15em] text-[#2F7EAF]">
               <BriefcaseBusiness size={14} strokeWidth={1.5} />
               Espace Professionnel
             </span>
@@ -160,7 +160,7 @@ export default function InscriptionFormulaireContent() {
                       type="text"
                       value={formData.societe}
                       onChange={handleInputChange}
-                      className="w-full border border-[#B7DFF2] bg-[#F1F8FC] px-3.5 py-2.5 text-[13px] text-[#1F3F52] outline-none transition-colors focus:border-[#4496CC]"
+                      className="w-full border border-[#89C2D9] bg-[#F1F8FC] px-3.5 py-2.5 text-[13px] text-[#1F3F52] outline-none transition-colors focus:border-[#4496CC]"
                       placeholder="Maison Exemple"
                       required
                     />
@@ -179,7 +179,7 @@ export default function InscriptionFormulaireContent() {
                       type="text"
                       value={formData.nom}
                       onChange={handleInputChange}
-                      className="w-full border border-[#B7DFF2] bg-[#F1F8FC] px-3.5 py-2.5 text-[13px] text-[#1F3F52] outline-none transition-colors focus:border-[#4496CC]"
+                      className="w-full border border-[#89C2D9] bg-[#F1F8FC] px-3.5 py-2.5 text-[13px] text-[#1F3F52] outline-none transition-colors focus:border-[#4496CC]"
                       placeholder="Martin"
                       required
                     />
@@ -200,7 +200,7 @@ export default function InscriptionFormulaireContent() {
                       type="text"
                       value={formData.prenom}
                       onChange={handleInputChange}
-                      className="w-full border border-[#B7DFF2] bg-[#F1F8FC] px-3.5 py-2.5 text-[13px] text-[#1F3F52] outline-none transition-colors focus:border-[#4496CC]"
+                      className="w-full border border-[#89C2D9] bg-[#F1F8FC] px-3.5 py-2.5 text-[13px] text-[#1F3F52] outline-none transition-colors focus:border-[#4496CC]"
                       placeholder="Camille"
                       required
                     />
@@ -219,7 +219,7 @@ export default function InscriptionFormulaireContent() {
                       type="email"
                       value={formData.email}
                       onChange={handleInputChange}
-                      className="w-full border border-[#B7DFF2] bg-[#F1F8FC] px-3.5 py-2.5 text-[13px] text-[#1F3F52] outline-none transition-colors focus:border-[#4496CC]"
+                      className="w-full border border-[#89C2D9] bg-[#F1F8FC] px-3.5 py-2.5 text-[13px] text-[#1F3F52] outline-none transition-colors focus:border-[#4496CC]"
                       placeholder="contact@maisonexemple.com"
                       required
                     />
@@ -240,7 +240,7 @@ export default function InscriptionFormulaireContent() {
                       type="tel"
                       value={formData.telPortable}
                       onChange={handleInputChange}
-                      className="w-full border border-[#B7DFF2] bg-[#F1F8FC] px-3.5 py-2.5 text-[13px] text-[#1F3F52] outline-none transition-colors focus:border-[#4496CC]"
+                      className="w-full border border-[#89C2D9] bg-[#F1F8FC] px-3.5 py-2.5 text-[13px] text-[#1F3F52] outline-none transition-colors focus:border-[#4496CC]"
                       placeholder="+41 ..."
                       required
                     />
@@ -259,7 +259,7 @@ export default function InscriptionFormulaireContent() {
                       type="tel"
                       value={formData.telFixe}
                       onChange={handleInputChange}
-                      className="w-full border border-[#B7DFF2] bg-[#F1F8FC] px-3.5 py-2.5 text-[13px] text-[#1F3F52] outline-none transition-colors focus:border-[#4496CC]"
+                      className="w-full border border-[#89C2D9] bg-[#F1F8FC] px-3.5 py-2.5 text-[13px] text-[#1F3F52] outline-none transition-colors focus:border-[#4496CC]"
                       placeholder="+41 ..."
                     />
                   </div>
@@ -279,7 +279,7 @@ export default function InscriptionFormulaireContent() {
                       type="text"
                       value={formData.address}
                       onChange={handleInputChange}
-                      className="w-full border border-[#B7DFF2] bg-[#F1F8FC] px-3.5 py-2.5 text-[13px] text-[#1F3F52] outline-none transition-colors focus:border-[#4496CC]"
+                      className="w-full border border-[#89C2D9] bg-[#F1F8FC] px-3.5 py-2.5 text-[13px] text-[#1F3F52] outline-none transition-colors focus:border-[#4496CC]"
                       placeholder="12 rue Exemple"
                       required
                     />
@@ -298,7 +298,7 @@ export default function InscriptionFormulaireContent() {
                       type="text"
                       value={formData.codePostal}
                       onChange={handleInputChange}
-                      className="w-full border border-[#B7DFF2] bg-[#F1F8FC] px-3.5 py-2.5 text-[13px] text-[#1F3F52] outline-none transition-colors focus:border-[#4496CC]"
+                      className="w-full border border-[#89C2D9] bg-[#F1F8FC] px-3.5 py-2.5 text-[13px] text-[#1F3F52] outline-none transition-colors focus:border-[#4496CC]"
                       placeholder="1201"
                       required
                     />
@@ -319,7 +319,7 @@ export default function InscriptionFormulaireContent() {
                       type="text"
                       value={formData.city}
                       onChange={handleInputChange}
-                      className="w-full border border-[#B7DFF2] bg-[#F1F8FC] px-3.5 py-2.5 text-[13px] text-[#1F3F52] outline-none transition-colors focus:border-[#4496CC]"
+                      className="w-full border border-[#89C2D9] bg-[#F1F8FC] px-3.5 py-2.5 text-[13px] text-[#1F3F52] outline-none transition-colors focus:border-[#4496CC]"
                       placeholder="Geneve"
                       required
                     />
@@ -338,7 +338,7 @@ export default function InscriptionFormulaireContent() {
                       type="text"
                       value={formData.instagram}
                       onChange={handleInputChange}
-                      className="w-full border border-[#B7DFF2] bg-[#F1F8FC] px-3.5 py-2.5 text-[13px] text-[#1F3F52] outline-none transition-colors focus:border-[#4496CC]"
+                      className="w-full border border-[#89C2D9] bg-[#F1F8FC] px-3.5 py-2.5 text-[13px] text-[#1F3F52] outline-none transition-colors focus:border-[#4496CC]"
                       placeholder="@votrecompte"
                     />
                   </div>
@@ -358,7 +358,7 @@ export default function InscriptionFormulaireContent() {
                 </div>
 
                 {submitted && (
-                  <div className="animate-fade-in flex items-center gap-2 border border-[#B7DFF2]/20 bg-[#E3F1F8] p-4 text-[#4496CC]">
+                  <div className="animate-fade-in flex items-center gap-2 border border-[#89C2D9]/20 bg-[#E3F1F8] p-4 text-[#4496CC]">
                     <Check size={18} strokeWidth={1.5} />
                     <span className="text-[13px] font-semibold">
                       Votre demande professionnelle a bien ete envoyee. Notre equipe revient vers vous tres vite.

@@ -136,7 +136,7 @@ export default function BoutiqueContent() {
             <p className="font-body text-[14px] font-light text-[#2F7EAF] mt-2 leading-relaxed">
               Une couvrance parfaite des cheveux blancs et des reflets vibrants en transparence, sans aucune agression chimique.
             </p>
-            <div className="w-12 h-[1px] bg-[#B7DFF2] mx-auto mt-4"></div>
+            <div className="w-12 h-[1px] bg-[#89C2D9] mx-auto mt-4"></div>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -162,7 +162,7 @@ export default function BoutiqueContent() {
             <p className="font-body text-[14px] font-light text-[#2F7EAF] mt-2 leading-relaxed">
               Des baumes et élixirs précieux infusés d’eau des glaciers suisses et d’actifs alpins pour nourrir et régénérer.
             </p>
-            <div className="w-12 h-[1px] bg-[#B7DFF2] mx-auto mt-4"></div>
+            <div className="w-12 h-[1px] bg-[#89C2D9] mx-auto mt-4"></div>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -190,7 +190,7 @@ export default function BoutiqueContent() {
             <p className="font-body text-[14px] font-light text-[#2F7EAF] mt-2 leading-relaxed">
               Brosses en soie naturelle et peignes sculptés dans des essences de bois nobles pour un coiffage sain et voluptueux.
             </p>
-            <div className="w-12 h-[1px] bg-[#B7DFF2] mx-auto mt-4"></div>
+            <div className="w-12 h-[1px] bg-[#89C2D9] mx-auto mt-4"></div>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -213,7 +213,7 @@ export default function BoutiqueContent() {
             <h2 className="font-display text-[28px] sm:text-[34px] font-medium text-[#1F3F52] mt-2 leading-tight">
               Aide &amp; <em className="font-display italic text-[#4496CC] font-normal">Conseils Boutique</em>
             </h2>
-            <div className="w-12 h-[1px] bg-[#B7DFF2] mx-auto mt-4"></div>
+            <div className="w-12 h-[1px] bg-[#89C2D9] mx-auto mt-4"></div>
           </div>
 
           <FAQAccordion items={boutiqueFAQs} />

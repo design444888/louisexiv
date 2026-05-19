@@ -113,7 +113,7 @@ export default function HomePage() {
                 className="object-cover w-full h-full transform hover:scale-102 transition-transform duration-700"
               />
               {/* Floating aesthetic stamp */}
-              <div className="absolute bottom-5 right-5 bg-[#F1F8FC]/95 border border-[#B7DFF2] px-4 py-3 rounded-none backdrop-blur-xs text-center">
+              <div className="absolute bottom-5 right-5 bg-[#F1F8FC]/95 border border-[#89C2D9] px-4 py-3 rounded-none backdrop-blur-xs text-center">
                 <p className="font-display italic text-[14px] text-[#4496CC]">Maison Louise XIV</p>
                 <p className="font-body text-[9px] uppercase tracking-widest text-[#2F7EAF] mt-0.5">Suisse • Genève</p>
               </div>
@@ -136,7 +136,7 @@ export default function HomePage() {
             <h2 className="font-display text-[28px] sm:text-[34px] font-medium text-[#1F3F52] mt-2 leading-tight">
               Trouvez <em className="font-display italic text-[#4496CC] font-normal">votre</em> rituel beauté
             </h2>
-            <div className="w-12 h-[1px] bg-[#B7DFF2] mx-auto mt-4"></div>
+            <div className="w-12 h-[1px] bg-[#89C2D9] mx-auto mt-4"></div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
@@ -229,7 +229,7 @@ export default function HomePage() {
 
               <div className="space-y-4">
                 <div className="flex gap-4">
-                  <div className="flex-shrink-0 w-8 h-8 rounded-none bg-[#E3F1F8] flex items-center justify-center text-[#B7DFF2]">
+                  <div className="flex-shrink-0 w-8 h-8 rounded-none bg-[#E3F1F8] flex items-center justify-center text-[#89C2D9]">
                     ⚜
                   </div>
                   <div>
@@ -239,7 +239,7 @@ export default function HomePage() {
                 </div>
 
                 <div className="flex gap-4">
-                  <div className="flex-shrink-0 w-8 h-8 rounded-none bg-[#E3F1F8] flex items-center justify-center text-[#B7DFF2]">
+                  <div className="flex-shrink-0 w-8 h-8 rounded-none bg-[#E3F1F8] flex items-center justify-center text-[#89C2D9]">
                     ⚜
                   </div>
                   <div>
@@ -282,7 +282,7 @@ export default function HomePage() {
             <p className="font-body text-[14px] font-light text-[#2F7EAF] mt-2">
               Explorez nos dossiers exclusifs sur le cheveu organique, nos diagnostics et nos conseils d&apos;experts.
             </p>
-            <div className="w-12 h-[1px] bg-[#B7DFF2] mx-auto mt-4"></div>
+            <div className="w-12 h-[1px] bg-[#89C2D9] mx-auto mt-4"></div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

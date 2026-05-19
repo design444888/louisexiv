@@ -28,7 +28,7 @@ export default function ArticleCard({ article }: ArticleCardProps) {
 
       {/* Content Area */}
       <div className="flex flex-col flex-grow p-6">
-        <div className="flex items-center gap-3 font-body text-[11px] text-[#B7DFF2] mb-3">
+        <div className="flex items-center gap-3 font-body text-[11px] text-[#89C2D9] mb-3">
           <span>{article.date}</span>
           <span>•</span>
           <span>{article.readTime}</span>

@@ -53,9 +53,9 @@ export default function Header() {
   };
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-[#B7DFF2]/50 bg-[#F1F8FC]/60 shadow-none backdrop-blur-md">
+    <header className="sticky top-0 z-50 w-full border-b border-[#89C2D9]/50 bg-[#F1F8FC]/60 shadow-none backdrop-blur-md">
       {showCartAlert && (
-        <div className="absolute top-full left-1/2 z-50 mt-4 -translate-x-1/2 rounded-none bg-[#B7DFF2] px-4 py-2 font-body text-[13px] tracking-wide text-[#F1F8FC] shadow-none animate-fade-in">
+        <div className="absolute top-full left-1/2 z-50 mt-4 -translate-x-1/2 rounded-none bg-[#89C2D9] px-4 py-2 font-body text-[13px] tracking-wide text-[#F1F8FC] shadow-none animate-fade-in">
           Produit ajoute au panier !
         </div>
       )}
@@ -316,7 +316,7 @@ export default function Header() {
         <div className="fixed inset-0 z-50 flex justify-start bg-[#1F3F52]/60 backdrop-blur-xs transition-all duration-300 md:hidden">
           <div className="flex h-full w-[300px] flex-col justify-between overflow-y-auto bg-[#F1F8FC] p-6 shadow-2xl animate-slide-right">
             <div>
-              <div className="mb-8 flex items-center justify-between border-b border-[#B7DFF2]/40 pb-4">
+              <div className="mb-8 flex items-center justify-between border-b border-[#89C2D9]/40 pb-4">
                 <Link
                   href="/"
                   className="relative block h-[43px] w-[52px] py-1 transition-transform duration-300 hover:scale-102"
@@ -433,7 +433,7 @@ export default function Header() {
               </div>
             </div>
 
-            <div className="border-t border-[#B7DFF2]/40 pt-6 text-center font-body text-[11px] text-[#2F7EAF]">
+            <div className="border-t border-[#89C2D9]/40 pt-6 text-center font-body text-[11px] text-[#2F7EAF]">
               <p>Maison Louise XIV - Suisse</p>
               <p className="mt-1 font-light">Rituels botaniques de prestige</p>
             </div>

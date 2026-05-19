@@ -19,7 +19,7 @@ export default function Footer() {
 
   return (
     <footer
-      className="bg-[var(--color-footer)] text-[#8FC7E6] border-t border-[#B7DFF2]/20 font-body"
+      className="bg-[var(--color-footer)] text-[#8FC7E6] border-t border-[#89C2D9]/20 font-body"
       style={{ backgroundColor: '#1F3F52' }}
     >
       
@@ -44,7 +44,7 @@ export default function Footer() {
           </p>
 
           {/* Partner logos banner */}
-          <div className="relative w-[280px] h-[95px] bg-[#F1F8FC] border border-[#B7DFF2]/30 overflow-hidden flex items-center justify-center p-1.5">
+          <div className="relative w-[280px] h-[95px] bg-[#F1F8FC] border border-[#89C2D9]/30 overflow-hidden flex items-center justify-center p-1.5">
             <Image
               src="/partners.png"
               alt="Partenaires Nouvelle-Aquitaine et Laboratoire ISATIS"
@@ -89,7 +89,7 @@ export default function Footer() {
             </li>
 
             {/* Divider Line 1 */}
-            <li className="w-full max-w-[120px] md:max-w-none border-t border-[#B7DFF2]/20 my-2.5 pointer-events-none"></li>
+            <li className="w-full max-w-[120px] md:max-w-none border-t border-[#89C2D9]/20 my-2.5 pointer-events-none"></li>
 
             {/* Group 2: Conseils */}
             <li>
@@ -104,7 +104,7 @@ export default function Footer() {
             </li>
 
             {/* Divider Line 2 */}
-            <li className="w-full max-w-[120px] md:max-w-none border-t border-[#B7DFF2]/20 my-2.5 pointer-events-none"></li>
+            <li className="w-full max-w-[120px] md:max-w-none border-t border-[#89C2D9]/20 my-2.5 pointer-events-none"></li>
 
             {/* Group 3: À propos */}
             <li>
@@ -133,7 +133,7 @@ export default function Footer() {
               placeholder="E-mail"
               value={newsletterEmail}
               onChange={(e) => setNewsletterEmail(e.target.value)}
-              className="bg-[#1F3F52]/40 border border-[#B7DFF2]/40 text-[#F1F8FC] font-body text-[13px] px-3.5 py-2.5 rounded-none focus:outline-none focus:border-[#F1F8FC] placeholder-[#8FC7E6]/35 w-full transition-all duration-300"
+              className="bg-[#1F3F52]/40 border border-[#89C2D9]/40 text-[#F1F8FC] font-body text-[13px] px-3.5 py-2.5 rounded-none focus:outline-none focus:border-[#F1F8FC] placeholder-[#8FC7E6]/35 w-full transition-all duration-300"
               required
             />
             <button 
@@ -145,7 +145,7 @@ export default function Footer() {
           </form>
           
           {subscribed && (
-            <p className="text-[12px] text-[#B7DFF2] mt-2 font-medium">
+            <p className="text-[12px] text-[#89C2D9] mt-2 font-medium">
               Inscription réussie. Bienvenue dans la Maison.
             </p>
           )}
@@ -159,7 +159,7 @@ export default function Footer() {
 
       {/* Bottom Bar: Copyright & legal links */}
       <div
-        className="border-t border-[#B7DFF2]/15 py-6 px-6 bg-[var(--color-footer)] text-center text-[12px] text-[#8FC7E6]/55 font-body"
+        className="border-t border-[#89C2D9]/15 py-6 px-6 bg-[var(--color-footer)] text-center text-[12px] text-[#8FC7E6]/55 font-body"
         style={{ backgroundColor: '#1F3F52' }}
       >
         <div className="max-w-[1200px] mx-auto flex flex-col sm:flex-row justify-center items-center gap-1.5 flex-wrap leading-relaxed">

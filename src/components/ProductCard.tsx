@@ -122,7 +122,7 @@ export default function ProductCard({
           aria-hidden="true"
         >
           <div className="space-y-4">
-            <div className="flex items-start justify-between gap-3 border-b border-[#B7DFF2]/40 pb-3">
+            <div className="flex items-start justify-between gap-3 border-b border-[#89C2D9]/40 pb-3">
               <div>
                 <p className="font-body text-[10px] font-semibold uppercase tracking-[0.2em] text-[#2F7EAF]">
                   Fiche Technique

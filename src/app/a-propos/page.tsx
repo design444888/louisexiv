@@ -45,7 +45,7 @@ export default function AProposPage() {
       {/* SECTION 1: HERO & BRAND STORY (Background #F1F8FC) */}
       <section className="bg-[#F1F8FC] py-16 md:py-24 border-b border-[#8FC7E6]/50">
         <div className="max-w-[1200px] mx-auto px-6 md:px-8 text-center max-w-3xl">
-          <div className="inline-flex items-center justify-center gap-2 border border-[#B7DFF2]/40 bg-[#E3F1F8] px-3 py-1 rounded-none mb-6">
+          <div className="inline-flex items-center justify-center gap-2 border border-[#89C2D9]/40 bg-[#E3F1F8] px-3 py-1 rounded-none mb-6">
             <Crown size={14} strokeWidth={1.5} className="text-[#2F7EAF]" />
             <span className="font-body text-[11px] uppercase tracking-[0.15em] text-[#2F7EAF]">
               L&apos;Héritage Helvetique
@@ -60,7 +60,7 @@ export default function AProposPage() {
             Fondée à Genève, Louise XIV est née de l&apos;ambition de redéfinir la beauté des cheveux à travers le prisme de la haute apothicairerie naturelle. Nous marions la noblesse de la flore alpine à la rigueur de la recherche suisse pour des formules d&apos;une efficacité et d&apos;une pureté absolues.
           </p>
 
-          <div className="w-16 h-[1px] bg-[#B7DFF2] mx-auto"></div>
+          <div className="w-16 h-[1px] bg-[#89C2D9] mx-auto"></div>
         </div>
       </section>
 
@@ -78,7 +78,7 @@ export default function AProposPage() {
                   alt="Eugénia M Fondatrice"
                   className="object-cover w-full h-full"
                 />
-                <div className="absolute bottom-4 left-4 right-4 bg-[#F1F8FC]/95 border border-[#B7DFF2] p-3 rounded-none text-center">
+                <div className="absolute bottom-4 left-4 right-4 bg-[#F1F8FC]/95 border border-[#89C2D9] p-3 rounded-none text-center">
                   <p className="font-display italic text-[14px] text-[#4496CC]">Eugénia M.</p>
                   <p className="font-body text-[9px] uppercase tracking-widest text-[#2F7EAF]">Fondatrice &amp; Maître Trichologue</p>
                 </div>
@@ -104,7 +104,7 @@ export default function AProposPage() {
                 Après des années de recherche en laboratoire à Genève et de collaboration avec des paysans herboristes du Valais, elle met au point le procédé signature de Louise XIV : une encapsulation unique de pigments botaniques dans une base huileuse thermorégulée. Une innovation qui dépose la couleur sans forcer la cuticule, soignant le cheveu au lieu de l&apos;altérer. Aujourd&apos;hui, la Maison allie cette méthode historique aux standards du luxe moderne pour sublimer les chevelures du monde entier.
               </p>
 
-              <div className="border-l-2 border-[#B7DFF2] pl-4 py-1 italic font-display text-[15px] text-[#4496CC] font-medium">
+              <div className="border-l-2 border-[#89C2D9] pl-4 py-1 italic font-display text-[15px] text-[#4496CC] font-medium">
                 &quot;Soigner le cheveu n&apos;est pas une question d&apos;artifice, c&apos;est une question de respect et de physiologie.&quot;
               </div>
             </div>
@@ -124,13 +124,13 @@ export default function AProposPage() {
             <h2 className="font-display text-[28px] sm:text-[34px] font-medium text-[#1F3F52] mt-2 leading-tight">
               Nos <em className="font-display italic text-[#4496CC] font-normal">Engagements</em>
             </h2>
-            <div className="w-12 h-[1px] bg-[#B7DFF2] mx-auto mt-4"></div>
+            <div className="w-12 h-[1px] bg-[#89C2D9] mx-auto mt-4"></div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             
             <div className="bg-[#E3F1F8] p-8 rounded-none border border-[#8FC7E6] shadow-none hover:bg-[#8FC7E6] transition-all duration-300">
-              <div className="w-12 h-12 rounded-none bg-[#E3F1F8] flex items-center justify-center text-[#B7DFF2] mb-6">
+              <div className="w-12 h-12 rounded-none bg-[#E3F1F8] flex items-center justify-center text-[#89C2D9] mb-6">
                 <Sprout size={24} strokeWidth={1.5} />
               </div>
               <h3 className="font-display text-[18px] font-medium text-[#1F3F52] mb-3">Pureté Biologique</h3>
@@ -140,8 +140,8 @@ export default function AProposPage() {
             </div>
 
             <div className="bg-[#E3F1F8] p-8 rounded-none border border-[#8FC7E6] shadow-none hover:bg-[#8FC7E6] transition-all duration-300">
-              <div className="w-12 h-12 rounded-none bg-[#E3F1F8] flex items-center justify-center text-[#B7DFF2] mb-6">
-                <Award size={24} strokeWidth={1.5} className="text-[#B7DFF2]" />
+              <div className="w-12 h-12 rounded-none bg-[#E3F1F8] flex items-center justify-center text-[#89C2D9] mb-6">
+                <Award size={24} strokeWidth={1.5} className="text-[#89C2D9]" />
               </div>
               <h3 className="font-display text-[18px] font-medium text-[#1F3F52] mb-3">Fabrication Suisse</h3>
               <p className="font-body text-[13.5px] font-light text-[#2F7EAF] leading-relaxed">
@@ -150,7 +150,7 @@ export default function AProposPage() {
             </div>
 
             <div className="bg-[#E3F1F8] p-8 rounded-none border border-[#8FC7E6] shadow-none hover:bg-[#8FC7E6] transition-all duration-300">
-              <div className="w-12 h-12 rounded-none bg-[#E3F1F8] flex items-center justify-center text-[#B7DFF2] mb-6">
+              <div className="w-12 h-12 rounded-none bg-[#E3F1F8] flex items-center justify-center text-[#89C2D9] mb-6">
                 <Users size={24} strokeWidth={1.5} />
               </div>
               <h3 className="font-display text-[18px] font-medium text-[#1F3F52] mb-3">Transparence Totale</h3>
@@ -189,13 +189,13 @@ export default function AProposPage() {
 
               <div className="grid grid-cols-2 gap-6 pt-4">
                 <div className="flex gap-2">
-                  <Check size={16} strokeWidth={1.5} className="text-[#B7DFF2] mt-1 flex-shrink-0" />
+                  <Check size={16} strokeWidth={1.5} className="text-[#89C2D9] mt-1 flex-shrink-0" />
                   <div>
                     <h4 className="font-display text-[14px] font-semibold text-[#1F3F52]">Tests sous contrôle dermatologique</h4>
                   </div>
                 </div>
                 <div className="flex gap-2">
-                  <Check size={16} strokeWidth={1.5} className="text-[#B7DFF2] mt-1 flex-shrink-0" />
+                  <Check size={16} strokeWidth={1.5} className="text-[#89C2D9] mt-1 flex-shrink-0" />
                   <div>
                     <h4 className="font-display text-[14px] font-semibold text-[#1F3F52]">Flacons recyclables sans phtalates</h4>
                   </div>
@@ -230,7 +230,7 @@ export default function AProposPage() {
             <h2 className="font-display text-[28px] sm:text-[34px] font-medium text-[#1F3F52] mt-2 leading-tight">
               Contact &amp; <em className="font-display italic text-[#4496CC] font-normal">Prestations Salon</em>
             </h2>
-            <div className="w-12 h-[1px] bg-[#B7DFF2] mx-auto mt-4"></div>
+            <div className="w-12 h-[1px] bg-[#89C2D9] mx-auto mt-4"></div>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
@@ -266,13 +266,13 @@ export default function AProposPage() {
                   <p className="font-light">contact@louisexiv-apothicaire.ch</p>
                 </div>
 
-                <div className="flex items-start gap-3 pt-2 border-t border-[#B7DFF2]/20">
+                <div className="flex items-start gap-3 pt-2 border-t border-[#89C2D9]/20">
                   <Clock size={18} strokeWidth={1.5} className="text-[#4496CC] mt-0.5 flex-shrink-0" />
                   <div>
                     <p className="font-medium text-[#1F3F52]">Heures d&apos;Ouverture</p>
                     <p className="font-light">Lundi - Vendredi : 09:00 - 19:00</p>
                     <p className="font-light">Samedi : 10:00 - 18:00</p>
-                    <p className="font-light text-[#B7DFF2] mt-1">Sur rendez-vous uniquement</p>
+                    <p className="font-light text-[#89C2D9] mt-1">Sur rendez-vous uniquement</p>
                   </div>
                 </div>
               </div>
@@ -297,7 +297,7 @@ export default function AProposPage() {
                       name="name"
                       value={formData.name}
                       onChange={handleInputChange}
-                      className="w-full bg-[#F1F8FC] border border-[#B7DFF2] text-[#1F3F52] text-[13px] px-3.5 py-2.5 rounded-none focus:outline-none focus:border-[#4496CC]"
+                      className="w-full bg-[#F1F8FC] border border-[#89C2D9] text-[#1F3F52] text-[13px] px-3.5 py-2.5 rounded-none focus:outline-none focus:border-[#4496CC]"
                       placeholder="Jean Dupont"
                       required
                     />
@@ -313,7 +313,7 @@ export default function AProposPage() {
                       name="email"
                       value={formData.email}
                       onChange={handleInputChange}
-                      className="w-full bg-[#F1F8FC] border border-[#B7DFF2] text-[#1F3F52] text-[13px] px-3.5 py-2.5 rounded-none focus:outline-none focus:border-[#4496CC]"
+                      className="w-full bg-[#F1F8FC] border border-[#89C2D9] text-[#1F3F52] text-[13px] px-3.5 py-2.5 rounded-none focus:outline-none focus:border-[#4496CC]"
                       placeholder="jean.dupont@email.com"
                       required
                     />
@@ -330,7 +330,7 @@ export default function AProposPage() {
                     name="subject"
                     value={formData.subject}
                     onChange={handleInputChange}
-                    className="w-full bg-[#F1F8FC] border border-[#B7DFF2] text-[#1F3F52] text-[13px] px-3.5 py-2.5 rounded-none focus:outline-none focus:border-[#4496CC]"
+                    className="w-full bg-[#F1F8FC] border border-[#89C2D9] text-[#1F3F52] text-[13px] px-3.5 py-2.5 rounded-none focus:outline-none focus:border-[#4496CC]"
                     placeholder="Conseil diagnostic coloration, réservation salon..."
                   />
                 </div>
@@ -345,7 +345,7 @@ export default function AProposPage() {
                     rows={5}
                     value={formData.message}
                     onChange={handleInputChange}
-                    className="w-full bg-[#F1F8FC] border border-[#B7DFF2] text-[#1F3F52] text-[13px] px-3.5 py-2.5 rounded-none focus:outline-none focus:border-[#4496CC] resize-none"
+                    className="w-full bg-[#F1F8FC] border border-[#89C2D9] text-[#1F3F52] text-[13px] px-3.5 py-2.5 rounded-none focus:outline-none focus:border-[#4496CC] resize-none"
                     placeholder="Décrivez votre type de cheveux ou votre question..."
                     required
                   ></textarea>
@@ -362,7 +362,7 @@ export default function AProposPage() {
                 </div>
 
                 {submitted && (
-                  <div className="p-4 bg-[#E3F1F8] text-[#B7DFF2] rounded-none flex items-center gap-2 border border-[#B7DFF2]/20 animate-fade-in">
+                  <div className="p-4 bg-[#E3F1F8] text-[#89C2D9] rounded-none flex items-center gap-2 border border-[#89C2D9]/20 animate-fade-in">
                     <Check size={18} />
                     <span className="text-[13px] font-semibold">Message envoyé avec succès ! Notre laboratoire vous répondra sous 24h ouvrées.</span>
                   </div>
