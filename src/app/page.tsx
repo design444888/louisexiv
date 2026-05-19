@@ -77,7 +77,7 @@ export default function HomePage() {
                 Maison suisse de prestige dédiée à la haute formulation capillaire. Nos colorations 100% végétales et nos soins d&apos;exception infusent la pureté alpine au cœur de votre fibre capillaire pour un éclat absolu.
               </p>
               <div className="flex flex-wrap items-center gap-4">
-                <Link href="/boutique" className="btn-primary">
+                <Link href="/boutique" className="inline-flex items-center justify-center rounded-[4px] border border-[#7E9797] bg-[#7E9797] px-[28px] py-[13px] font-body text-[13px] font-semibold uppercase leading-none tracking-[0.08em] text-[#FFFAFA] transition-all duration-300 hover:-translate-y-[1px] hover:border-[#6F8787] hover:bg-[#6F8787]">
                   DÉCOUVRIR NOS COLORATIONS
                 </Link>
                 <Link href="/a-propos" className="btn-secondary">
@@ -257,7 +257,7 @@ export default function HomePage() {
                   href="https://louisexiv.com/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn-primary"
+                  className="inline-flex items-center justify-center rounded-[4px] border border-[#7E9797] bg-[#7E9797] px-[28px] py-[13px] font-body text-[13px] font-semibold uppercase leading-none tracking-[0.08em] text-[#FFFAFA] transition-all duration-300 hover:-translate-y-[1px] hover:border-[#6F8787] hover:bg-[#6F8787]"
                 >
                   Louise XIV France
                 </a>

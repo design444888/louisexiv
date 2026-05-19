@@ -293,7 +293,7 @@ export default function Header() {
         <div className="flex items-center justify-end gap-4">
           <Link
             href="/inscription-formulaire"
-            className="hidden md:inline-flex items-center justify-center rounded-[4px] bg-[#573119] px-4 py-2 font-body text-[11px] font-semibold uppercase tracking-[0.12em] text-[#FFFAFA] transition-all duration-200 hover:bg-[#6E4226] hover:-translate-y-[1px]"
+            className="hidden md:inline-flex items-center justify-center rounded-[4px] bg-[#7E9797] px-4 py-2 font-body text-[11px] font-semibold uppercase tracking-[0.12em] text-[#FFFAFA] transition-all duration-200 hover:bg-[#6F8787] hover:-translate-y-[1px]"
           >
             Inscription Pro
           </Link>
@@ -339,7 +339,7 @@ export default function Header() {
                 <Link
                   href="/inscription-formulaire"
                   onClick={() => setMobileMenuOpen(false)}
-                  className="flex w-full items-center justify-center rounded-[4px] bg-[#573119] px-4 py-3 text-[12px] font-semibold uppercase tracking-[0.12em] text-[#FFFAFA] transition-all duration-200 hover:bg-[#6E4226]"
+                  className="flex w-full items-center justify-center rounded-[4px] bg-[#7E9797] px-4 py-3 text-[12px] font-semibold uppercase tracking-[0.12em] text-[#FFFAFA] transition-all duration-200 hover:bg-[#6F8787]"
                 >
                   Inscription Pro
                 </Link>
