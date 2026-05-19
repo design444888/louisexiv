@@ -67,32 +67,13 @@ export const CATEGORIES: Category[] = [
 export const PRODUCTS: Product[] = [
   {
     id: 'p1',
-    name: "Les colorations en poudre Louise XIV®",
-    category: "Coloration végétale",
-    categorySlug: "colorations",
-    description: "Une coloration botanique en poudre pensée par Louise XIV pour sublimer les reflets, gainer la fibre et offrir un rituel végétal d'exception.",
-    price: 39,
-    image: "Photos/bol-verre-coloration-coiffure.webp",
-    rating: 4.8,
-    volumeOrSize: "100g",
-    details: [
-      " PRO : En une seule étape quelque soit la couleur choisie et le pourcentage de cheveux blancs. Sans reflet disgracieux au rinçage et au vieillissement. Possibilité de faire des balayages et tout autre acte tecnhique avant ou après la coloration.",
-          "Les colorations en poudre Louise XIV® ont été concues pour une utilisation simplifiée. Toutes les colorations de la gamme mélangent entre elles. N'hésitez pas à demander conseil sur notre chat en ligne.",
-          "L'expertise de Louise XIV® a permis de déveloper une gamme étendue de couleurs grâce à l'introduction d'extraits colorants végétaux et de ingrédients naturelles garantissant le confort d'application et de rinçage.",
-          "Son brevet portant sur la fixation de molécules naturelles sur la fibre capillaire encourage l'industrie à explorer de nouvelles solutions de colorations naturelles accéssibles au plus grand nombre. ",
-          "La tenue dans le temps est garantie grâce à l'utilisation de soins naturels comme le Shampoing Doux Louise XIV® aux extraits d’ortie- sauge- cresson- arnica et romarin et le Soin Nutritif Intense à la mirabelle de Lorraine. ",
-      
-    ]
-  },
-  {
-    id: 'p2',
     name: "La Lumineuse (8/9.31)",
     category: "Coloration végétale",
     categorySlug: "colorations",
-    description: "Coloration soin cuivrée naturelle, reflets chauds intenses et brillance miroir.",
+    description: "",
     price: 39,
     image: "Photos/la-lumineuse-louisexiv-1.webp",
-    rating: 4.9,
+    rating: 4.8,
     volumeOrSize: "100g",
     details: [
       "La Lumineuse®, L’élégance d’un blond doré ",
@@ -104,8 +85,28 @@ export const PRODUCTS: Product[] = [
 
        "Liste des ingrédients : CASSIA OBOVATA LEAF POWDER- LAWSONIA INERMIS LEAF POWDER- LAWSONIA INERMIS LEAF EXTRACT- ACACIA GUM- XANTHAN GUM- HAEMATOXILON CAMPECHIANUM WOOD EXTRACT- MALTODEXTRINE- LYSINE HYDROCHLORIDE.",
 
+    ]
+  },
+  {
+    id: 'p2',
+    name: "La Somptueuse (6.3)",
+    category: "Coloration végétale",
+    categorySlug: "colorations",
+    description: " ",
+    price: 39,
+    image: "Photos/la-somptueuse-louisexiv-1.webp",
+    rating: 4.7,
+    volumeOrSize: "100g",
+    details: [
+      "La Somptueuse®- La charme d’un blond foncé doré ",
+       "La Somptueuse® est un véritable blond foncé doré qui s’utilise seule ou en mélange avec les gels et les autres poudres de la gamme Louise XIV®. Elle permet d’obtenir des blonds foncés légèrement doré. ",
+       "Les colorations permanentes Louise XIV® se déposent et se fixent sur le cheveu sans altérer la structure de la fibre capillaire, elles enrobent et gainent le cheveu pour un résultat brillant,  doux et soyeux. Que vous soyez Somptueuse, Mystérieuse ,Ravissante, Lumineuse, Rêveuse®, Flamboyante® ou Gourmande®, la couleur finale dépendra de la teinte et de la nature de vos cheveux-, offrant ainsi un résultat unique à chaque femme.",
 
-     
+       "Dans un bol, ajouter trois fois le poids de la poudre en eau bouillante, mélanger jusqu’à obtention d’une crème fluide homogène sans grumeaux. Après rinçage du masque purifiant Louise XIV®, démêler l’ensemble de la chevelure et appliquer généreusement le mélange sur cheveux essorés, en raies fines (en commençant par la bordure du visage). Laisser poser sous un film ou charlotte et sous une source de chaleur (climazon- bonnet- casque chauffant...) durant 1h00. Rincer abondamment sans shampoing jusqu’à obtention d’une eau claire. ",
+
+       "Liste des ingrédients : LAWSONIA INERMIS LEAF POWDER- CASSIA OBAVATA LEAF POWDER- POLYGONUM MULTIFLORUM ROOT EXTRACT- GLYCINE SOJA EXTRACT- HAEMATOXYLUM CAMPECHIANUM WOOD EXTRACT- EMBLICA OFFICINALIS FRUIT EXTRACT- TRIGONELLA FOENUM-GRAECUM SEED EXTRACT- INDIGO TINCTORIA LEAF POWDER- CAMELLIA SINENSIS LEAF POWDER- CHARCOAL POWDER- SODIUM",
+       "HYDROXIDE- ACACIA SENEGAL GUM- XANTHAN GUM- LAWSONIA INERMIS LEAF EXTRACT- ILLITE- KAOLIN- LYSINE HYDROCHLORIDE",
+
     ]
   },
   {
