@@ -100,7 +100,7 @@ export default function Header() {
           >
             <Link
               href="/boutique"
-              className={`flex cursor-pointer items-center gap-1 py-2 font-body text-[13px] font-semibold uppercase tracking-[0.15em] text-[#4496CC] transition-colors hover:text-[#2F7EAF] ${pathname.startsWith('/boutique') ? 'underline underline-offset-[6px]' : ''}`}
+              className={`flex cursor-pointer items-center gap-1 py-2 font-body text-[13px] font-semibold uppercase tracking-[0.15em] transition-colors hover:text-white ${pathname.startsWith('/boutique') || activeDropdown === 'boutique' ? 'text-white underline underline-offset-[6px]' : 'text-[#4496CC]'}`}
             >
               Boutique
               <ChevronDown
@@ -121,43 +121,49 @@ export default function Header() {
                 <Link
                   href="/boutique#colorations"
                   onClick={() => setActiveDropdown(null)}
-                  className="flex items-center gap-3 rounded-none p-2.5 text-[#1F3F52] transition-all hover:bg-[#8FC7E6] hover:text-[#4496CC]"
+                  className="group flex items-center gap-3 rounded-none p-2.5 text-[#1F3F52] transition-all hover:bg-[#4496CC] hover:text-white"
                 >
-                  <Leaf size={18} strokeWidth={1.5} className="text-[#4496CC]" />
+                  <Leaf size={18} strokeWidth={1.5} className="text-[#4496CC] transition-colors group-hover:text-white" />
                   <div className="text-left">
                     <div className="font-display text-[14px] font-medium">Colorations Naturelles</div>
-                    <div className="font-body text-[11px] font-light text-[#2F7EAF]">Pigments botaniques et soins</div>
+                    <div className="font-body text-[11px] font-light text-[#2F7EAF] transition-colors group-hover:text-white">
+                      Pigments botaniques et soins
+                    </div>
                   </div>
                 </Link>
                 <Link
                   href="/boutique#soins"
                   onClick={() => setActiveDropdown(null)}
-                  className="flex items-center gap-3 rounded-none p-2.5 text-[#1F3F52] transition-all hover:bg-[#8FC7E6] hover:text-[#4496CC]"
+                  className="group flex items-center gap-3 rounded-none p-2.5 text-[#1F3F52] transition-all hover:bg-[#4496CC] hover:text-white"
                 >
-                  <Droplets size={18} strokeWidth={1.5} className="text-[#4496CC]" />
+                  <Droplets size={18} strokeWidth={1.5} className="text-[#4496CC] transition-colors group-hover:text-white" />
                   <div className="text-left">
                     <div className="font-display text-[14px] font-medium">Soins Capillaires</div>
-                    <div className="font-body text-[11px] font-light text-[#2F7EAF]">Rituels hydratants des Alpes</div>
+                    <div className="font-body text-[11px] font-light text-[#2F7EAF] transition-colors group-hover:text-white">
+                      Rituels hydratants des Alpes
+                    </div>
                   </div>
                 </Link>
                 <Link
                   href="/boutique#accessoires"
                   onClick={() => setActiveDropdown(null)}
-                  className="flex items-center gap-3 rounded-none p-2.5 text-[#1F3F52] transition-all hover:bg-[#8FC7E6] hover:text-[#4496CC]"
+                  className="group flex items-center gap-3 rounded-none p-2.5 text-[#1F3F52] transition-all hover:bg-[#4496CC] hover:text-white"
                 >
-                  <Sparkles size={18} strokeWidth={1.5} className="text-[#4496CC]" />
+                  <Sparkles size={18} strokeWidth={1.5} className="text-[#4496CC] transition-colors group-hover:text-white" />
                   <div className="text-left">
                     <div className="font-display text-[14px] font-medium">Accessoires</div>
-                    <div className="font-body text-[11px] font-light text-[#2F7EAF]">Outils artisanaux en bois noble</div>
+                    <div className="font-body text-[11px] font-light text-[#2F7EAF] transition-colors group-hover:text-white">
+                      Outils artisanaux en bois noble
+                    </div>
                   </div>
                 </Link>
                 <div className="my-1 border-t border-[#8FC7E6]/50 pt-1.5">
                   <Link
                     href="/boutique"
                     onClick={() => setActiveDropdown(null)}
-                    className="flex items-center gap-3 rounded-none p-2.5 font-body text-[12px] font-semibold uppercase tracking-wider text-[#1F3F52] transition-all hover:bg-[#8FC7E6] hover:text-[#4496CC]"
+                    className="group flex items-center gap-3 rounded-none p-2.5 font-body text-[12px] font-semibold uppercase tracking-wider text-[#1F3F52] transition-all hover:bg-[#4496CC] hover:text-white"
                   >
-                    <MoreHorizontal size={18} strokeWidth={1.5} className="text-[#4496CC]" />
+                    <MoreHorizontal size={18} strokeWidth={1.5} className="text-[#4496CC] transition-colors group-hover:text-white" />
                     Voir tous les produits
                   </Link>
                 </div>
@@ -174,7 +180,7 @@ export default function Header() {
           >
             <Link
               href="/conseils"
-              className={`flex cursor-pointer items-center gap-1 py-2 font-body text-[13px] font-semibold uppercase tracking-[0.15em] text-[#4496CC] transition-colors hover:text-[#2F7EAF] ${pathname.startsWith('/conseils') ? 'underline underline-offset-[6px]' : ''}`}
+              className={`flex cursor-pointer items-center gap-1 py-2 font-body text-[13px] font-semibold uppercase tracking-[0.15em] transition-colors hover:text-white ${pathname.startsWith('/conseils') || activeDropdown === 'conseils' ? 'text-white underline underline-offset-[6px]' : 'text-[#4496CC]'}`}
             >
               Conseils
               <ChevronDown
@@ -195,25 +201,25 @@ export default function Header() {
                 <Link
                   href="/conseils#blog-section"
                   onClick={() => setActiveDropdown(null)}
-                  className="flex items-center gap-3 rounded-none p-2 text-[#1F3F52] transition-all hover:bg-[#8FC7E6] hover:text-[#4496CC]"
+                  className="group flex items-center gap-3 rounded-none p-2 text-[#1F3F52] transition-all hover:bg-[#4496CC] hover:text-white"
                 >
-                  <BookOpen size={16} strokeWidth={1.5} className="text-[#4496CC]" />
+                  <BookOpen size={16} strokeWidth={1.5} className="text-[#4496CC] transition-colors group-hover:text-white" />
                   <span className="font-body text-[13.5px]">Le Blog Officiel</span>
                 </Link>
                 <Link
                   href="/conseils#faq-section"
                   onClick={() => setActiveDropdown(null)}
-                  className="flex items-center gap-3 rounded-none p-2 text-[#1F3F52] transition-all hover:bg-[#8FC7E6] hover:text-[#4496CC]"
+                  className="group flex items-center gap-3 rounded-none p-2 text-[#1F3F52] transition-all hover:bg-[#4496CC] hover:text-white"
                 >
-                  <HelpCircle size={16} strokeWidth={1.5} className="text-[#4496CC]" />
+                  <HelpCircle size={16} strokeWidth={1.5} className="text-[#4496CC] transition-colors group-hover:text-white" />
                   <span className="font-body text-[13.5px]">Foire Aux Questions</span>
                 </Link>
                 <Link
                   href="/conseils#reviews-section"
                   onClick={() => setActiveDropdown(null)}
-                  className="flex items-center gap-3 rounded-none p-2 text-[#1F3F52] transition-all hover:bg-[#8FC7E6] hover:text-[#4496CC]"
+                  className="group flex items-center gap-3 rounded-none p-2 text-[#1F3F52] transition-all hover:bg-[#4496CC] hover:text-white"
                 >
-                  <MessageSquare size={16} strokeWidth={1.5} className="text-[#4496CC]" />
+                  <MessageSquare size={16} strokeWidth={1.5} className="text-[#4496CC] transition-colors group-hover:text-white" />
                   <span className="font-body text-[13.5px]">Avis Clients</span>
                 </Link>
               </div>
@@ -229,7 +235,7 @@ export default function Header() {
           >
             <Link
               href="/a-propos"
-              className={`flex cursor-pointer items-center gap-1 py-2 font-body text-[13px] font-semibold uppercase tracking-[0.15em] text-[#4496CC] transition-colors hover:text-[#2F7EAF] ${pathname.startsWith('/a-propos') ? 'underline underline-offset-[6px]' : ''}`}
+              className={`flex cursor-pointer items-center gap-1 py-2 font-body text-[13px] font-semibold uppercase tracking-[0.15em] transition-colors hover:text-white ${pathname.startsWith('/a-propos') || activeDropdown === 'a-propos' ? 'text-white underline underline-offset-[6px]' : 'text-[#4496CC]'}`}
             >
               A Propos
               <ChevronDown
@@ -250,33 +256,33 @@ export default function Header() {
                 <Link
                   href="/a-propos#histoire"
                   onClick={() => setActiveDropdown(null)}
-                  className="flex items-center gap-3 rounded-none p-2 text-[#1F3F52] transition-all hover:bg-[#8FC7E6] hover:text-[#4496CC]"
+                  className="group flex items-center gap-3 rounded-none p-2 text-[#1F3F52] transition-all hover:bg-[#4496CC] hover:text-white"
                 >
-                  <Users size={16} strokeWidth={1.5} className="text-[#4496CC]" />
+                  <Users size={16} strokeWidth={1.5} className="text-[#4496CC] transition-colors group-hover:text-white" />
                   <span className="font-body text-[13.5px]">Notre Histoire</span>
                 </Link>
                 <Link
                   href="/a-propos#engagements"
                   onClick={() => setActiveDropdown(null)}
-                  className="flex items-center gap-3 rounded-none p-2 text-[#1F3F52] transition-all hover:bg-[#8FC7E6] hover:text-[#4496CC]"
+                  className="group flex items-center gap-3 rounded-none p-2 text-[#1F3F52] transition-all hover:bg-[#4496CC] hover:text-white"
                 >
-                  <Sprout size={16} strokeWidth={1.5} className="text-[#4496CC]" />
+                  <Sprout size={16} strokeWidth={1.5} className="text-[#4496CC] transition-colors group-hover:text-white" />
                   <span className="font-body text-[13.5px]">Nos Engagements</span>
                 </Link>
                 <Link
                   href="/a-propos#innovation"
                   onClick={() => setActiveDropdown(null)}
-                  className="flex items-center gap-3 rounded-none p-2 text-[#1F3F52] transition-all hover:bg-[#8FC7E6] hover:text-[#4496CC]"
+                  className="group flex items-center gap-3 rounded-none p-2 text-[#1F3F52] transition-all hover:bg-[#4496CC] hover:text-white"
                 >
-                  <Lightbulb size={16} strokeWidth={1.5} className="text-[#4496CC]" />
+                  <Lightbulb size={16} strokeWidth={1.5} className="text-[#4496CC] transition-colors group-hover:text-white" />
                   <span className="font-body text-[13.5px]">Innovation Suisse</span>
                 </Link>
                 <Link
                   href="/a-propos#contact"
                   onClick={() => setActiveDropdown(null)}
-                  className="flex items-center gap-3 rounded-none p-2 text-[#1F3F52] transition-all hover:bg-[#8FC7E6] hover:text-[#4496CC]"
+                  className="group flex items-center gap-3 rounded-none p-2 text-[#1F3F52] transition-all hover:bg-[#4496CC] hover:text-white"
                 >
-                  <Mail size={16} strokeWidth={1.5} className="text-[#4496CC]" />
+                  <Mail size={16} strokeWidth={1.5} className="text-[#4496CC] transition-colors group-hover:text-white" />
                   <span className="font-body text-[13.5px]">Contact & Salon</span>
                 </Link>
               </div>
