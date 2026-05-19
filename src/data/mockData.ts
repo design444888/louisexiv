@@ -230,24 +230,23 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: 'p10',
-    name: "La Somptueuse (6.3)",
+    name: "La Glorieuse® (6.13)",
     category: "Coloration végétale",
     categorySlug: "colorations",
     description: "Coloration végétale châtain profond aux nuances de cacao et d'ortie dioïque alpine.",
     price: 39,
-    image: "Photos/la-somptueuse-louisexiv-1.webp",
+    image: "Photos/la-glorieuse-louisexiv-coloration-vegetale0.webp",
     rating: 4.7,
     volumeOrSize: "100g",
     details: [
-      "La Somptueuse®- La charme d’un blond foncé doré ",
-       "La Somptueuse® est un véritable blond foncé doré qui s’utilise seule ou en mélange avec les gels et les autres poudres de la gamme Louise XIV®. Elle permet d’obtenir des blonds foncés légèrement doré. ",
+      "La Glorieuse® - Le charme inédit d'un blond foncé neutre ",
+       "La Glorieuse® est un véritable blond foncé neutre qui s’utilise seule ou en mélange avec les gels et les autres poudres de la gamme Louise XIV®. Elle permet d’obtenir des blonds foncés neutres ",
        "Les colorations permanentes Louise XIV® se déposent et se fixent sur le cheveu sans altérer la structure de la fibre capillaire, elles enrobent et gainent le cheveu pour un résultat brillant,  doux et soyeux. Que vous soyez Somptueuse, Mystérieuse ,Ravissante, Lumineuse, Rêveuse®, Flamboyante® ou Gourmande®, la couleur finale dépendra de la teinte et de la nature de vos cheveux-, offrant ainsi un résultat unique à chaque femme.",
 
-       "Dans un bol, ajouter trois fois le poids de la poudre en eau bouillante, mélanger jusqu’à obtention d’une crème fluide homogène sans grumeaux. Après rinçage du masque purifiant Louise XIV®, démêler l’ensemble de la chevelure et appliquer généreusement le mélange sur cheveux essorés, en raies fines (en commençant par la bordure du visage). Laisser poser sous un film ou charlotte et sous une source de chaleur (climazon- bonnet- casque chauffant...) durant 1h00. Rincer abondamment sans shampoing jusqu’à obtention d’une eau claire. ",
+       "Dans un bol, ajouter trois fois le poids de la poudre en eau bouillante, mélanger jusqu’à obtention d’une crème fluide homogène sans grumeaux. Après rinçage du masque purifiant Louise XIV®, démêler l’ensemble de la chevelure et appliquer généreusement le mélange sur cheveux essorés, en raies fines (en commençant par la bordure du visage). Laisser poser sous un film ou charlotte et sous une source de chaleur (climazon- bonnet- casque chauffant...) durant 1h00. Rincer abondamment sans shampoing jusqu’à obtention d’une eau claire.", 
 
-       "Liste des ingrédients : LAWSONIA INERMIS LEAF POWDER- CASSIA OBAVATA LEAF POWDER- POLYGONUM MULTIFLORUM ROOT EXTRACT- GLYCINE SOJA EXTRACT- HAEMATOXYLUM CAMPECHIANUM WOOD EXTRACT- EMBLICA OFFICINALIS FRUIT EXTRACT- TRIGONELLA FOENUM-GRAECUM SEED EXTRACT- INDIGO TINCTORIA LEAF POWDER- CAMELLIA SINENSIS LEAF POWDER- CHARCOAL POWDER- SODIUM",
-       "HYDROXIDE- ACACIA SENEGAL GUM- XANTHAN GUM- LAWSONIA INERMIS LEAF EXTRACT- ILLITE- KAOLIN- LYSINE HYDROCHLORIDE",
-
+       "Liste des ingrédients : en cours ",
+      
     ]
   },
 
