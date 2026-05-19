@@ -212,36 +212,30 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: 'p8',
-    name: "Le Peigne d'Ébène",
+    name: "Bol en verre gravé Louise XIV® ®",
     category: "Accessoires",
     categorySlug: "accessoires",
-    description: "Peigne artisanal en bois de poirier noble, poli à la main en Suisse.",
+    description: "jbdwqjdw  kjcqcq ckjcjk  ",
     price: 28,
-    image: "https://images.unsplash.com/photo-1590156546746-c2370a8c601f?auto=format&fit=crop&q=80&w=600",
+    image: "Photos/bol-verre-coloration-coiffure.webp",
     rating: 4.5,
     volumeOrSize: "1 pièce",
     details: [
-      "Bois issu de forêts suisses gérées durablement.",
-      "Dents arrondies pour masser doucement le cuir chevelu.",
-      "Prévient l'électricité statique naturelle lors du brossage.",
-      "Livré dans son étui en lin naturel Louise XIV."
+      
     ]
   },
   {
     id: 'p9',
-    name: "La Brosse en Soie",
+    name: "Bol en verre gravé Louise XIV® ®",
     category: "Accessoires",
     categorySlug: "accessoires",
-    description: "Brosse premium en poils de sanglier fins et manche en bois de hêtre huilé.",
-    price: 42,
-    image: "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&q=80&w=600",
-    rating: 4.8,
+    description: "jbdwqjdw  kjcqcq ckjcjk  ",
+    price: 28,
+    image: "Photos/bol-verre-coloration-coiffure.webp",
+    rating: 4.5,
     volumeOrSize: "1 pièce",
     details: [
-      "Poils de soie naturelle répartissant le sébum des racines aux pointes.",
-      "Effet lissant et lustrant immédiat pour des cheveux soyeux.",
-      "Conception ergonomique pour une prise en main confortable.",
-      "Entièrement fabriquée à la main."
+      
     ]
   },
   {
@@ -285,19 +279,16 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: 'p13',
-    name: "Le Bol d'Apothicaire",
+    name: "Bol en verre gravé Louise XIV® ®",
     category: "Accessoires",
     categorySlug: "accessoires",
-    description: "Bol en grès artisanal tourné à la main, conçu pour la préparation des rituels de coloration.",
-    price: 45,
-    image: "https://images.unsplash.com/photo-1610701596007-11502861dcfa?auto=format&fit=crop&q=80&w=600",
-    rating: 4.9,
+    description: "jbdwqjdw  kjcqcq ckjcjk  ",
+    price: 28,
+    image: "Photos/bol-verre-coloration-coiffure.webp",
+    rating: 4.5,
     volumeOrSize: "1 pièce",
     details: [
-      "Grès naturel cuit à haute température, résistant aux pigments.",
-      "Chaque pièce est unique, signée par un céramiste suisse.",
-      "Forme ergonomique assurant un mélange parfait des poudres végétales.",
-      "Facile à nettoyer, passe au lave-vaisselle."
+      
     ]
   },
   {
