@@ -108,8 +108,8 @@ export default function HomePage() {
             <div className="relative aspect-[4/5] rounded-none overflow-hidden border border-[#8FC7E6] shadow-none">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?auto=format&fit=crop&q=80&w=800"
-                alt="Louise XIV Nature"
+                src="/PLV-laflamboyante.webp"
+                alt="Louise XIV La Flamboyante"
                 className="object-cover w-full h-full transform hover:scale-102 transition-transform duration-700"
               />
               {/* Floating aesthetic stamp */}
