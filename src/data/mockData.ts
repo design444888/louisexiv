@@ -68,7 +68,7 @@ export const PRODUCTS: Product[] = [
   {
     id: 'p1',
     name: "Les colorations en poudre Louise XIV®",
-    category: "Colorations Naturelles",
+    category: "Coloration végétale",
     categorySlug: "colorations",
     description: "Une coloration botanique en poudre pensée par Louise XIV pour sublimer les reflets, gainer la fibre et offrir un rituel végétal d'exception.",
     price: 39,
@@ -86,19 +86,26 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: 'p2',
-    name: "Éclat d'Ambre",
-    category: "Colorations Naturelles",
+    name: "La Lumineuse (8/9.31)",
+    category: "Coloration végétale",
     categorySlug: "colorations",
     description: "Coloration soin cuivrée naturelle, reflets chauds intenses et brillance miroir.",
     price: 39,
-    image: "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?auto=format&fit=crop&q=80&w=600",
+    image: "Photos/pinceau-coloration-louisexiv.webp",
     rating: 4.9,
     volumeOrSize: "100g",
     details: [
-      "Pigments végétaux de haute pureté certifiés bio.",
-      "Reflets intenses et durables respectueux du cuir chevelu.",
-      "Soin gainant protecteur enrichi en huile de jojoba.",
-      "Formulation suisse respectueuse des peaux sensibles."
+      "La Lumineuse®, L’élégance d’un blond doré ",
+       "La Lumineuse® est un véritable blond doré qui s’utilise seule ou en mélange avec les gels et les autres poudres de la gamme Louise XIV®. Elle permet d’obtenir des blonds dorés très subtils et légers. ",
+
+       "Les colorations permanentes Louise XIV® se déposent et se fixent sur le cheveu sans altérer la structure de la fibre capillaire, elles enrobent et gainent le cheveu pour un résultat brillant, doux et soyeux. Que vous soyez Lumineuse®, Ravissante®,  Somptueuse®, Rêveuse®, Flamboyante®, Gourmande® ou Mystérieuse®, la couleur finale dépendra de la teinte et de la nature de vos cheveux, offrant ainsi un résultat unique à chaque femme.",
+
+       "Dans un bol, ajouter trois fois le poids de la poudre en eau bouillante, mélanger jusqu’à obtention d’une crème fluide homogène sans grumeaux. Après rinçage du masque purifiant Louise XIV®, démêler l’ensemble de la chevelure et appliquer généreusement le mélange sur cheveux essorés, en raies fines (en commençant par la bordure du visage). Laisser poser sous un film ou charlotte et sous une source de chaleur (climazon, bonnet, casque chauffant...) durant 20’ à 45’ selon l’intensité. Rincer abondamment sans shampoing jusqu’à obtention d’une eau claire.",
+
+       "Liste des ingrédients : CASSIA OBOVATA LEAF POWDER- LAWSONIA INERMIS LEAF POWDER- LAWSONIA INERMIS LEAF EXTRACT- ACACIA GUM- XANTHAN GUM- HAEMATOXILON CAMPECHIANUM WOOD EXTRACT- MALTODEXTRINE- LYSINE HYDROCHLORIDE.",
+
+
+     
     ]
   },
   {
