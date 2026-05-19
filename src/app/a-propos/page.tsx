@@ -74,7 +74,7 @@ export default function AProposPage() {
               <div className="relative aspect-[4/5] rounded-none overflow-hidden border border-[#E4D3C8] shadow-none">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=800"
+                  src="Photos/image hero.webp"
                   alt="Eugénia M Fondatrice"
                   className="object-cover w-full h-full"
                 />
