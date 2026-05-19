@@ -100,7 +100,7 @@ export default function Header() {
           >
             <Link
               href="/boutique"
-              className={`flex cursor-pointer items-center gap-1 py-2 font-body text-[13px] font-semibold uppercase tracking-[0.15em] transition-colors hover:text-white ${pathname.startsWith('/boutique') || activeDropdown === 'boutique' ? 'text-white underline underline-offset-[6px]' : 'text-[#4496CC]'}`}
+              className={`flex cursor-pointer items-center gap-1 py-2 font-body text-[13px] font-semibold uppercase tracking-[0.15em] transition-colors hover:text-[#1F3F52] ${pathname.startsWith('/boutique') || activeDropdown === 'boutique' ? 'text-[#1F3F52] underline underline-offset-[6px]' : 'text-[#4496CC]'}`}
             >
               Boutique
               <ChevronDown
@@ -180,7 +180,7 @@ export default function Header() {
           >
             <Link
               href="/conseils"
-              className={`flex cursor-pointer items-center gap-1 py-2 font-body text-[13px] font-semibold uppercase tracking-[0.15em] transition-colors hover:text-white ${pathname.startsWith('/conseils') || activeDropdown === 'conseils' ? 'text-white underline underline-offset-[6px]' : 'text-[#4496CC]'}`}
+              className={`flex cursor-pointer items-center gap-1 py-2 font-body text-[13px] font-semibold uppercase tracking-[0.15em] transition-colors hover:text-[#1F3F52] ${pathname.startsWith('/conseils') || activeDropdown === 'conseils' ? 'text-[#1F3F52] underline underline-offset-[6px]' : 'text-[#4496CC]'}`}
             >
               Conseils
               <ChevronDown
@@ -235,7 +235,7 @@ export default function Header() {
           >
             <Link
               href="/a-propos"
-              className={`flex cursor-pointer items-center gap-1 py-2 font-body text-[13px] font-semibold uppercase tracking-[0.15em] transition-colors hover:text-white ${pathname.startsWith('/a-propos') || activeDropdown === 'a-propos' ? 'text-white underline underline-offset-[6px]' : 'text-[#4496CC]'}`}
+              className={`flex cursor-pointer items-center gap-1 py-2 font-body text-[13px] font-semibold uppercase tracking-[0.15em] transition-colors hover:text-[#1F3F52] ${pathname.startsWith('/a-propos') || activeDropdown === 'a-propos' ? 'text-[#1F3F52] underline underline-offset-[6px]' : 'text-[#4496CC]'}`}
             >
               A Propos
               <ChevronDown
