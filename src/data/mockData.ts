@@ -125,23 +125,7 @@ export const PRODUCTS: Product[] = [
       "Application sur cheveux humides ou secs en finition de rituel."
     ]
   },
-  {
-    id: 'p4',
-    name: "La Crème de Soie",
-    category: "Soins Capillaires",
-    categorySlug: "soins",
-    description: "Masque hydratant intense au beurre de karité bio et protéines de soie naturelle.",
-    price: 48,
-    image: "https://images.unsplash.com/photo-1601049541289-9b1b7bbbfe19?auto=format&fit=crop&q=80&w=600",
-    rating: 4.7,
-    volumeOrSize: "200ml",
-    details: [
-      "Texture crème onctueuse enveloppante.",
-      "Hydratation en profondeur qui redéfinit les boucles et lisse les frisottis.",
-      "Ingrédients rigoureusement sélectionnés en Suisse.",
-      "Laisser poser 5 à 10 minutes puis rincer abondamment."
-    ]
-  },
+
   {
     id: 'p5',
     name: "La Rosée Lactée",
