@@ -60,7 +60,7 @@ export default function Header() {
         </div>
       )}
 
-      <div className="mx-auto flex h-20 max-w-[1200px] items-center justify-between px-6 md:grid md:grid-cols-3 md:px-8">
+      <div className="relative mx-auto flex h-20 max-w-[1200px] items-center justify-between px-6 md:grid md:grid-cols-3 md:px-8">
         <div className="flex items-center justify-start gap-4">
           <button
             className="cursor-pointer text-[#573119] hover:text-[#6E4226] md:hidden"
@@ -70,7 +70,10 @@ export default function Header() {
             <Menu size={24} strokeWidth={1.5} />
           </button>
 
-          <Link href="/" className="flex items-center group py-1 select-none transition-transform duration-300 hover:scale-102">
+          <Link
+            href="/"
+            className="absolute left-1/2 top-1/2 flex -translate-x-1/2 -translate-y-1/2 items-center py-1 select-none transition-transform duration-300 hover:scale-102 md:static md:left-auto md:top-auto md:translate-x-0 md:translate-y-0"
+          >
             <Image
               src="/logo.svg"
               alt="Louise XIV"
