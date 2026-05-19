@@ -15,12 +15,64 @@ export default function ProductCard({
   variant = 'surface',
   showTechnicalSheetOnHover = false,
 }: ProductCardProps) {
+  const [isMobileViewport, setIsMobileViewport] = React.useState(false);
+  const [isMobileSheetOpen, setIsMobileSheetOpen] = React.useState(false);
+
   const bgClass = variant === 'surface' ? 'bg-[#F1F8FC]' : 'bg-[#E3F1F8]';
   const imgBgClass = variant === 'surface' ? 'bg-[#E3F1F8]' : 'bg-[#8FC7E6]';
 
+  React.useEffect(() => {
+    const mediaQuery = window.matchMedia('(max-width: 767px)');
+
+    const syncViewportState = (matches: boolean) => {
+      setIsMobileViewport(matches);
+      if (!matches) {
+        setIsMobileSheetOpen(false);
+      }
+    };
+
+    syncViewportState(mediaQuery.matches);
+
+    const handleChange = (event: MediaQueryListEvent) => {
+      syncViewportState(event.matches);
+    };
+
+    mediaQuery.addEventListener('change', handleChange);
+
+    return () => mediaQuery.removeEventListener('change', handleChange);
+  }, []);
+
+  const handleCardInteraction = () => {
+    if (showTechnicalSheetOnHover && isMobileViewport) {
+      setIsMobileSheetOpen((current) => !current);
+    }
+  };
+
+  const handleCardKeyDown = (event: React.KeyboardEvent<HTMLDivElement>) => {
+    if (!showTechnicalSheetOnHover || !isMobileViewport) {
+      return;
+    }
+
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault();
+      setIsMobileSheetOpen((current) => !current);
+    }
+  };
+
+  const overlayVisibilityClass = isMobileViewport
+    ? isMobileSheetOpen
+      ? 'pointer-events-auto translate-y-0 opacity-100'
+      : 'pointer-events-none translate-y-3 opacity-0'
+    : 'pointer-events-none translate-y-3 opacity-0 group-hover:pointer-events-auto group-hover:translate-y-0 group-hover:opacity-100 group-focus-within:pointer-events-auto group-focus-within:translate-y-0 group-focus-within:opacity-100';
+
   return (
     <div
-      className={`group relative flex h-full flex-col overflow-hidden rounded-none border border-[#8FC7E6] ${bgClass} shadow-[0_2px_16px_rgba(31,63,82,0.07)] transition-all duration-300 hover:-translate-y-[3px] hover:shadow-[0_8px_28px_rgba(31,63,82,0.13)]`}
+      className={`group relative flex h-full flex-col overflow-hidden rounded-none border border-[#8FC7E6] ${bgClass} shadow-[0_2px_16px_rgba(31,63,82,0.07)] transition-all duration-300 hover:-translate-y-[3px] hover:shadow-[0_8px_28px_rgba(31,63,82,0.13)] ${showTechnicalSheetOnHover && isMobileViewport ? 'cursor-pointer' : ''}`}
+      onClick={handleCardInteraction}
+      onKeyDown={handleCardKeyDown}
+      tabIndex={showTechnicalSheetOnHover && isMobileViewport ? 0 : undefined}
+      role={showTechnicalSheetOnHover && isMobileViewport ? 'button' : undefined}
+      aria-expanded={showTechnicalSheetOnHover && isMobileViewport ? isMobileSheetOpen : undefined}
     >
       <div className={`relative aspect-[4/5] w-full ${imgBgClass} overflow-hidden`}>
         {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -54,6 +106,7 @@ export default function ProductCard({
             title="Ajouter au panier"
             onClick={(e) => {
               e.preventDefault();
+              e.stopPropagation();
               const event = new CustomEvent('add-to-cart');
               window.dispatchEvent(event);
             }}
@@ -65,7 +118,7 @@ export default function ProductCard({
 
       {showTechnicalSheetOnHover && (
         <div
-          className="pointer-events-none absolute inset-0 translate-y-3 overflow-y-auto bg-[linear-gradient(180deg,rgba(241,248,252,0.94)_0%,rgba(227,241,248,0.985)_100%)] p-5 opacity-0 backdrop-blur-[2px] transition-all duration-300 ease-out group-hover:pointer-events-auto group-hover:translate-y-0 group-hover:opacity-100 group-focus-within:pointer-events-auto group-focus-within:translate-y-0 group-focus-within:opacity-100"
+          className={`absolute inset-0 overflow-y-auto bg-[linear-gradient(180deg,rgba(241,248,252,0.94)_0%,rgba(227,241,248,0.985)_100%)] p-5 backdrop-blur-[2px] transition-all duration-300 ease-out ${overlayVisibilityClass}`}
           aria-hidden="true"
         >
           <div className="space-y-4">
