@@ -259,7 +259,7 @@ export default function HomePage() {
                   rel="noopener noreferrer"
                   className="btn-primary"
                 >
-                  Louise XIV
+                  Louise XIV France
                 </a>
               </div>
             </div>
