@@ -118,13 +118,13 @@ export default function ProductCard({
 
       {showTechnicalSheetOnHover && (
         <div
-          className={`absolute inset-0 overflow-y-auto bg-[linear-gradient(180deg,rgba(241,248,252,0.94)_0%,rgba(227,241,248,0.985)_100%)] p-5 backdrop-blur-[2px] transition-all duration-300 ease-out ${overlayVisibilityClass}`}
+          className={`absolute inset-0 overflow-y-auto border border-[#C8A893]/50 bg-[linear-gradient(180deg,rgba(255,250,250,0.96)_0%,rgba(248,240,235,0.99)_100%)] p-5 backdrop-blur-[2px] transition-all duration-300 ease-out ${overlayVisibilityClass}`}
           aria-hidden="true"
         >
           <div className="space-y-4">
-            <div className="flex items-start justify-between gap-3 border-b border-[#C8A893]/40 pb-3">
+            <div className="flex items-start justify-between gap-3 border-b border-[#C8A893]/55 pb-3">
               <div>
-                <p className="font-body text-[10px] font-semibold uppercase tracking-[0.2em] text-[#6E4226]">
+                <p className="font-body text-[10px] font-semibold uppercase tracking-[0.2em] text-[#573119]">
                   Fiche Technique
                 </p>
                 <h4 className="mt-1 font-display text-[20px] font-medium leading-tight text-[#402312]">
@@ -141,7 +141,7 @@ export default function ProductCard({
               {product.details.slice(0, 4).map((detail) => (
                 <li
                   key={detail}
-                  className="flex gap-2.5 font-body text-[12.5px] font-light leading-relaxed text-[#573119]"
+                  className="flex gap-2.5 font-body text-[12.5px] font-medium leading-relaxed text-[#6E4226]"
                 >
                   <span className="mt-[7px] h-1.5 w-1.5 shrink-0 rounded-full bg-[#573119]" />
                   <span>{detail}</span>
