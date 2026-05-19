@@ -249,10 +249,18 @@ export default function HomePage() {
                 </div>
               </div>
 
-              <div className="pt-4">
+              <div className="flex flex-wrap gap-4 pt-4">
                 <Link href="/a-propos#engagements" className="btn-secondary">
                   Nos engagements
                 </Link>
+                <a
+                  href="https://louisexiv.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-primary"
+                >
+                  Louise XIV
+                </a>
               </div>
             </div>
 
