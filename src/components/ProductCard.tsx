@@ -95,15 +95,6 @@ export default function ProductCard({
                 </li>
               ))}
             </ul>
-
-            <div className="border-t border-[#B7DFF2]/40 pt-3">
-              <p className="font-body text-[10.5px] uppercase tracking-[0.14em] text-[#2F7EAF]">
-                Prix
-              </p>
-              <p className="mt-1 font-display text-[21px] font-semibold text-[#4496CC]">
-                {product.price},00 €
-              </p>
-            </div>
           </div>
         </div>
       )}
