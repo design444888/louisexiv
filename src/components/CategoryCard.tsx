@@ -23,33 +23,33 @@ export default function CategoryCard({ category }: CategoryCardProps) {
   return (
     <Link 
       href={`/boutique?cat=${category.slug}`}
-      className="group block p-7 rounded-none border border-[#8FC7E6] bg-[#F1F8FC] hover:bg-[#E3F1F8] transition-all duration-300 shadow-none"
+      className="group block p-7 rounded-none border border-[#E4D3C8] bg-[#FFFAFA] hover:bg-[#F8F0EB] transition-all duration-300 shadow-none"
     >
       {/* Icon Area */}
       <div className="mb-6 flex items-center justify-start h-12">
         {category.iconName === 'M' ? (
-          <span className="font-display italic text-[28px] font-bold text-[#4496CC] select-none">
+          <span className="font-display italic text-[28px] font-bold text-[#573119] select-none">
             M
           </span>
         ) : IconComponent ? (
-          <IconComponent size={28} strokeWidth={1.5} className="text-[#4496CC]" />
+          <IconComponent size={28} strokeWidth={1.5} className="text-[#573119]" />
         ) : (
-          <Sparkles size={28} strokeWidth={1.5} className="text-[#4496CC]" />
+          <Sparkles size={28} strokeWidth={1.5} className="text-[#573119]" />
         )}
       </div>
 
       {/* Title */}
-      <h3 className="font-display text-[20px] font-medium text-[#1F3F52] mb-2 leading-tight group-hover:text-[#4496CC] transition-colors">
+      <h3 className="font-display text-[20px] font-medium text-[#402312] mb-2 leading-tight group-hover:text-[#573119] transition-colors">
         {category.name}
       </h3>
 
       {/* Copy */}
-      <p className="font-body text-[13px] font-light text-[#2F7EAF] leading-relaxed">
+      <p className="font-body text-[13px] font-light text-[#6E4226] leading-relaxed">
         {category.description}
       </p>
       
       {/* Action link indicator */}
-      <div className="mt-5 flex items-center text-[12px] font-body font-semibold uppercase tracking-wider text-[#4496CC]">
+      <div className="mt-5 flex items-center text-[12px] font-body font-semibold uppercase tracking-wider text-[#573119]">
         Découvrir la gamme
         <span className="inline-block transition-transform duration-300 group-hover:translate-x-1 ml-1">→</span>
       </div>

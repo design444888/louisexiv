@@ -36,8 +36,8 @@ export default function HomePage() {
 
   return (
     <div className="w-full">
-      {/* SECTION 1: HERO (Background #F1F8FC) */}
-      <section className="bg-[#F1F8FC] py-16 md:py-24 border-b border-[#8FC7E6]/50">
+      {/* SECTION 1: HERO (Background #FFFAFA) */}
+      <section className="bg-[#FFFAFA] py-16 md:py-24 border-b border-[#E4D3C8]/50">
         <div className="max-w-[1200px] mx-auto px-6 md:px-8 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
 
           {/* Left Text Column */}
@@ -45,18 +45,18 @@ export default function HomePage() {
 
             {/* Header Block: Title, Slogan & Vegan Logo */}
             <div className="space-y-2">
-              <h1 className="font-display text-[38px] sm:text-[48px] lg:text-[58px] font-medium text-[#4496CC] leading-[1.1] tracking-tight">
+              <h1 className="font-display text-[38px] sm:text-[48px] lg:text-[58px] font-medium text-[#573119] leading-[1.1] tracking-tight">
                 Qualité premium<br />
-                <em className="font-display italic text-[#2F7EAF] font-normal">100% naturelle</em>
+                <em className="font-display italic text-[#6E4226] font-normal">100% naturelle</em>
               </h1>
-              <p className="font-body text-[16px] sm:text-[18px] font-light text-[#4496CC] tracking-wide">
+              <p className="font-body text-[16px] sm:text-[18px] font-light text-[#573119] tracking-wide">
                 L’engagement d’une beauté durable
               </p>
               <div>
                 <span
                   role="img"
                   aria-label="Logo Certified Vegan"
-                  className="block h-[52px] w-[100px] bg-[#4496CC] opacity-85 transition-opacity duration-300 hover:opacity-100"
+                  className="block h-[52px] w-[100px] bg-[#573119] opacity-85 transition-opacity duration-300 hover:opacity-100"
                   style={{
                     maskImage: "url('/logo-vegan.webp')",
                     maskPosition: 'left center',
@@ -73,7 +73,7 @@ export default function HomePage() {
 
             {/* Action Block: Description & Buttons closely bound */}
             <div className="space-y-4">
-              <p className="font-body text-[15px] sm:text-[16px] font-light text-[#2F7EAF] max-w-xl leading-relaxed">
+              <p className="font-body text-[15px] sm:text-[16px] font-light text-[#6E4226] max-w-xl leading-relaxed">
                 Maison suisse de prestige dédiée à la haute formulation capillaire. Nos colorations 100% végétales et nos soins d&apos;exception infusent la pureté alpine au cœur de votre fibre capillaire pour un éclat absolu.
               </p>
               <div className="flex flex-wrap items-center gap-4">
@@ -87,25 +87,25 @@ export default function HomePage() {
             </div>
 
             {/* Quick Badges (Auto-Layout Horizontal Scroll on Mobile) */}
-            <div className="flex items-center justify-start md:justify-between gap-6 overflow-x-auto no-scrollbar whitespace-nowrap pt-8 border-t border-[#8FC7E6]/50 max-w-lg">
+            <div className="flex items-center justify-start md:justify-between gap-6 overflow-x-auto no-scrollbar whitespace-nowrap pt-8 border-t border-[#E4D3C8]/50 max-w-lg">
               <div className="flex items-center gap-2 flex-shrink-0">
-                <Leaf size={16} strokeWidth={1.5} className="text-[#4496CC]" />
-                <span className="font-body text-[12px] text-[#2F7EAF]">100% Végétal</span>
+                <Leaf size={16} strokeWidth={1.5} className="text-[#573119]" />
+                <span className="font-body text-[12px] text-[#6E4226]">100% Végétal</span>
               </div>
               <div className="flex items-center gap-2 flex-shrink-0">
-                <Sparkles size={16} strokeWidth={1.5} className="text-[#4496CC]" />
-                <span className="font-body text-[12px] text-[#2F7EAF]">Éclat Intense</span>
+                <Sparkles size={16} strokeWidth={1.5} className="text-[#573119]" />
+                <span className="font-body text-[12px] text-[#6E4226]">Éclat Intense</span>
               </div>
               <div className="flex items-center gap-2 flex-shrink-0">
-                <ShieldCheck size={16} strokeWidth={1.5} className="text-[#4496CC]" />
-                <span className="font-body text-[12px] text-[#2F7EAF]">Cuir Chevelu Sain</span>
+                <ShieldCheck size={16} strokeWidth={1.5} className="text-[#573119]" />
+                <span className="font-body text-[12px] text-[#6E4226]">Cuir Chevelu Sain</span>
               </div>
             </div>
           </div>
 
           {/* Right Image Column - Warm, organic premium feel */}
           <div className="lg:col-span-5 relative">
-            <div className="relative aspect-[4/5] rounded-none overflow-hidden border border-[#8FC7E6] shadow-none">
+            <div className="relative aspect-[4/5] rounded-none overflow-hidden border border-[#E4D3C8] shadow-none">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src="Photos/PLV-lagourmande.webp"
@@ -113,30 +113,30 @@ export default function HomePage() {
                 className="object-cover w-full h-full transform hover:scale-102 transition-transform duration-700"
               />
               {/* Floating aesthetic stamp */}
-              <div className="absolute bottom-5 right-5 bg-[#F1F8FC]/95 border border-[#89C2D9] px-4 py-3 rounded-none backdrop-blur-xs text-center">
-                <p className="font-display italic text-[14px] text-[#4496CC]">Maison Louise XIV</p>
-                <p className="font-body text-[9px] uppercase tracking-widest text-[#2F7EAF] mt-0.5">Suisse • Genève</p>
+              <div className="absolute bottom-5 right-5 bg-[#FFFAFA]/95 border border-[#C8A893] px-4 py-3 rounded-none backdrop-blur-xs text-center">
+                <p className="font-display italic text-[14px] text-[#573119]">Maison Louise XIV</p>
+                <p className="font-body text-[9px] uppercase tracking-widest text-[#6E4226] mt-0.5">Suisse • Genève</p>
               </div>
             </div>
             {/* Soft decorative element behind the image */}
-            <div className="absolute -inset-2 bg-[#E3F1F8] -z-10 rounded-none transform rotate-1"></div>
+            <div className="absolute -inset-2 bg-[#F8F0EB] -z-10 rounded-none transform rotate-1"></div>
           </div>
 
         </div>
       </section>
 
-      {/* SECTION 2: CATEGORY GRID (Background #E3F1F8 - Surface) */}
-      <section className="bg-[#E3F1F8] py-20 border-b border-[#8FC7E6]/50">
+      {/* SECTION 2: CATEGORY GRID (Background #F8F0EB - Surface) */}
+      <section className="bg-[#F8F0EB] py-20 border-b border-[#E4D3C8]/50">
         <div className="max-w-[1200px] mx-auto px-6 md:px-8">
 
           <div className="text-center max-w-xl mx-auto mb-16">
-            <span className="font-body text-[11px] uppercase tracking-[0.15em] text-[#2F7EAF]">
+            <span className="font-body text-[11px] uppercase tracking-[0.15em] text-[#6E4226]">
               Collections Botaniques
             </span>
-            <h2 className="font-display text-[28px] sm:text-[34px] font-medium text-[#1F3F52] mt-2 leading-tight">
-              Trouvez <em className="font-display italic text-[#4496CC] font-normal">votre</em> rituel beauté
+            <h2 className="font-display text-[28px] sm:text-[34px] font-medium text-[#402312] mt-2 leading-tight">
+              Trouvez <em className="font-display italic text-[#573119] font-normal">votre</em> rituel beauté
             </h2>
-            <div className="w-12 h-[1px] bg-[#89C2D9] mx-auto mt-4"></div>
+            <div className="w-12 h-[1px] bg-[#C8A893] mx-auto mt-4"></div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
@@ -148,17 +148,17 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* SECTION 3: BEST SELLERS (Background #F1F8FC) */}
-      <section className="bg-[#F1F8FC] py-20 border-b border-[#8FC7E6]/50 overflow-hidden">
+      {/* SECTION 3: BEST SELLERS (Background #FFFAFA) */}
+      <section className="bg-[#FFFAFA] py-20 border-b border-[#E4D3C8]/50 overflow-hidden">
         <div className="w-full">
 
           <div className="max-w-[1200px] mx-auto px-6 md:px-8 flex flex-col md:flex-row items-center justify-between mb-12 gap-6">
             <div>
-              <span className="font-body text-[11px] uppercase tracking-[0.15em] text-[#2F7EAF]">
+              <span className="font-body text-[11px] uppercase tracking-[0.15em] text-[#6E4226]">
                 Les Favoris de la Maison
               </span>
-              <h2 className="font-display text-[28px] sm:text-[34px] font-medium text-[#1F3F52] mt-2 leading-tight">
-                Les Créations <em className="font-display italic text-[#4496CC] font-normal">Signatures</em>
+              <h2 className="font-display text-[28px] sm:text-[34px] font-medium text-[#402312] mt-2 leading-tight">
+                Les Créations <em className="font-display italic text-[#573119] font-normal">Signatures</em>
               </h2>
             </div>
             <Link href="/boutique" className="btn-secondary text-[12px] tracking-[0.08em] px-6 py-3">
@@ -196,8 +196,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* SECTION 4: BRAND PROMISE (Background #E3F1F8 - Surface, Alternating!) */}
-      <section className="bg-[#E3F1F8] py-20 border-b border-[#8FC7E6]/50">
+      {/* SECTION 4: BRAND PROMISE (Background #F8F0EB - Surface, Alternating!) */}
+      <section className="bg-[#F8F0EB] py-20 border-b border-[#E4D3C8]/50">
         <div className="max-w-[1200px] mx-auto px-6 md:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
 
@@ -215,36 +215,36 @@ export default function HomePage() {
 
             {/* Text Column */}
             <div className="lg:col-span-7 space-y-6">
-              <span className="font-body text-[11px] uppercase tracking-[0.15em] text-[#2F7EAF]">
+              <span className="font-body text-[11px] uppercase tracking-[0.15em] text-[#6E4226]">
                 Engagements et Excellence
               </span>
 
-              <h2 className="font-display text-[28px] sm:text-[34px] font-medium text-[#1F3F52] leading-tight">
-                L’élégance <em className="font-display italic text-[#4496CC] font-normal">du soin naturel</em>
+              <h2 className="font-display text-[28px] sm:text-[34px] font-medium text-[#402312] leading-tight">
+                L’élégance <em className="font-display italic text-[#573119] font-normal">du soin naturel</em>
               </h2>
 
-              <p className="font-body text-[14.5px] font-light text-[#2F7EAF] leading-relaxed">
+              <p className="font-body text-[14.5px] font-light text-[#6E4226] leading-relaxed">
                 Chez Louise XIV, nous pensons que la beauté capillaire ne doit pas compromettre votre santé, ni celle de l&apos;environnement. C&apos;est pourquoi notre laboratoire situé au cœur des Alpes suisses élabore des formules d&apos;exception qui allient l&apos;exigence de l&apos;apothicaire traditionnel à la recherche scientifique moderne.
               </p>
 
               <div className="space-y-4">
                 <div className="flex gap-4">
-                  <div className="flex-shrink-0 w-8 h-8 rounded-none bg-[#E3F1F8] flex items-center justify-center text-[#89C2D9]">
+                  <div className="flex-shrink-0 w-8 h-8 rounded-none bg-[#F8F0EB] flex items-center justify-center text-[#C8A893]">
                     ⚜
                   </div>
                   <div>
-                    <h4 className="font-display text-[15px] font-medium text-[#1F3F52]">Sourcing Botanique Responsable</h4>
-                    <p className="font-body text-[13px] text-[#2F7EAF] font-light mt-0.5">Des plantes cultivées biologiquement et récoltées à maturité pour garantir une concentration maximale en principes actifs.</p>
+                    <h4 className="font-display text-[15px] font-medium text-[#402312]">Sourcing Botanique Responsable</h4>
+                    <p className="font-body text-[13px] text-[#6E4226] font-light mt-0.5">Des plantes cultivées biologiquement et récoltées à maturité pour garantir une concentration maximale en principes actifs.</p>
                   </div>
                 </div>
 
                 <div className="flex gap-4">
-                  <div className="flex-shrink-0 w-8 h-8 rounded-none bg-[#E3F1F8] flex items-center justify-center text-[#89C2D9]">
+                  <div className="flex-shrink-0 w-8 h-8 rounded-none bg-[#F8F0EB] flex items-center justify-center text-[#C8A893]">
                     ⚜
                   </div>
                   <div>
-                    <h4 className="font-display text-[15px] font-medium text-[#1F3F52]">Technologie Alpine Suisse</h4>
-                    <p className="font-body text-[13px] text-[#2F7EAF] font-light mt-0.5">Eau pure de glaciers alpins et procédés d&apos;extraction écologiques brevetés pour préserver l&apos;intégrité moléculaire des plantes.</p>
+                    <h4 className="font-display text-[15px] font-medium text-[#402312]">Technologie Alpine Suisse</h4>
+                    <p className="font-body text-[13px] text-[#6E4226] font-light mt-0.5">Eau pure de glaciers alpins et procédés d&apos;extraction écologiques brevetés pour préserver l&apos;intégrité moléculaire des plantes.</p>
                   </div>
                 </div>
               </div>
@@ -268,21 +268,21 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* SECTION 5: ADVICE PREVIEW (Background #F1F8FC) */}
-      <section className="bg-[#F1F8FC] py-20 border-b border-[#8FC7E6]/50">
+      {/* SECTION 5: ADVICE PREVIEW (Background #FFFAFA) */}
+      <section className="bg-[#FFFAFA] py-20 border-b border-[#E4D3C8]/50">
         <div className="max-w-[1200px] mx-auto px-6 md:px-8">
 
           <div className="text-center max-w-xl mx-auto mb-16">
-            <span className="font-body text-[11px] uppercase tracking-[0.15em] text-[#2F7EAF]">
+            <span className="font-body text-[11px] uppercase tracking-[0.15em] text-[#6E4226]">
               Partage de Savoir-Faire
             </span>
-            <h2 className="font-display text-[28px] sm:text-[34px] font-medium text-[#1F3F52] mt-2 leading-tight">
-              Les Secrets <em className="font-display italic text-[#4496CC] font-normal">de l&apos;Apothicaire</em>
+            <h2 className="font-display text-[28px] sm:text-[34px] font-medium text-[#402312] mt-2 leading-tight">
+              Les Secrets <em className="font-display italic text-[#573119] font-normal">de l&apos;Apothicaire</em>
             </h2>
-            <p className="font-body text-[14px] font-light text-[#2F7EAF] mt-2">
+            <p className="font-body text-[14px] font-light text-[#6E4226] mt-2">
               Explorez nos dossiers exclusifs sur le cheveu organique, nos diagnostics et nos conseils d&apos;experts.
             </p>
-            <div className="w-12 h-[1px] bg-[#89C2D9] mx-auto mt-4"></div>
+            <div className="w-12 h-[1px] bg-[#C8A893] mx-auto mt-4"></div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

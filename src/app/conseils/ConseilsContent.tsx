@@ -65,53 +65,53 @@ export default function ConseilsContent() {
 
   return (
     <div className="w-full">
-      {/* SECTION 1: INTRO (Background #F1F8FC) */}
-      <section className="bg-[#F1F8FC] py-12 md:py-20 border-b border-[#8FC7E6]/50">
+      {/* SECTION 1: INTRO (Background #FFFAFA) */}
+      <section className="bg-[#FFFAFA] py-12 md:py-20 border-b border-[#E4D3C8]/50">
         <div className="max-w-[1200px] mx-auto px-6 md:px-8 text-center">
-          <div className="inline-flex items-center justify-center gap-2 border border-[#89C2D9]/40 bg-[#E3F1F8] px-3 py-1 rounded-none mb-6">
-            <BookOpen size={14} strokeWidth={1.5} className="text-[#2F7EAF]" />
-            <span className="font-body text-[11px] uppercase tracking-[0.15em] text-[#2F7EAF]">
+          <div className="inline-flex items-center justify-center gap-2 border border-[#C8A893]/40 bg-[#F8F0EB] px-3 py-1 rounded-none mb-6">
+            <BookOpen size={14} strokeWidth={1.5} className="text-[#6E4226]" />
+            <span className="font-body text-[11px] uppercase tracking-[0.15em] text-[#6E4226]">
               L&apos;Écriture de l&apos;Apothicaire
             </span>
           </div>
 
-          <h1 className="font-display text-[34px] md:text-[48px] font-medium text-[#4496CC] mb-4">
-            Conseils <em className="font-display italic text-[#2F7EAF] font-normal">d&apos;Apothicaire</em>
+          <h1 className="font-display text-[34px] md:text-[48px] font-medium text-[#573119] mb-4">
+            Conseils <em className="font-display italic text-[#6E4226] font-normal">d&apos;Apothicaire</em>
           </h1>
 
-          <p className="font-body text-[15px] font-light text-[#2F7EAF] max-w-xl mx-auto leading-relaxed">
+          <p className="font-body text-[15px] font-light text-[#6E4226] max-w-xl mx-auto leading-relaxed">
             Prenez soin de vous grâce aux rituels naturels. Retrouvez les recommandations exclusives de notre laboratoire, nos dossiers scientifiques et nos réponses personnalisées.
           </p>
         </div>
       </section>
 
-      {/* SECTION 2: BLOG CARDS (Background #E3F1F8 - Surface) */}
-      <section id="blog-section" className="bg-[#E3F1F8] py-16 md:py-24 border-b border-[#8FC7E6]/50 scroll-mt-24">
+      {/* SECTION 2: BLOG CARDS (Background #F8F0EB - Surface) */}
+      <section id="blog-section" className="bg-[#F8F0EB] py-16 md:py-24 border-b border-[#E4D3C8]/50 scroll-mt-24">
         <div className="max-w-[1200px] mx-auto px-6 md:px-8">
           
           <div className="text-center max-w-xl mx-auto mb-16">
-            <span className="font-body text-[11px] uppercase tracking-[0.15em] text-[#2F7EAF]">
+            <span className="font-body text-[11px] uppercase tracking-[0.15em] text-[#6E4226]">
               Le Dossier Capillaire
             </span>
-            <h2 className="font-display text-[28px] sm:text-[34px] font-medium text-[#1F3F52] mt-2 leading-tight">
-              Dossiers &amp; <em className="font-display italic text-[#4496CC] font-normal">Rituels</em>
+            <h2 className="font-display text-[28px] sm:text-[34px] font-medium text-[#402312] mt-2 leading-tight">
+              Dossiers &amp; <em className="font-display italic text-[#573119] font-normal">Rituels</em>
             </h2>
-            <div className="w-12 h-[1px] bg-[#89C2D9] mx-auto mt-4"></div>
+            <div className="w-12 h-[1px] bg-[#C8A893] mx-auto mt-4"></div>
           </div>
 
           {/* Renders dynamic article details reading layout if an article is selected */}
           {selectedArticle ? (
-            <div className="max-w-3xl mx-auto bg-[#F1F8FC] rounded-none border border-[#8FC7E6] shadow-none p-6 md:p-10 animate-fade-in mb-12">
+            <div className="max-w-3xl mx-auto bg-[#FFFAFA] rounded-none border border-[#E4D3C8] shadow-none p-6 md:p-10 animate-fade-in mb-12">
               <button 
                 onClick={handleCloseArticle}
-                className="inline-flex items-center gap-2 text-[12px] font-body font-semibold uppercase tracking-wider text-[#4496CC] hover:text-[#2F7EAF] mb-8 cursor-pointer"
+                className="inline-flex items-center gap-2 text-[12px] font-body font-semibold uppercase tracking-wider text-[#573119] hover:text-[#6E4226] mb-8 cursor-pointer"
               >
                 <ArrowLeft size={16} strokeWidth={1.5} />
                 Retour aux dossiers
               </button>
 
-              <div className="flex items-center gap-3 font-body text-[11px] text-[#89C2D9] mb-4">
-                <span className="bg-[#E3F1F8] text-[#2F7EAF] px-2 py-0.5 rounded-none font-medium">
+              <div className="flex items-center gap-3 font-body text-[11px] text-[#C8A893] mb-4">
+                <span className="bg-[#F8F0EB] text-[#6E4226] px-2 py-0.5 rounded-none font-medium">
                   {selectedArticle.category}
                 </span>
                 <span>{selectedArticle.date}</span>
@@ -119,11 +119,11 @@ export default function ConseilsContent() {
                 <span>{selectedArticle.readTime}</span>
               </div>
 
-              <h2 className="font-display text-[26px] md:text-[36px] font-medium text-[#1F3F52] leading-snug mb-6">
+              <h2 className="font-display text-[26px] md:text-[36px] font-medium text-[#402312] leading-snug mb-6">
                 {selectedArticle.title}
               </h2>
 
-              <div className="aspect-[16/9] w-full rounded-none overflow-hidden border border-[#8FC7E6] mb-8">
+              <div className="aspect-[16/9] w-full rounded-none overflow-hidden border border-[#E4D3C8] mb-8">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={selectedArticle.image}
@@ -132,14 +132,14 @@ export default function ConseilsContent() {
                 />
               </div>
 
-              <div className="font-body text-[15px] font-light text-[#2F7EAF] leading-[1.8] space-y-6">
+              <div className="font-body text-[15px] font-light text-[#6E4226] leading-[1.8] space-y-6">
                 {selectedArticle.content.split('\n\n').map((paragraph, index) => (
                   <p key={index}>{paragraph}</p>
                 ))}
               </div>
 
-              <div className="mt-10 pt-6 border-t border-[#8FC7E6] flex justify-between items-center">
-                <p className="font-display italic text-[14px] text-[#2F7EAF]">Rédigé par la Maison Louise XIV</p>
+              <div className="mt-10 pt-6 border-t border-[#E4D3C8] flex justify-between items-center">
+                <p className="font-display italic text-[14px] text-[#6E4226]">Rédigé par la Maison Louise XIV</p>
                 <button 
                   onClick={handleCloseArticle}
                   className="btn-secondary py-2.5 px-6 text-[12px]"
@@ -160,21 +160,21 @@ export default function ConseilsContent() {
         </div>
       </section>
 
-      {/* SECTION 3: FAQ ACCORDION (Background #F1F8FC) */}
-      <section id="faq-section" className="bg-[#F1F8FC] py-16 md:py-24 border-b border-[#8FC7E6]/50 scroll-mt-24">
+      {/* SECTION 3: FAQ ACCORDION (Background #FFFAFA) */}
+      <section id="faq-section" className="bg-[#FFFAFA] py-16 md:py-24 border-b border-[#E4D3C8]/50 scroll-mt-24">
         <div className="max-w-[1200px] mx-auto px-6 md:px-8">
           
           <div className="text-center max-w-xl mx-auto mb-16">
-            <span className="font-body text-[11px] uppercase tracking-[0.15em] text-[#2F7EAF]">
+            <span className="font-body text-[11px] uppercase tracking-[0.15em] text-[#6E4226]">
               Des questions sur vos cheveux ?
             </span>
-            <h2 className="font-display text-[28px] sm:text-[34px] font-medium text-[#1F3F52] mt-2 leading-tight">
-              Foire <em className="font-display italic text-[#4496CC] font-normal">Aux Questions</em>
+            <h2 className="font-display text-[28px] sm:text-[34px] font-medium text-[#402312] mt-2 leading-tight">
+              Foire <em className="font-display italic text-[#573119] font-normal">Aux Questions</em>
             </h2>
-            <p className="font-body text-[14px] text-[#2F7EAF] font-light mt-2">
+            <p className="font-body text-[14px] text-[#6E4226] font-light mt-2">
               Retrouvez les interrogations les plus fréquentes reçues par notre laboratoire de Genève.
             </p>
-            <div className="w-12 h-[1px] bg-[#89C2D9] mx-auto mt-4"></div>
+            <div className="w-12 h-[1px] bg-[#C8A893] mx-auto mt-4"></div>
           </div>
 
           <FAQAccordion items={FAQS} />
@@ -182,56 +182,56 @@ export default function ConseilsContent() {
         </div>
       </section>
 
-      {/* SECTION 4: AVIS CLIENTS CARDS (Background #E3F1F8 - Surface) */}
-      <section id="reviews-section" className="bg-[#E3F1F8] py-16 md:py-24 border-b border-[#8FC7E6]/50 scroll-mt-24">
+      {/* SECTION 4: AVIS CLIENTS CARDS (Background #F8F0EB - Surface) */}
+      <section id="reviews-section" className="bg-[#F8F0EB] py-16 md:py-24 border-b border-[#E4D3C8]/50 scroll-mt-24">
         <div className="max-w-[1200px] mx-auto px-6 md:px-8">
           
           <div className="text-center max-w-xl mx-auto mb-16">
-            <span className="font-body text-[11px] uppercase tracking-[0.15em] text-[#2F7EAF]">
+            <span className="font-body text-[11px] uppercase tracking-[0.15em] text-[#6E4226]">
               Témoignages de la Communauté
             </span>
-            <h2 className="font-display text-[28px] sm:text-[34px] font-medium text-[#1F3F52] mt-2 leading-tight">
-              Avis <em className="font-display italic text-[#4496CC] font-normal">Clients</em>
+            <h2 className="font-display text-[28px] sm:text-[34px] font-medium text-[#402312] mt-2 leading-tight">
+              Avis <em className="font-display italic text-[#573119] font-normal">Clients</em>
             </h2>
-            <div className="w-12 h-[1px] bg-[#89C2D9] mx-auto mt-4"></div>
+            <div className="w-12 h-[1px] bg-[#C8A893] mx-auto mt-4"></div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {CUSTOMER_REVIEWS.map((review) => (
               <div 
                 key={review.id} 
-                className="bg-[#F1F8FC] p-8 rounded-none border border-[#8FC7E6] shadow-none relative"
+                className="bg-[#FFFAFA] p-8 rounded-none border border-[#E4D3C8] shadow-none relative"
               >
                 {/* Quote Icon */}
-                <div className="absolute top-6 right-8 text-[#8FC7E6] opacity-60">
+                <div className="absolute top-6 right-8 text-[#E4D3C8] opacity-60">
                   <MessageSquareQuote size={32} strokeWidth={1.5} />
                 </div>
 
                 {/* Rating */}
-                <div className="flex items-center gap-1 mb-4 text-[#4496CC]">
+                <div className="flex items-center gap-1 mb-4 text-[#573119]">
                   {[...Array(review.rating)].map((_, i) => (
                     <Star key={i} size={15} fill="currentColor" strokeWidth={1.5} />
                   ))}
                 </div>
 
                 {/* Content */}
-                <p className="font-body text-[13.5px] font-light text-[#2F7EAF] leading-relaxed mb-6 italic">
+                <p className="font-body text-[13.5px] font-light text-[#6E4226] leading-relaxed mb-6 italic">
                   &quot;{review.text}&quot;
                 </p>
 
                 {/* Reviewer info */}
-                <div className="pt-4 border-t border-[#8FC7E6]/50">
+                <div className="pt-4 border-t border-[#E4D3C8]/50">
                   <div className="flex items-center justify-between">
-                    <h4 className="font-display text-[15px] font-semibold text-[#1F3F52]">
+                    <h4 className="font-display text-[15px] font-semibold text-[#402312]">
                       {review.name}
                     </h4>
-                    <span className="font-body text-[10px] text-[#89C2D9]">
+                    <span className="font-body text-[10px] text-[#C8A893]">
                       {review.date}
                     </span>
                   </div>
                   
                   {/* Hair Type Badge */}
-                  <div className="inline-block mt-2 bg-[#E3F1F8] text-[#89C2D9] px-2 py-0.5 rounded-none">
+                  <div className="inline-block mt-2 bg-[#F8F0EB] text-[#C8A893] px-2 py-0.5 rounded-none">
                     <span className="font-body text-[10px] font-semibold uppercase tracking-wider">
                       {review.hairType}
                     </span>
@@ -242,9 +242,9 @@ export default function ConseilsContent() {
             ))}
           </div>
 
-          <div className="text-center mt-12 max-w-sm mx-auto p-4 rounded-none border border-[#8FC7E6] bg-[#F1F8FC]/50">
-            <p className="font-body text-[13px] text-[#2F7EAF]">
-              Note moyenne globale de la Maison : <span className="font-bold text-[#1F3F52]">4.9/5</span> basée sur plus de 1200 avis vérifiés.
+          <div className="text-center mt-12 max-w-sm mx-auto p-4 rounded-none border border-[#E4D3C8] bg-[#FFFAFA]/50">
+            <p className="font-body text-[13px] text-[#6E4226]">
+              Note moyenne globale de la Maison : <span className="font-bold text-[#402312]">4.9/5</span> basée sur plus de 1200 avis vérifiés.
             </p>
           </div>
 
