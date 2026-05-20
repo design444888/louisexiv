@@ -96,7 +96,7 @@ export default function ProductCard({
           {product.description}
         </p>
 
-        <div className="mt-auto flex items-center justify-between border-t border-[#E4D3C8]/50 pt-3">
+        <div className="relative z-10 mt-auto flex items-center justify-between border-t border-[#E4D3C8]/50 pt-3">
           <span className="font-display text-[17px] font-semibold text-[#573119]">
             {product.price},00 €
           </span>
@@ -118,7 +118,7 @@ export default function ProductCard({
 
       {showTechnicalSheetOnHover && (
         <div
-          className={`absolute inset-0 overflow-y-auto border border-[#C8A893]/50 bg-[linear-gradient(180deg,rgba(255,250,250,0.96)_0%,rgba(248,240,235,0.99)_100%)] p-5 backdrop-blur-[2px] transition-all duration-300 ease-out ${overlayVisibilityClass}`}
+          className={`absolute inset-x-0 top-0 bottom-[72px] overflow-y-auto border border-[#C8A893]/50 bg-[linear-gradient(180deg,rgba(255,250,250,0.96)_0%,rgba(248,240,235,0.99)_100%)] p-5 backdrop-blur-[2px] transition-all duration-300 ease-out ${overlayVisibilityClass}`}
           aria-hidden="true"
         >
           <div className="space-y-4">
